@@ -158,6 +158,9 @@ module.exports = exports = {
     "http://img1.wikia.nocookie.net/__cb20140912201850/disney/images/6/69/Carnotaurus.jpg",
   ],
   "Cearadactylus": [
+    "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Cearadactylus.jpg/250px-Cearadactylus.jpg",
+    "http://www.jplegacy.org/encyc/novel-dinosaurs/jpnovelceara.jpg",
+    "http://www.joetucciarone.com/cearadactylus.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/5/5d/Cearadaktyl_%28Cearadactylus%29_-_JuraPark_Baltow_%282%29.JPG",
     "http://dic.academic.ru/pictures/wiki/files/67/Cearadactylus_model.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/f/f3/Cearadaktyl_%28Cearadactylus%29_-_JuraPark_Baltow_%284%29.JPG",
@@ -170,7 +173,11 @@ module.exports = exports = {
   "Charonosaurus": [
     "http://upload.wikimedia.org/wikipedia/commons/8/86/Charonosaurus-v3.jpg",
     "http://media.moddb.com/images/mods/1/22/21590/Charono.png",
-    "http://img2.wikia.nocookie.net/__cb20140204235505/dinosaurs/images/a/a2/Charonosaurus-Enchanters-Blood.jpg",
+    "http://www.luisrey.ndtilda.co.uk/jpegs/256col/charono.jpg",
+    "http://fc03.deviantart.net/fs7/i/2005/261/1/7/Charonosaurus_jiayinensis_by_patriatyrannus.jpg",
+    "http://vignette4.wikia.nocookie.net/dinosauralive/images/9/9a/Charonosaurus_3.png/revision/latest?cb=20130323040631",
+    "http://www.rareresource.com/photos/dinosaur-gallery/charonosaurus_lrg.jpg",
+    "http://th01.deviantart.net/fs71/PRE/f/2010/303/2/c/charonosaurus_by_elperdido1965-d31r58g.jpg",
   ],
   "Chasmosaurus": [
     "http://upload.wikimedia.org/wikipedia/commons/1/1f/Chasmosaurus_BW.jpg",
@@ -284,6 +291,7 @@ module.exports = exports = {
     "http://fc00.deviantart.net/fs71/i/2010/061/8/c/Edmontonia_by_Glyptodon_graphycus.jpg",
     "http://www.iped.com.br/sie/uploads/10672.jpg",
     "http://www.skyenimals.com/images_wallpaper/cat_dinosaur/edmontonia_1920x1080.jpg",
+    "http://41.media.tumblr.com/e39dd3a6d7654e4745977a78217f3dfb/tumblr_neyu3p6SjD1tk9c2yo1_500.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/1/19/Edmontonia_mount.jpg",
     "http://vignette3.wikia.nocookie.net/walkingwith/images/f/f5/Imgrese.jpg/revision/latest?cb=20130624173052",
     "http://upload.wikimedia.org/wikipedia/commons/6/6a/Edmontonia_half.jpg",
@@ -385,6 +393,10 @@ module.exports = exports = {
     "http://upload.wikimedia.org/wikipedia/commons/6/6e/Khaan.jpg",
   ],
   "Lacusovagus": [
+    "http://www.multi.fi/~rback/material/illustration/Lacusovagus.jpg",
+    "http://www.digitaljournal.com/img/7/8/6/2/7/9/i/4/5/1/o/Lacusovagus_magnificens.jpg",
+    "http://news.bbcimg.co.uk/media/images/50108000/jpg/_50108986_pterosaur.jpg",
+    "http://img2.wikia.nocookie.net/__cb20130418190211/planetdinosaur/images/thumb/5/58/Lacusovagus4.png/500px-Lacusovagus4.png",
     "https://archosaurmusings.files.wordpress.com/2010/11/dimoprh-model.jpg",
     "http://th01.deviantart.net/fs71/PRE/i/2013/081/8/2/lacusovagus_by_dyn0saur-d5yuzy5.png",
     "http://upload.wikimedia.org/wikipedia/commons/9/99/Lacusovagus_JWPhoto.JPG",
@@ -554,9 +566,12 @@ module.exports = exports = {
     "http://i.imgur.com/qSOPmhs.jpg",
   ],
   "Raptorex": [
+    "http://25.media.tumblr.com/5fe65068db11848a7fd8ca3b93027b28/tumblr_mk31b10oAa1s40nxho1_1280.jpg",
+    "http://fc02.deviantart.net/fs71/i/2011/315/2/6/raptorex_by_fafnirx-d4fowhl.jpg",
+    "http://vignette2.wikia.nocookie.net/prehistrico/images/d/d2/Raptorex_sketch_by_dustdevil.jpg/revision/latest?cb=20131231000211&path-prefix=es",
+    "http://blog.press.princeton.edu/wp-content/uploads/2010/09/140.jpg",
     "http://mjfowler.weebly.com/uploads/2/4/0/9/24097146/1465554_orig.jpg",
     "https://archosaurmusings.files.wordpress.com/2011/09/img_4821.jpg",
-    "http://vignette2.wikia.nocookie.net/prehistoricmonsters/images/d/df/Raptorex_i_protarachaeopteryx-1.jpg/revision/latest?cb=20121101225010",
   ],
   "Rhabdodon": [
     "http://bioinf3.uab.cat/dinosaures/images/stories/dinosaures/img/pararhabdodon.jpg",
@@ -595,6 +610,9 @@ module.exports = exports = {
   ],
   "Sarcosuchus": [
     "http://upload.wikimedia.org/wikipedia/commons/d/d7/Dinosaurios_Park,_Sarcosuchus.JPG",
+    "http://www.rareresource.com/photos/dinosaur-gallery/sarcosuchus_imperator.jpg",
+    "http://www.arcadiastreet.com/cgvistas/earth/03_mesozoic/images/sarcosuchus_and_ornithopoda_1280.jpg",
+    "http://vignette4.wikia.nocookie.net/bbcplanetdinosaur/images/3/36/Vlcsnap-2011-11-23-23h22m00s217.png/revision/latest?cb=20111126152507",
     "http://images4.fanpop.com/image/photos/23700000/Sarcosuchus-dinosaurs-23743587-800-410.jpg",
     "http://vignette2.wikia.nocookie.net/planetdinosaur/images/7/7d/1x1_SarcosuchusScaresOffSpinosaurus.png/revision/latest?cb=20140202110043",
   ],
@@ -651,7 +669,10 @@ module.exports = exports = {
     "http://upload.wikimedia.org/wikipedia/commons/e/e5/Segno.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/d/d1/Piveteausaurus_divesensis_jmallon.jpg",
   ],
-  "Stygimoluch": [
+  "Stygimoloch": [
+    "http://www.worldsofimagination.co.uk/Stygimoloch.jpg",
+    "http://img1.wikia.nocookie.net/__cb20140124125056/jurassicpark/images/archive/d/db/20140404075217!Jurassic_Park_Stygimoloch_by_hellraptor.jpg",
+    "http://vignette3.wikia.nocookie.net/prehistrico/images/a/aa/Stygimoloch.jpg/revision/latest?cb=20120726144225&path-prefix=es",
     "http://fc04.deviantart.net/fs71/i/2012/081/6/b/stygimoloch_by_baryonyx_walkeri-d4tldnh.jpg",
     "http://gregmansfield.com/Photos/Spring2011/Images/g3260130-1.jpg",
     "http://fc02.deviantart.net/fs71/i/2013/105/e/e/stygimoloch_done_4_by_blade_of_the_moon-d61w09h.jpg",
