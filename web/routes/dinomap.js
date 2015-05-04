@@ -279,6 +279,11 @@ module.exports = exports = {
     "http://upload.wikimedia.org/wikipedia/commons/5/5b/Dunkleosteus_profile.jpg",
   ],
   "Edmontonia": [
+    "http://images4.fanpop.com/image/photos/22200000/Edmontonia-dinosaurs-22266539-800-408.jpg",
+    "http://vignette3.wikia.nocookie.net/walkingwith/images/9/96/639px-Edmontonia_1.jpg/revision/latest?cb=20140104003720",
+    "http://fc00.deviantart.net/fs71/i/2010/061/8/c/Edmontonia_by_Glyptodon_graphycus.jpg",
+    "http://www.iped.com.br/sie/uploads/10672.jpg",
+    "http://www.skyenimals.com/images_wallpaper/cat_dinosaur/edmontonia_1920x1080.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/1/19/Edmontonia_mount.jpg",
     "http://vignette3.wikia.nocookie.net/walkingwith/images/f/f5/Imgrese.jpg/revision/latest?cb=20130624173052",
     "http://upload.wikimedia.org/wikipedia/commons/6/6a/Edmontonia_half.jpg",
