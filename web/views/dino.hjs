@@ -14,7 +14,11 @@
   <body>
     <div class="container">
 
-      You looked up {{dino}}.
+      <h1>{{dino}} dinosaur pictures</h1>
+
+      {{#pics}}
+      <img src="{{.}}" />
+      {{/pics}}
 
     </div> <!-- end container-fluid -->
 

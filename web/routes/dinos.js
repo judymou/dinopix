@@ -5,7 +5,15 @@ exports.home = function(req, res) {
 }
 
 exports.dinosaur = function(req, res) {
+  var dino = req.params.dino.trim();
+  var match = dinomap[dino];
+  if (!match) {
+    res.send('not found');
+    return;
+  }
+
   res.render('dino', {
-    dino: req.params.dino,
+    dino: dino,
+    pics: match,
   });
 };

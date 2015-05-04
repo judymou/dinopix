@@ -1,4 +1,4 @@
-exports = {
+module.exports = exports = {
   "Achelousaurus": [
     "http://upload.wikimedia.org/wikipedia/commons/8/8b/Achelousaurus_dinosaur.png",
     "http://upload.wikimedia.org/wikipedia/commons/0/0e/Achelousaurus_BW.jpg",
@@ -30,7 +30,6 @@ exports = {
     "http://upload.wikimedia.org/wikipedia/commons/3/36/Daspletosaurus_FMNH.jpg",
   ],
   "Allosaurus": [
-    "http://upload.wikimedia.org/wikipedia/commons/9/9f/Allosaurus_in_Baltow_20060916_1500.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/5/51/Allosaurus_BW.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/3/3a/Allosaurus_SDNHM.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/5/51/Allosaurus_BW.jpg",
