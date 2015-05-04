@@ -74,6 +74,10 @@
         margin-right: 60px;
       }
 
+      #popular span:not(:last-of-type)::after {
+        content: ", "
+      }
+
       ul {
         margin: 0 auto;
         text-align: center;
@@ -99,6 +103,13 @@
         </p>
         <p>
           All credit for images goes to the original authors and creators.  DinoPictures.org is a search engine that curates high quality dinosaur pictures.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script>.
+        </p>
+
+        <p id="popular">
+          Pictures of popular dinosaurs:
+          {{#popular}}
+          <span><a href="/{{.}}-dinosaur-pictures">{{.}}</a></span>
+          {{/popular}}
         </p>
 
         <p>

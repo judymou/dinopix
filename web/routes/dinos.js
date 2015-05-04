@@ -7,6 +7,8 @@ exports.home = function(req, res) {
   }
   res.render('home', {
     dinos: dinoNames,
+    popular: ['Tyrannosaurus', 'Allosaurus', 'Ankylosaurus', 'Triceratops',
+      'Brachiosaurus', 'Apatosaurus', 'Pachycephalosaurus'],
   });
 };
 

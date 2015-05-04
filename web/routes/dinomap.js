@@ -525,6 +525,11 @@ module.exports = exports = {
     "http://en.academic.ru/pictures/enwiki/70/Fighting_Othnielia.jpg",
   ],
   "Pachycephalosaurus": [
+    "http://fc05.deviantart.net/fs12/f/2006/332/c/3/Pachycephalosaurus_by_tavari.jpg",
+    "http://ayay.co.uk/backgrounds/dinosaurs/herbivore/pachycephalosaurus-head-swiper.jpg",
+    "http://www.worldsofimagination.co.uk/800px-Pachycephalosaurus.jpg",
+    "http://upload.wikimedia.org/wikipedia/commons/8/87/Pachycephalosaurus.jpg",
+    "http://www.worldbookonline.com/contents/common-content/wbe-content/pc/lg/pc313181.gif",
     "http://upload.wikimedia.org/wikipedia/commons/f/fe/Pachycephalosaurus_in_Japan.jpg",
     "http://dinosaurios.org/wp-content/uploads/2013/09/Pachycephalosaurus_FULL.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/c/c0/Pachycephalosaurus_RoyalOntarioMuseum.png",
