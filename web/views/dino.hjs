@@ -133,6 +133,7 @@
       </p>
 
       <h4><a href="/">Search for other dinosaurs</a></h4>
+      <h4><a href="/random">Random dinosaur</a></h4>
 
       <div class="pics">
         {{#pics}}

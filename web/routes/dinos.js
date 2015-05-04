@@ -8,7 +8,7 @@ exports.home = function(req, res) {
   res.render('home', {
     dinos: dinoNames,
   });
-}
+};
 
 exports.dinosaur = function(req, res) {
   var dino = req.params.dino.trim();
@@ -22,4 +22,15 @@ exports.dinosaur = function(req, res) {
     dino: dino,
     pics: match,
   });
+};
+
+exports.random = function(req, res) {
+  var dinoNames = [];
+  for (var key in dinomap) {
+    dinoNames.push(key);
+  }
+
+  var name = dinoNames[Math.floor(Math.random() * dinoNames.length)];
+  req.params.dino = name;
+  exports.dinosaur(req, res);
 };
