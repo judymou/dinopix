@@ -5,10 +5,52 @@
     <title>{{dino}} dinosaur pictures!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pictures of {{dinos}}.">
+    <!--
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
     <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <style>
+      .pics {
+        text-align: center;
+      }
 
+      .img-container {
+        margin: 30px;
+        position: relative;
+        border: 1px solid #404040;
+      }
+
+      .img-container img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .save {
+        color: #fff;
+        background-color: #404040;
+        padding: 5px;
+        border-left: 1px solid #000;
+        border-top: 1px solid #000;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        cursor: pointer;
+      }
+
+      .save:hover {
+        background-color: #535353;
+      }
+
+      .save a {
+        color: #fff;
+      }
+
+      .save a:hover {
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
@@ -18,9 +60,16 @@
 
       <h2><a href="/">Back to full dinosaur list</a></h2>
 
-      {{#pics}}
-      <img src="{{.}}" />
-      {{/pics}}
+      <div class="pics">
+        {{#pics}}
+        <div class="img-container">
+          <a href="{{.}}" target="_blank"><img src="{{.}}" /></a>
+          <div class="save">
+            <a href="{{.}}" download><i class="glyphicon glyphicon-save"></i> Save</a>
+          </div>
+        </div>
+        {{/pics}}
+      </div>
 
     </div> <!-- end container-fluid -->
 
