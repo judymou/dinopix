@@ -16,15 +16,16 @@
 
       <h1>{{dino}} dinosaur pictures</h1>
 
+      <h2><a href="/">Back to full dinosaur list</a></h2>
+
       {{#pics}}
       <img src="{{.}}" />
       {{/pics}}
 
     </div> <!-- end container-fluid -->
 
-    <style>
+    {{! TODO similar dinos }}
 
-    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
     </script>
   </body>
