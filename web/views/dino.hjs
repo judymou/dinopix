@@ -132,8 +132,8 @@
       All these pictures were collected from the internet.  Credit goes to original creators and artists.
       </p>
 
-      <h4><a href="/">Search for other dinosaurs</a></h4>
-      <h4><a href="/random">Random dinosaur</a></h4>
+      <h4>&middot; <a href="/">Search for other dinosaurs</a></h4>
+      <h4>&middot; <a href="/random">Random dinosaur</a></h4>
 
       <div class="pics">
         {{#pics}}
