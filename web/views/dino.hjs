@@ -97,6 +97,23 @@
       .save a:hover {
         text-decoration: none;
       }
+
+      .source {
+        color: #fff;
+        background-color: #404040;
+        padding: 5px;
+        border-left: 1px solid #000;
+        border-top: 1px solid #000;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     </style>
   </head>
   <body>
@@ -108,7 +125,7 @@
       <h1 class="main-title">{{dino}} dinosaur pictures</h1>
 
       <p>
-      All these pictures were collected from the internet.  Credit goes to original authors.
+      All these pictures were collected from the internet.  Credit goes to original creators and artists.
       </p>
 
       <h4><a href="/">Search for other dinosaurs</a></h4>
@@ -117,6 +134,9 @@
         {{#pics}}
         <div class="img-container">
           <a href="{{.}}" target="_blank"><img src="{{.}}" /></a>
+          <div class="source">
+            Source: {{.}}
+          </div>
           <div class="save">
             <a href="{{.}}" download><i class="glyphicon glyphicon-save"></i> Save</a>
           </div>
