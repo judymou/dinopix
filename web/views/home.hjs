@@ -74,6 +74,11 @@
         margin-right: 60px;
       }
 
+      #popular {
+        background-color: #eee;
+        padding: 30px;
+      }
+
       #popular span:not(:last-of-type)::after {
         content: ", "
       }
@@ -106,7 +111,7 @@
         </p>
 
         <p id="popular">
-          Pictures of popular dinosaurs:
+          Shortcut to pictures of popular dinosaurs:
           {{#popular}}
           <span><a href="/{{.}}-dinosaur-pictures">{{.}}</a></span>
           {{/popular}}
