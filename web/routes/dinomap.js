@@ -198,6 +198,7 @@ module.exports = exports = {
   ],
   "Compsognathus": [
     "http://www.wikidino.com/wp-content/uploads/Compsognathus-Peter-Minister.jpg",
+    "http://img4.wikia.nocookie.net/__cb20131014174149/dinosaurs/images/f/f3/Compsognathus.png",
     "http://upload.wikimedia.org/wikipedia/commons/c/cd/Compsognathus_longipes_skeleton_reconstruction_munich.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/c/c4/Compsognathus_BW.jpg",
   ],
