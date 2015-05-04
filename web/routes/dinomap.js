@@ -330,6 +330,7 @@ module.exports = exports = {
     "http://upload.wikimedia.org/wikipedia/commons/4/4e/Huaxiagnathus_orientalis.JPG",
     "http://40.media.tumblr.com/fe5fd8bc9ac5f47dbc0850f3fa679afb/tumblr_nd5khzSQ6A1sxjia7o3_1280.jpg",
     "http://www.oldearth.org/curriculum/dinosaur/Compsognathus_BW.jpg",
+    "http://fc03.deviantart.net/fs71/i/2010/340/b/3/sudden_attack_by_cheungchungtat-d32ovg3.jpg",
   ],
   "Huayangosaurus": [
     "http://upload.wikimedia.org/wikipedia/commons/2/2c/Fossil_Kentrosaurus_aethiopicus_in_Museum_f%C3%BCr_Naturkunde_Berlin_001.JPG",
@@ -687,7 +688,13 @@ module.exports = exports = {
     "http://media.moddb.com/images/games/1/13/12727/tylosaurus_rend1.jpg",
   ],
   "Tyrannosaurus": [
-    "http://img3.wikia.nocookie.net/__cb20131014174305/dinosaurs/images/3/32/Tyrannosaur-dino-large.png",
+    "http://www.jurassicworld.com/media/dinosaurs/tyrannosaurus-rex/tyrannosaurus-rex-info-graphic.png",
+    "http://img1.wikia.nocookie.net/__cb20150213222749/dinosaurs/images/0/00/Outrun-t-rex-orig.jpg",
+    "http://img3.wikia.nocookie.net/__cb20130726211339/dinosaurs/images/6/61/Tyrannosaurus-rex.73505.jpg",
+    "http://www.omicrono.com/wp-content/uploads/2014/03/Tyrannosaurus_rex.jpg",
+    "http://ichef.bbci.co.uk/naturelibrary/images/ic/credit/640x395/t/ty/tyrannosaurus/tyrannosaurus_1.jpg",
+    "http://www.dinosaurlive.com/connectwp/wp-content/uploads/akagallery/746/8361091611.jpg",
+    "http://i.kinja-img.com/gawker-media/image/upload/s--HshDJ0Zj--/c_fit,fl_progressive,q_80,w_636/813266302148042132.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/6/6f/Feathered_Tyrannosaurus_model.jpg",
     "http://th05.deviantart.net/fs71/PRE/i/2013/214/8/e/tyrannosaurus_rex_by_fordgt-d6ge0ci.jpg",
   ],
