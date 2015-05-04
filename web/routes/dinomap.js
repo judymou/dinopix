@@ -616,7 +616,7 @@ module.exports = exports = {
     "http://vignette1.wikia.nocookie.net/walkingwith/images/a/aa/SpinosaurusInfobox.png/revision/latest?cb=20131217214946",
   ],
   "Staurikosaurus": [
-    "http://img3.wikia.nocookie.net/__cb20130413201352/dinosaurs/images/7/77/Stauriko-pic.jpg",
+    "http://img4.wikia.nocookie.net/__cb20130413201833/dinosaurs/images/5/5b/9_The_Sound2.jpg",
     "http://classconnection.s3.amazonaws.com/61/flashcards/1316061/png/staurikosaurus1335383964478.png",
     "http://animalreader.ru/wp-content/uploads/2014/09/Staurikosaurus.jpg",
   ],
