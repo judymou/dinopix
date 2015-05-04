@@ -143,7 +143,7 @@
 
       <div class="intro">
         <p>
-        All these pictures were collected from the internet.  Credit goes to original creators and artists.
+          All these pictures were collected from the internet.  Credit goes to original creators and artists.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script>.
         </p>
         <ul>
           <li><a href="/">View other dinosaurs</a></li>
