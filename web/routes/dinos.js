@@ -1,7 +1,13 @@
 var dinomap = require('./dinomap.js');
 
 exports.home = function(req, res) {
-  res.render('home', {});
+  var dinoNames = [];
+  for (var key in dinomap) {
+    dinoNames.push(key);
+  }
+  res.render('home', {
+    dinos: dinoNames,
+  });
 }
 
 exports.dinosaur = function(req, res) {
