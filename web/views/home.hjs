@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{dino}} dinosaur pictures!</title>
+    <title>Dinosaur Pictures - High Quality Database</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pictures of {{dinos}}.">
     <!--
@@ -75,7 +75,7 @@
         The Dinosaur Picture Database
       </div>
 
-      <h1 class="main-title">Dinosaur pictures</h1>
+      <h1 class="main-title">Dinosaur Pictures</h1>
       <div class="intro">
         <p>
           This site is a collection of dinosaur pictures taken from all over the internet.  Look at a <strong><a href="/random">random</a></strong> dinosaur or pick one from below!
