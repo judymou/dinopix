@@ -18,6 +18,8 @@
         background: -ms-linear-gradient(top,#b3b3b0 0,#e3e2dd 500px);
         background: linear-gradient(top,#b3b3b0 0,#e3e2dd 500px);
         background-color: #e3e2dd;
+
+        margin-bottom: 40px;
       }
 
       .header {
@@ -37,10 +39,17 @@
       .container {
         position: relative;
 
+        {{! maybe someday: http://jsfiddle.net/zuul/mPnTP/ }}
+
         background-color: rgb(255, 255, 255);
         background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.298039) 0px, rgba(0, 0, 0, 0) 7px);
+        box-shadow: 4px 0 2px -2px rgba(0,0,0,0.4), 0 4px 2px -2px rgba(0,0,0,0.4), -4px 0 2px -2px rgba(0,0,0,0.4);
+
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
 
         padding-top: 30px;
+        padding-bottom: 20px;
       }
 
       .main-title {
@@ -91,7 +100,7 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="container drop-shadow left right bottom">
       <div class="header">
         The Dinosaur Picture Database
       </div>
@@ -115,7 +124,7 @@
         {{/pics}}
       </div>
 
-      <h4><a href="/">More dinosaur pictures</a></h4>
+      <h4 style="text-align:center"><strong><a href="/">More dinosaur pictures</a></strong></h4>
 
     </div> <!-- end container-fluid -->
 
