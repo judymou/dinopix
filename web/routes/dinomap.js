@@ -703,9 +703,14 @@ module.exports = exports = {
     "http://upload.wikimedia.org/wikipedia/commons/b/b0/Dryosaurus_lettowvorbecki_skeleton.jpg",
   ],
   "Velociraptor": [
-    "http://img1.wikia.nocookie.net/__cb20120928165731/jurassicpark/images/3/39/Tumblr_maitioGBUI1qhsdu1o3_1280.jpg",
+    "http://vignette2.wikia.nocookie.net/landbeforetime/images/b/bf/Velociraptor_infobox.png/revision/latest?cb=20150106014550",
+    "http://upload.wikimedia.org/wikipedia/commons/c/cd/Velociraptor_dinoguy2.jpg",
+    "http://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1440/Velociraptor_u4hjbq.jpg",
+    "http://www.eatthedamncake.com/wordpress/wp-content/uploads/2012/02/tstVelociraptor_Tucci.jpg",
+    "http://www.rareresource.com/images/velociraptor-dinosaur.jpg",
+    "http://plesiosauria.com/dinotoyimage/velociraptor_wildsafari.jpg",
+    "http://images4.wikia.nocookie.net/__cb20130315233016/deadliestfiction/images/6/67/Two_velociraptors_.jpg",
     "http://cornucopia3d.e-oncontent.com/storeItems/Objects/Animals/Prehistoric/Velociraptor_Vue_3_0_img.jpg",
-    "http://screeninvasion.com/wp-content/uploads/2013/06/jurassic-park-velociraptor.jpg",
   ],
   "Ventastega": [
     "http://upload.wikimedia.org/wikipedia/commons/4/45/Limnoscelis21DB.jpg",
