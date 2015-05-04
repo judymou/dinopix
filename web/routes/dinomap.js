@@ -15,14 +15,20 @@ module.exports = exports = {
     "http://upload.wikimedia.org/wikipedia/commons/4/4f/Mapusaurus_BW.jpg",
   ],
   "Afrovenator": [
+    "http://www.avph.com.br/jpg/afrovenator1.jpg",
+    "http://img3.wikia.nocookie.net/__cb20131224154400/prehistrico/es/images/7/71/Afrovenator-Cheung-Chungtat-600x393.jpg",
+
     "http://upload.wikimedia.org/wikipedia/commons/8/8a/Afrovenator_mount.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/8/8b/Afrovenator_abakensis_dinosaur.png",
     "http://fc03.deviantart.net/fs71/i/2011/184/e/0/afrovenator_skelly_four_by_algoroth-d3kvfjp.jpg",
+    "http://fc06.deviantart.net/fs70/i/2011/235/4/0/afrovenator_running_fast_by_algoroth-d47k946.jpg",
   ],
   "Albertosaurus": [
     "http://upload.wikimedia.org/wikipedia/commons/8/87/Albertosaurus.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/e/e6/Drumheller_150.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/a/a2/Albertosaurus_sculpture.jpg",
+    "http://cdn.dinosaur-world.com/tyrannosaurs/images/albertosaurus_sarcophagus.gif?rewrite=true",
+    "http://vignette3.wikia.nocookie.net/primeval/images/0/0f/Dino11.jpg/revision/latest?cb=20130223184557",
   ],
   "Alectrosaurus": [
     "http://upload.wikimedia.org/wikipedia/commons/a/ab/Appalachiosaurus_montgomeriensis.jpg",
@@ -529,6 +535,8 @@ module.exports = exports = {
     "http://upload.wikimedia.org/wikipedia/commons/6/6b/Life_restoration_of_a_group_of_giant_azhdarchids,_Quetzalcoatlus_northropi,_foraging_on_a_Cretaceous_fern_prairie.png",
     "https://optimisticpainter.files.wordpress.com/2011/03/quetzalcoatlus_blog.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/a/ab/Quetzalcoatlus_1.JPG",
+    "http://talismancoins.com/content/catalog/Flying_Dinosaur_Quetzalcoatlus_1.jpg",
+    "http://fc02.deviantart.net/fs70/i/2010/168/d/2/Quetzalcoatlus_sp__by_Eurwentala.jpg",
   ],
   "Rajasarus": [
     "http://www.sciencekids.co.nz/images/pictures/dinosaurs/rajasaurus.jpg",
