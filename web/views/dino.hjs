@@ -18,6 +18,7 @@
         background: -ms-linear-gradient(top,#b3b3b0 0,#e3e2dd 500px);
         background: linear-gradient(top,#b3b3b0 0,#e3e2dd 500px);
         background-color: #e3e2dd;
+        background-repeat: no-repeat;
 
         margin-bottom: 40px;
       }
