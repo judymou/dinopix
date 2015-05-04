@@ -48,7 +48,7 @@
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
 
-        padding-top: 30px;
+        padding-top: 45px;
         padding-bottom: 20px;
       }
 
@@ -57,45 +57,12 @@
         font-weight: bold;
       }
 
-      .pics {
-        text-align: center;
-      }
-
-      .img-container {
+      .intro {
         margin: 30px;
-        position: relative;
-        border: 1px solid #404040;
+        font-size: 20px;
       }
-
-      .img-container img {
-        width: 100%;
-        height: 100%;
-      }
-
-      .save {
-        color: #fff;
-        background-color: #404040;
-        padding: 5px;
-        border-left: 1px solid #000;
-        border-top: 1px solid #000;
-
-        position: absolute;
-        bottom: 0;
-        right: 0;
-
-        cursor: pointer;
-      }
-
-      .save:hover {
-        background-color: #535353;
-      }
-
-      .save a {
-        color: #fff;
-      }
-
-      .save a:hover {
-        text-decoration: none;
+      .dino-list {
+        margin-top: 30px;
       }
     </style>
   </head>
@@ -106,11 +73,21 @@
       </div>
 
       <h1 class="main-title">Dinosaur pictures</h1>
-      <ul>
-      {{#dinos}}
-      <li><h4><a href="/{{.}}-dinosaur-pictures">{{.}}</a></h4></li>
-      {{/dinos}}
-      </ul>
+      <div class="intro">
+        <p>
+          This site is a collection of dinosaur pictures taken from all over the internet.  Look at a <a href="/random">random</a> dinosaur or pick one from below!
+        </p>
+        <p>
+          All credit for images goes to the original authors and creators.  DinoPictures.org is a search engine that curates high quality dinosaur pictures.
+        </p>
+      </div>
+      <div class="dino-list">
+        <ul>
+        {{#dinos}}
+        <li><h4><a href="/{{.}}-dinosaur-pictures">{{.}}</a></h4></li>
+        {{/dinos}}
+        </ul>
+      </div>
 
     </div> <!-- end container-fluid -->
 
