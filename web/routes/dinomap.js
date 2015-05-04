@@ -41,7 +41,6 @@ module.exports = exports = {
   "Allosaurus": [
     "http://upload.wikimedia.org/wikipedia/commons/5/51/Allosaurus_BW.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/3/3a/Allosaurus_SDNHM.jpg",
-    "http://upload.wikimedia.org/wikipedia/commons/5/51/Allosaurus_BW.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/9/9f/Allosaurus_in_Baltow_20060916_1500.jpg",
     "http://i.huffpost.com/gen/1151138/images/o-ALLOSAURUS-FEEDING-facebook.jpg",
   ],
@@ -422,11 +421,10 @@ module.exports = exports = {
     "http://th00.deviantart.net/fs71/PRE/i/2010/005/d/2/Mamenchisaurus_by_AshiRox.jpg",
     "http://th00.deviantart.net/fs71/PRE/i/2014/145/3/d/mamenchisaurus_by_atrox1-d6kg2m2.jpg",
   ],
-  "Maniraptoraclaw": [
-    "http://upload.wikimedia.org/wikipedia/commons/d/dd/Utahraptor_skeleton_NAMAL.jpg",
-    "http://upload.wikimedia.org/wikipedia/commons/5/5c/Allosaurus-fragilis-Klauen.JPG",
-    "http://upload.wikimedia.org/wikipedia/commons/2/29/Buitreraptor-Deinonychus.jpg",
+  /*
+  "Maniraptora": [
   ],
+ */
   "Methriorhynchus": [
     "http://upload.wikimedia.org/wikipedia/commons/c/c8/Metriorhynchus_jaekeli_-_Naturmuseum_Senckenberg_-_DSC02182.JPG",
     "http://upload.wikimedia.org/wikipedia/commons/9/95/Metriorhynchus_dubr1DB.jpg",
