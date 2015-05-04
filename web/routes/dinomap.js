@@ -76,8 +76,10 @@ module.exports = exports = {
   ],
   "Atlasaurus": [
     "http://www.renderosity.com/mod/gallery/media/folder_214/display_2132880.jpg",
-    "http://www.thefossilforum.com/uploads/monthly_03_2015/post-2399-0-51102200-1425653027.jpg",
+    "http://i1162.photobucket.com/albums/q522/paleostudies/6.png",
+    "http://th07.deviantart.net/fs70/PRE/i/2013/074/a/c/atlasaurus_drawing_by_palaeozoologist-d5y4njp.jpg",
     "http://fc05.deviantart.net/fs70/i/2013/280/e/1/whale_of_a_tail_by_qilong-d6po0zi.png",
+    "http://www.thefossilforum.com/uploads/monthly_03_2015/post-2399-0-51102200-1425653027.jpg",
   ],
   "Baryonyx": [
     "http://fc09.deviantart.net/fs71/i/2013/297/4/9/baryonyx_by_baryonyx_walkeri-d6ro8h3.jpg",
