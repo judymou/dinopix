@@ -36,6 +36,14 @@
         padding: 10px;
       }
 
+      .header a {
+        color: #fff;
+      }
+
+      .header a:hover {
+        text-decoration: none;
+      }
+
       .container {
         position: relative;
 
@@ -128,7 +136,7 @@
   <body>
     <div class="container drop-shadow left right bottom">
       <div class="header">
-        The Dinosaur Picture Database
+        <a href="/">The Dinosaur Picture Database</a>
       </div>
 
       <h1 class="main-title">{{dino}} dinosaur pictures</h1>
