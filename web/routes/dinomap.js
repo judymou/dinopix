@@ -498,8 +498,6 @@ module.exports = exports = {
     "http://upload.wikimedia.org/wikipedia/commons/9/93/Plateosaurus_Skelett_2.jpg",
     "http://fc08.deviantart.net/fs70/i/2014/107/7/a/plateosaurus_by_deskridge-d7euv1k.jpg",
   ],
-  "Platypte": [
-  ],
   "Psittacosaurus": [
     "http://upload.wikimedia.org/wikipedia/commons/b/b7/Psittacosaurus_sibiricus_whole_BW.jpg",
     "http://images.fineartamerica.com/images-medium-large/psittacosaurus-mongoliensis-sergey-krasovskiy.jpg",
