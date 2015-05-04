@@ -445,9 +445,12 @@ module.exports = exports = {
     "http://australianmuseum.net.au/uploads/images/7236/minmi_big.jpg",
   ],
   "Monolophosaurus": [
+    "http://img1.wikia.nocookie.net/__cb20150220001101/dinosaurs/images/4/48/Monolophosaurus_6_by_wolverine041269-d65c64h.png",
+    "http://australianmuseum.net.au/uploads/images/8223/g125%20monolophosaurus_big.jpg",
+    "http://upload.wikimedia.org/wikipedia/commons/1/1a/Monolophosaurus_jiangi_jmallon.jpg",
+    "http://fc03.deviantart.net/fs70/i/2013/163/6/5/monolophosaurus_by_sylxeriaguardian-d68r7s3.jpg",
     "http://www.captmondo.com/weblog/uploaded_images/MonolophosaurusJiangiAttackingATuojiangosaurusMultispinus-PaleozoologicalMuseumOfChina-May23-08-757767.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/1/16/Monolophosaurus_skull.jpg",
-    "http://fc03.deviantart.net/fs70/i/2013/163/6/5/monolophosaurus_by_sylxeriaguardian-d68r7s3.jpg",
   ],
   "Mosasaurus": [
     "http://www.jurassicworlduniverse.com/wordpress/wp-content/uploads/2014/11/mosasaurus3.jpg",
