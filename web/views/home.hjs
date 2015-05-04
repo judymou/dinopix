@@ -5,27 +5,115 @@
     <title>{{dino}} dinosaur pictures!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pictures of {{dinos}}.">
+    <!--
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
     <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <style>
+      body {
+        background: #b3b3b0;
+        background: -moz-linear-gradient(top,#b3b3b0 0,#e3e2dd 500px);
+        background: -webkit-linear-gradient(#b3b3b0 0,#e3e2dd 500px);
+        background: -ms-linear-gradient(top,#b3b3b0 0,#e3e2dd 500px);
+        background: linear-gradient(top,#b3b3b0 0,#e3e2dd 500px);
+        background-color: #e3e2dd;
 
+        margin-bottom: 40px;
+      }
+
+      .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        color: #fff;
+        background-color: #404040;
+        text-align: center;
+        font-weight: bold;
+
+        padding: 10px;
+      }
+
+      .container {
+        position: relative;
+
+        {{! maybe someday: http://jsfiddle.net/zuul/mPnTP/ }}
+
+        background-color: rgb(255, 255, 255);
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.298039) 0px, rgba(0, 0, 0, 0) 7px);
+        box-shadow: 4px 0 2px -2px rgba(0,0,0,0.4), 0 4px 2px -2px rgba(0,0,0,0.4), -4px 0 2px -2px rgba(0,0,0,0.4);
+
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        padding-top: 30px;
+        padding-bottom: 20px;
+      }
+
+      .main-title {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .pics {
+        text-align: center;
+      }
+
+      .img-container {
+        margin: 30px;
+        position: relative;
+        border: 1px solid #404040;
+      }
+
+      .img-container img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .save {
+        color: #fff;
+        background-color: #404040;
+        padding: 5px;
+        border-left: 1px solid #000;
+        border-top: 1px solid #000;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        cursor: pointer;
+      }
+
+      .save:hover {
+        background-color: #535353;
+      }
+
+      .save a {
+        color: #fff;
+      }
+
+      .save a:hover {
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Dinosaur pictures</h1>
+    <div class="container drop-shadow left right bottom">
+      <div class="header">
+        The Dinosaur Picture Database
+      </div>
+
+      <h1 class="main-title">Dinosaur pictures</h1>
       <ul>
       {{#dinos}}
-      <li><a href="/{{.}}-dinosaur-pictures">{{.}}</a></li>
+      <li><h4><a href="/{{.}}-dinosaur-pictures">{{.}}</a></h4></li>
       {{/dinos}}
       </ul>
 
     </div> <!-- end container-fluid -->
 
-    <style>
-
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   </body>
 </html>
