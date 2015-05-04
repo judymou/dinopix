@@ -31,6 +31,5 @@ exports.random = function(req, res) {
   }
 
   var name = dinoNames[Math.floor(Math.random() * dinoNames.length)];
-  req.params.dino = name;
-  exports.dinosaur(req, res);
+  res.redirect('/' + name + '-dinosaur-pictures');
 };
