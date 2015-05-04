@@ -132,6 +132,11 @@
         overflow: hidden;
         text-overflow: ellipsis;
       }
+
+      .source a {
+        color: #fff;
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
@@ -158,7 +163,7 @@
         <div class="img-container">
           <a href="{{.}}" target="_blank"><img src="{{.}}" /></a>
           <div class="source">
-            Source: {{.}}
+            <a target="_blank" href="http://images.google.com/search?tbm=isch&q={{dino}}">Source</a>: {{.}}
           </div>
           <div class="save">
             <a href="{{.}}" download><i class="glyphicon glyphicon-save"></i> Save</a>
