@@ -149,7 +149,7 @@
         <ul>
           <li><a href="/">View other dinosaurs</a></li>
           <li><a href="/random">Random dinosaur</a></li>
-          <li><a href="http://en.wikipedia.org/wiki/{{dino}}">Wikipedia page</a></li>
+          <li><a target="_blank" href="http://en.wikipedia.org/wiki/{{dino}}">Wikipedia page</a></li>
         </ul>
       </div>
 
