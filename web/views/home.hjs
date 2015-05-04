@@ -70,8 +70,19 @@
       }
 
       .dino-list {
-        margin-top: 30px;
-        margin-left: 30px;
+        margin: 30px;
+        margin-right: 60px;
+      }
+
+      ul {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      li {
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
       }
     </style>
   </head>

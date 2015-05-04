@@ -1,6 +1,6 @@
 var express = require('express')
   , dinos = require('./routes/dinos.js')
-  //, sitemap = require('./routes/sitemap.js')
+  , sitemap = require('./routes/sitemap.js')
   , http = require('http')
   , path = require('path')
 
@@ -29,7 +29,7 @@ app.get('/random', dinos.random);
 
 // someday - dinosaurs by era!
 
-//app.get('/sitemap.xml', sitemap.main);
+app.get('/sitemap.xml', sitemap.main);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
