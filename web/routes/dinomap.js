@@ -28,6 +28,9 @@ module.exports = exports = {
     "http://upload.wikimedia.org/wikipedia/commons/a/ab/Appalachiosaurus_montgomeriensis.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/2/23/Appalachiosaurus_arms.jpg",
     "http://upload.wikimedia.org/wikipedia/commons/3/36/Daspletosaurus_FMNH.jpg",
+    "http://vignette3.wikia.nocookie.net/cooldinofacts/images/d/dd/Alectrosaurus1.png/revision/latest?cb=20111210105249",
+    "http://i.ytimg.com/vi/uPYQwY3y0nM/hqdefault.jpg",
+    "http://artfrombooks.com/bmz_cache/2/2a6bcf25ecae6f33eec414340bb86c5b.image.400x336.jpg",
   ],
   "Allosaurus": [
     "http://upload.wikimedia.org/wikipedia/commons/5/51/Allosaurus_BW.jpg",

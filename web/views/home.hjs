@@ -82,7 +82,7 @@
       <h1 class="main-title">Dinosaur Pictures</h1>
       <div class="intro">
         <p>
-          This site is a collection of dinosaur pictures taken from all over the internet.  Look at a <strong><a href="/random">random</a></strong> dinosaur or pick one from below!
+          This site is a collection of dinosaur pictures compiled from all over the internet.  Look at a <strong><a href="/random">random</a></strong> dinosaur or pick one from below!
         </p>
         <p>
           All credit for images goes to the original authors and creators.  DinoPictures.org is a search engine that curates high quality dinosaur pictures.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script>.
