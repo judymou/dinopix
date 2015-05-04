@@ -8,9 +8,46 @@
     <!--
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
     <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
--->
+    -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <style>
+      body {
+        background: #b3b3b0;
+        background: -moz-linear-gradient(top,#b3b3b0 0,#e3e2dd 500px);
+        background: -webkit-linear-gradient(#b3b3b0 0,#e3e2dd 500px);
+        background: -ms-linear-gradient(top,#b3b3b0 0,#e3e2dd 500px);
+        background: linear-gradient(top,#b3b3b0 0,#e3e2dd 500px);
+        background-color: #e3e2dd;
+      }
+
+      .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        color: #fff;
+        background-color: #404040;
+        text-align: center;
+        font-weight: bold;
+
+        padding: 10px;
+      }
+
+      .container {
+        position: relative;
+
+        background-color: rgb(255, 255, 255);
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.298039) 0px, rgba(0, 0, 0, 0) 7px);
+
+        padding-top: 30px;
+      }
+
+      .main-title {
+        text-align: center;
+        font-weight: bold;
+      }
+
       .pics {
         text-align: center;
       }
@@ -55,10 +92,17 @@
   </head>
   <body>
     <div class="container">
+      <div class="header">
+        The Dinosaur Picture Database
+      </div>
 
-      <h1>{{dino}} dinosaur pictures</h1>
+      <h1 class="main-title">{{dino}} dinosaur pictures</h1>
 
-      <h2><a href="/">Back to full dinosaur list</a></h2>
+      <p>
+      All these pictures were collected from the internet.  Credit goes to original authors.
+      </p>
+
+      <h4><a href="/">Search for other dinosaurs</a></h4>
 
       <div class="pics">
         {{#pics}}
@@ -71,11 +115,12 @@
         {{/pics}}
       </div>
 
+      <h4><a href="/">More dinosaur pictures</a></h4>
+
     </div> <!-- end container-fluid -->
 
     {{! TODO similar dinos }}
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   </body>
 </html>
