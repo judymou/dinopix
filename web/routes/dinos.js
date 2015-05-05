@@ -35,3 +35,7 @@ exports.random = function(req, res) {
   var name = dinoNames[Math.floor(Math.random() * dinoNames.length)];
   res.redirect('/' + name + '-dinosaur-pictures');
 };
+
+exports.json = function(req, res) {
+  res.send(JSON.stringify(dinomap));
+};
