@@ -153,7 +153,7 @@
 
       <div class="intro">
         <p>
-        {{dino}} is a {{eats}}.  It lives in the {{period}} period and resided in {{regions}}.
+        {{dino}} is a {{eats}}.  It lived in the {{period}} period and resided in {{regions}}.
         </p>
         <p>
         All these {{dino}} pictures were collected from the internet.  Credit goes to original creators and artists.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script> or use <a href="http://goo.gl/forms/B9rRB2O1wT">this form</a>.
