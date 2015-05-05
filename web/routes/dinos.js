@@ -22,12 +22,28 @@ exports.dinosaur = function(req, res) {
 
   res.render('dino', {
     dino: dino,
+    period: match['period'],
+    eats: match['eats'],
+    regions: (function() {
+      return match['region'].map(function(region) {
+        switch(region) {
+          case 'na':
+            return 'North America';
+          case 'sa':
+            return 'South America';
+          default:
+            return region[0].toUpperCase() + region.slice(1);
+        }
+      }).join(',');
+    })(),
     pics: (function() {
       var pics = [];
-      match.forEach(function(picitem) {
+      match['images'].forEach(function(picitem) {
         pics.push({
-          url: picitem['cloudinary'] || picitem['original'],
-          source: picitem['original'],
+          //url: picitem['cloudinary'] || picitem['original'],
+          url: picitem['url'],
+          source: picitem['source'],
+          source_display: picitem['display_url'],
         });
       });
       return pics;

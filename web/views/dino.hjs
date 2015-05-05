@@ -153,11 +153,14 @@
 
       <div class="intro">
         <p>
+        {{dino}} is a {{eats}}.  It lives in the {{period}} period and resided in {{regions}}.
+        </p>
+        <p>
         All these {{dino}} pictures were collected from the internet.  Credit goes to original creators and artists.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script> or use <a href="http://goo.gl/forms/B9rRB2O1wT">this form</a>.
         </p>
         <ul>
+          <li><strong><a href="/random">Random dinosaur</a></strong></li>
           <li><a href="/">View other dinosaurs</a></li>
-          <li><a href="/random">Random dinosaur</a></li>
           <li><a target="_blank" href="http://en.wikipedia.org/wiki/{{dino}}">Wikipedia page</a></li>
         </ul>
       </div>
@@ -165,9 +168,9 @@
       <div class="pics">
         {{#pics}}
         <div class="img-container">
-          <a href="{{url}}" target="_blank"><img src="{{url}}" /></a>
+          <a href="{{url}}" target="_blank"><img src="http://i.imgur.com/Vmxsx1H.gif" data-src="{{url}}" /></a>
           <div class="source">
-            <a target="_blank" href="http://images.google.com/search?tbm=isch&q={{dino}}">Source</a>: {{source}}
+            <a target="_blank" href="{{source}}">Source</a>: {{source_display}}
           </div>
           <div class="save">
             <a href="{{url}}" download><i class="glyphicon glyphicon-save"></i> Save</a>
@@ -183,6 +186,12 @@
     {{! TODO similar dinos }}
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/unveil/1.3.0/jquery.unveil.min.js"></script>
+    <script>
+      $(function() {
+        $('.img-container img').unveil();
+      });
+    </script>
 
     <!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
 for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
