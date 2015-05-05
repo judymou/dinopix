@@ -179,7 +179,7 @@
         {{/pics}}
       </div>
 
-      <h4 style="text-align:center"><strong><a href="/">More dinosaur pictures</a> &middot; <a href="/random">Random dinosaur</a></strong></h4>
+      <h4 style="text-align:center"><a href="/">More dinosaur pictures</a> &middot; <a href="/random">Random dinosaur</a></h4>
 
     </div> <!-- end container-fluid -->
 

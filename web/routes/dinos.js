@@ -34,7 +34,7 @@ exports.dinosaur = function(req, res) {
           default:
             return region[0].toUpperCase() + region.slice(1);
         }
-      }).join(',');
+      }).join(', ');
     })(),
     pics: (function() {
       var pics = [];
