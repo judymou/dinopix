@@ -22,7 +22,16 @@ exports.dinosaur = function(req, res) {
 
   res.render('dino', {
     dino: dino,
-    pics: match,
+    pics: (function() {
+      var pics = [];
+      match.forEach(function(picitem) {
+        pics.push({
+          url: picitem['cloudinary'] || picitem['original'],
+          source: picitem['original'],
+        });
+      });
+      return pics;
+    })(),
   });
 };
 

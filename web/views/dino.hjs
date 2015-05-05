@@ -165,12 +165,12 @@
       <div class="pics">
         {{#pics}}
         <div class="img-container">
-          <a href="{{.}}" target="_blank"><img src="{{.}}" /></a>
+          <a href="{{url}}" target="_blank"><img src="{{url}}" /></a>
           <div class="source">
-            <a target="_blank" href="http://images.google.com/search?tbm=isch&q={{dino}}">Source</a>: {{.}}
+            <a target="_blank" href="http://images.google.com/search?tbm=isch&q={{dino}}">Source</a>: {{source}}
           </div>
           <div class="save">
-            <a href="{{.}}" download><i class="glyphicon glyphicon-save"></i> Save</a>
+            <a href="{{url}}" download><i class="glyphicon glyphicon-save"></i> Save</a>
           </div>
         </div>
         {{/pics}}
