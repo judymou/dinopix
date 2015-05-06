@@ -47,7 +47,7 @@ exports.dinosaur = function(req, res) {
           source_display: picitem['display_url'],
         });
       });
-      return pics;
+      return pics.slice(0, 20);
     })(),
   });
 };
