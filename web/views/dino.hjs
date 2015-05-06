@@ -201,7 +201,16 @@
         {{/pics}}
       </div>
 
-      <h4 style="text-align:center"><a href="/">More dinosaur pictures</a> &middot; <a href="/random">Random dinosaur</a></h4>
+      <h4 style="text-align:center">
+        <p>
+          <a href="/{{prevDino}}-dinosaur-pictures">&laquo; {{ prevDino }}</a>
+          &middot;
+          <a href="/{{nextDino}}-dinosaur-pictures">{{ nextDino }} &raquo;</a>
+        </p>
+        <p>
+          <a href="/">More dinosaur pictures</a> &middot; <a href="/random">Random dinosaur</a>
+        </p>
+      </h4>
 
     </div> <!-- end container-fluid -->
 
@@ -216,7 +225,7 @@
         $('.report').on('click', function() {
           var $this = $(this);
           $this.parent().hide('fast');
-          $.get('/report?url=' + encodeURIComponent($this.data('url')));
+          $.get('/report?url=' + encodeURIComponent($this.data('url')) + '&dino=' + '{{dino}}');
         });
       });
     </script>

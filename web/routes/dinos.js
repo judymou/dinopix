@@ -1,6 +1,8 @@
 var fs = require('fs');
 var dinomap = require('./dinomap.js');
 
+var reportedCache = {};
+
 exports.home = function(req, res) {
   var dinoNames = [];
   for (var key in dinomap) {
@@ -23,6 +25,8 @@ exports.dinosaur = function(req, res) {
 
   res.render('dino', {
     dino: dino,
+    prevDino: match['prev'],
+    nextDino: match['next'],
     period: match['period'],
     eats: match['eats'],
     regions: (function() {
@@ -68,8 +72,9 @@ exports.json = function(req, res) {
 
 exports.report = function(req, res) {
   var url = decodeURIComponent(req.query.url);
+  var dino = decodeURIComponent(req.query.dino);
   console.log('got report for', url);
-  fs.appendFile('reported.txt', url + '\n', function (err) {
+  fs.appendFile('reported.txt', dino + ':' + url + '\n', function (err) {
     res.send('ok');
   });
 };
