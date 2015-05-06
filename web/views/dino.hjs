@@ -83,6 +83,7 @@
         margin: 30px;
         position: relative;
         border: 1px solid #404040;
+        min-height: 100px;
       }
 
       .img-container img {
@@ -91,6 +92,24 @@
         height: 100%;
         */
         max-width: 100%;
+      }
+
+      .report {
+        color: #fff;
+        background-color: #404040;
+        padding: 5px;
+        border-left: 1px solid #000;
+        border-bottom: 1px solid #000;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        cursor: pointer;
+      }
+
+      .report :hover {
+        background-color: #535353;
       }
 
       .save {
@@ -168,7 +187,10 @@
       <div class="pics">
         {{#pics}}
         <div class="img-container">
-          <a href="{{url}}" target="_blank"><img src="http://i.imgur.com/Vmxsx1H.gif" data-src="{{url}}" /></a>
+          <div class="report" data-url="{{url}}">
+            X
+          </div>
+          <a href="{{url}}" target="_blank"><img foo-src="http://i.imgur.com/Vmxsx1H.gif" src="{{url}}" /></a>
           <div class="source">
             <a target="_blank" href="{{source}}">Source</a>: {{source_display}}
           </div>
@@ -190,6 +212,12 @@
     <script>
       $(function() {
         $('.img-container img').unveil();
+
+        $('.report').on('click', function() {
+          var $this = $(this);
+          $this.parent().hide('fast');
+          $.get('/report?url=' + encodeURIComponent($this.data('url')));
+        });
       });
     </script>
 

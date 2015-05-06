@@ -1,3 +1,4 @@
+var fs = require('fs');
 var dinomap = require('./dinomap.js');
 
 exports.home = function(req, res) {
@@ -63,4 +64,12 @@ exports.random = function(req, res) {
 
 exports.json = function(req, res) {
   res.send(JSON.stringify(dinomap));
+};
+
+exports.report = function(req, res) {
+  var url = decodeURIComponent(req.query.url);
+  console.log('got report for', url);
+  fs.appendFile('reported.txt', url + '\n', function (err) {
+    res.send('ok');
+  });
 };

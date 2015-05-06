@@ -27,6 +27,7 @@ app.get('/', dinos.home);
 app.get('/:dino-dinosaur-pictures', dinos.dinosaur);
 app.get('/random', dinos.random);
 app.get('/json', dinos.json);
+app.get('/report', dinos.report);
 
 // someday - dinosaurs by era!
 
