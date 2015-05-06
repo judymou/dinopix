@@ -203,9 +203,17 @@
 
       <h4 style="text-align:center">
         <p>
+          {{#prevDino}}
           <a href="/{{prevDino}}-dinosaur-pictures">&laquo; {{ prevDino }}</a>
           &middot;
+          {{/prevDino}}
+
+          {{ dino }}
+
+          {{#nextDino}}
+          &middot;
           <a href="/{{nextDino}}-dinosaur-pictures">{{ nextDino }} &raquo;</a>
+          {{/nextDino}}
         </p>
         <p>
           <a href="/">More dinosaur pictures</a> &middot; <a href="/random">Random dinosaur</a>
