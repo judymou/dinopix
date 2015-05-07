@@ -46,7 +46,7 @@ exports.dinosaur = function(req, res) {
       match['images'].forEach(function(picitem) {
         pics.push({
           //url: picitem['cloudinary'] || picitem['original'],
-          url: picitem['url'],
+          url: req.query.review == '1' ? picitem['thumbnail'] : picitem['url'],
           source: picitem['source'],
           source_display: picitem['display_url'],
         });
