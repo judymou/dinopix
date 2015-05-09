@@ -204,7 +204,7 @@
 
       <div class="pics">
         {{#pics}}
-        <div class="img-container">
+        <div class="img-container" data-url="{{url}}">
           <div class="upvote" data-url="{{url}}">
             <i class="glyphicon glyphicon-check"></i>
           </div>
@@ -226,7 +226,7 @@
         <p>
           <strong>
           Next dinosaur:
-          <a href="/{{nextDino}}-dinosaur-pictures">{{ nextDino }} ({{count}} of {{total}}) &raquo;</a>
+          <a id="next-dino" href="/{{nextDino}}-dinosaur-pictures">{{ nextDino }} ({{count}} of {{total}}) &raquo;</a>
           </strong>
         </p>
         <p>
@@ -257,10 +257,39 @@
       $(function() {
         $('.img-container img').unveil();
 
+        var $focusedImageContainer = null;
+        $('.img-container').on('mouseover', function() {
+          $focusedImageContainer = $(this).css('border-color', 'red');
+        }).on('mouseout', function() {
+          $(this).css('border-color', 'black');
+        });
+
+        $('body').on('keypress', function(e) {
+          if (String.fromCharCode(e.keyCode) == 'x') {
+            console.log('Xing...');
+            $focusedImageContainer.hide('fast');
+            $.get('/report?url=' +
+                encodeURIComponent($focusedImageContainer.data('url')) +
+                '&dino=' + '{{dino}}');
+          } else if (String.fromCharCode(e.keyCode) == 'a') {
+            console.log('Aing...');
+            $focusedImageContainer.hide('fast', function() {
+              $(this).show('fast');
+            });
+            $.get('/upvote?url=' +
+                encodeURIComponent($focusedImageContainer.data('url')) +
+                '&dino=' + '{{dino}}');
+          } else if (String.fromCharCode(e.keyCode) == 'q') {
+            window.location.href = $('#next-dino').attr('href');
+          }
+        });
+
         $('.report').on('click', function() {
           var $this = $(this);
           $this.parent().hide('fast');
-          $.get('/report?url=' + encodeURIComponent($this.data('url')) + '&dino=' + '{{dino}}');
+          $.get('/report?url=' +
+              encodeURIComponent($this.data('url')) +
+              '&dino=' + '{{dino}}');
         });
 
         $('.upvote').on('click', function() {
@@ -268,7 +297,9 @@
           $this.parent().hide('fast', function() {
             $this.parent().show('fast');
           });
-          $.get('/upvote?url=' + encodeURIComponent($this.data('url')) + '&dino=' + '{{dino}}');
+          $.get('/upvote?url=' +
+              encodeURIComponent($this.data('url')) +
+              '&dino=' + '{{dino}}');
         });
       });
     </script>
