@@ -203,6 +203,12 @@
 
       <h4 style="text-align:center">
         <p>
+          <strong>
+          Next dinosaur:
+          <a href="/{{nextDino}}-dinosaur-pictures">{{ nextDino }} &raquo;</a>
+          </strong>
+        </p>
+        <p>
           {{#prevDino}}
           <a href="/{{prevDino}}-dinosaur-pictures">&laquo; {{ prevDino }}</a>
           &middot;
