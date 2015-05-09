@@ -15,13 +15,17 @@ module.exports = exports = (function() {
   });
   var sorted = {};
   var prevName = null;
+  var count = 0;
   list.forEach(function(item) {
+    count++;
     sorted[item.name] = item;
     if (prevName) {
       sorted[item.name]['prev'] = prevName;
+      sorted[item.name]['count'] = count;
       sorted[prevName]['next'] = item.name;
     }
     prevName = item.name;
   });
+  sorted['_total'] = count;
   return sorted;
 })();

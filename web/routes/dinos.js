@@ -27,6 +27,8 @@ exports.dinosaur = function(req, res) {
     dino: dino,
     prevDino: match['prev'],
     nextDino: match['next'],
+    count: match['count'],
+    total: dinomap['_total'],
     period: match['period'],
     eats: match['eats'],
     regions: (function() {

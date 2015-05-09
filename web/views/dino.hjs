@@ -226,7 +226,7 @@
         <p>
           <strong>
           Next dinosaur:
-          <a href="/{{nextDino}}-dinosaur-pictures">{{ nextDino }} &raquo;</a>
+          <a href="/{{nextDino}}-dinosaur-pictures">{{ nextDino }} ({{count}} of {{total}}) &raquo;</a>
           </strong>
         </p>
         <p>
