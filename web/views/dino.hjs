@@ -112,6 +112,24 @@
         background-color: #535353;
       }
 
+      .upvote {
+        color: #fff;
+        background-color: #404040;
+        padding: 5px;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        cursor: pointer;
+      }
+
+      .upvote :hover {
+        background-color: #535353;
+      }
+
       .save {
         color: #fff;
         background-color: #404040;
@@ -187,6 +205,9 @@
       <div class="pics">
         {{#pics}}
         <div class="img-container">
+          <div class="upvote" data-url="{{url}}">
+            <i class="glyphicon glyphicon-check"></i>
+          </div>
           <div class="report" data-url="{{url}}">
             X
           </div>
@@ -240,6 +261,14 @@
           var $this = $(this);
           $this.parent().hide('fast');
           $.get('/report?url=' + encodeURIComponent($this.data('url')) + '&dino=' + '{{dino}}');
+        });
+
+        $('.upvote').on('click', function() {
+          var $this = $(this);
+          $this.parent().hide('fast', function() {
+            $this.parent().show('fast');
+          });
+          $.get('/upvote?url=' + encodeURIComponent($this.data('url')) + '&dino=' + '{{dino}}');
         });
       });
     </script>
