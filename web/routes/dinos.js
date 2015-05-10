@@ -3,7 +3,6 @@ var stable = require('stable');
 var dinomap = require('./dinomap.js');
 var featured = require('./featured.js');
 var reported_map = require('./reported.js');
-var upvoted_map = require('./upvoted.js');
 
 var reportedCache = {};
 
@@ -172,7 +171,7 @@ function picsForDinosaur(match) {
   });
 
   return stable(pics, function(a, b) {
-    if (a['voting_url'] in upvoted_map) {
+    if (featured.isFeaturedUrl(a['voting_url'])) {
       return -1;
     }
     return 1;

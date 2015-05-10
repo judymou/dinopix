@@ -25,6 +25,9 @@ module.exports = exports = {
   get: function() {
     return featuredDinos;
   },
+  isFeaturedUrl: function(url) {
+    return url in seenUrls;
+  },
   lazyFilter: function(filterId, fn) {
     if (!filterCache[filterId]) {
       filterCache[filterId] = featuredDinos.filter(function(dino) {
