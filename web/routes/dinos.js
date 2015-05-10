@@ -29,7 +29,12 @@ exports.filter = function(req, res) {
   // TODO choose featured and popular based on who's in this filter!
   var filter = req.params.filter;
   res.render('home', {
-    filterPrefix: filter[0].toUpperCase() + filter.slice(1),
+    filterPrefix: (function() {
+      var splits = filter.split('-');
+      return splits.map(function(split) {
+        return split[0].toUpperCase() + split.slice(1)
+      }).join(' ');
+    })(),
     dinos: (function() {
       switch(filter) {
         case 'triassic':

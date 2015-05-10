@@ -136,18 +136,6 @@
         <p>
         All credit for images goes to the original authors and creators.  DinoPictures.org is a search engine that curates high quality dinosaur pictures.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script> or use <a href="http://goo.gl/forms/B9rRB2O1wT">this form</a>.
         </p>
-
-        {{#showPopular}}
-        <p id="popular">
-          Shortcut to pictures of popular dinosaurs:
-          {{#popular}}
-          <span><a href="/{{.}}-dinosaur-pictures">{{.}}</a></span>
-          {{/popular}}
-        </p>
-
-        <hr/>
-        {{/showPopular}}
-
         {{#showFeatured}}
         <h3>Featured Dinos</h3>
         <div id="featured">
@@ -171,6 +159,65 @@
         {{/showFeatured}}
 
         <hr/>
+
+        <h3>Dinosaurs by Continent</h3>
+        <ul style="text-align: left">
+          <li><a href="/north-america-dinosaurs">
+          North America
+          </a></li>
+          <li><a href="/south-america-dinosaurs">
+          South America
+          </a></li>
+          <li><a href="/europe-dinosaurs">
+          Europe
+          </a></li>
+          <li><a href="/africa-dinosaurs">
+          Africa
+          </a></li>
+          <li><a href="/madagascar-dinosaurs">
+          Madagascar
+          </a></li>
+          <li><a href="/asia-dinosaurs">
+          Asia
+          </a></li>
+          <li><a href="/india-dinosaurs">
+          India
+          </a></li>
+          <li><a href="/australia-dinosaurs">
+          Australia
+          </a></li>
+          <li><a href="/antarctica-dinosaurs">
+          Antarctica
+          </a></li>
+        </ul>
+
+        <h3>Dinosaurs by Period</h3>
+        <ul style="text-align: left">
+          <li><a href="/triassic-dinosaurs">
+          Triassic
+          </a></li>
+          <li><a href="/jurassic-dinosaurs">
+          Jurassic
+          </a></li>
+          <li><a href="/cretaceous-dinosaurs">
+          Cretaceous
+          </a></li>
+        </ul>
+
+        <hr/>
+
+
+        {{#showPopular}}
+        <p id="popular">
+          Shortcut to pictures of popular dinosaurs:
+          {{#popular}}
+          <span><a href="/{{.}}-dinosaur-pictures">{{.}}</a></span>
+          {{/popular}}
+        </p>
+
+        <hr/>
+        {{/showPopular}}
+
 
         <h3>
           Search: <input id="search" type="search"/>
