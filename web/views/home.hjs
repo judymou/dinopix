@@ -80,7 +80,7 @@
       }
 
       #featured img {
-        max-width: 300px;
+        max-width: 200px;
         height: auto;
       }
 
@@ -127,19 +127,33 @@
           {{/popular}}
         </p>
 
+        <hr/>
+
+        <h3>Featured Dinos</h3>
         <div id="featured">
-          <h3>Featured Dinos</h3>
-          {{#featured}}
-            <div>
-              <span><a href="/{{dino}}-dinosaur-pictures">{{dino}}</a></span>
-              <img src="{{img}}">
-            </div>
-          {{/featured}}
+          <div class="row">
+            {{#featuredFirstRow}}
+              <div class="featured-dino col-md-3">
+                <span><a href="/{{dino}}-dinosaur-pictures">{{dino}}</a></span>
+                <img src="{{img}}">
+              </div>
+            {{/featuredFirstRow}}
+          </div>
+          <div class="row" style="margin-top: 30px">
+            {{#featuredSecondRow}}
+              <div class="featured-dino col-md-3">
+                <span><a href="/{{dino}}-dinosaur-pictures">{{dino}}</a></span>
+                <img src="{{img}}">
+              </div>
+            {{/featuredSecondRow}}
+          </div>
         </div>
 
-        <p>
+        <hr/>
+
+        <h3>
           Search: <input id="search" type="search"/>
-        </p>
+        </h3>
       </div>
       <div class="dino-list">
         <ul>
@@ -152,13 +166,13 @@
     </div> <!-- end container-fluid -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.js"></script>
     <script>
       $(function() {
         $('.dino-list li').each(function() {
           var $this = $(this);
           $this.data('match', $this.text().toLowerCase());
         });
+
         $('#search').on('keyup', function() {
           var val = $(this).val().toLowerCase();
           $('.dino-list li').each(function() {

@@ -1,6 +1,7 @@
 var fs = require('fs');
 var dinomap = require('./dinomap.js');
 var featured = require('./featured.js');
+var reported_map = require('./reported.js');
 
 var reportedCache = {};
 
@@ -9,11 +10,13 @@ exports.home = function(req, res) {
   for (var key in dinomap) {
     dinoNames.push(key);
   }
+  featured = shuffle(featured);
   res.render('home', {
     dinos: dinoNames,
     popular: ['Tyrannosaurus', 'Allosaurus', 'Ankylosaurus', 'Triceratops',
       'Brachiosaurus', 'Apatosaurus', 'Pachycephalosaurus'],
-    featured: shuffle(featured).slice(0, 5),
+    featuredFirstRow: featured.slice(0, 4),
+    featuredSecondRow: featured.slice(4, 8),
   });
 };
 
@@ -45,18 +48,7 @@ exports.dinosaur = function(req, res) {
         }
       }).join(', ');
     })(),
-    pics: (function() {
-      var pics = [];
-      match['images'].forEach(function(picitem) {
-        pics.push({
-          //url: picitem['cloudinary'] || picitem['original'],
-          url: req.query.review == '1' ? picitem['thumbnail'] : picitem['url'],
-          source: picitem['source'],
-          source_display: picitem['display_url'],
-        });
-      });
-      return pics.slice(0, 20);
-    })(),
+    pics: picsForDinosaur(match),
   });
 };
 
@@ -91,6 +83,25 @@ exports.upvote = function(req, res) {
     res.send('ok');
   });
 };
+
+// Returns pics for a given dinosaur from dinomap.  Does all the ranking and
+// ensures bad images aren't returned.
+function picsForDinosaur(match, useThumbnails) {
+  var pics = [];
+  match['images'].forEach(function(picitem) {
+    if (picitem['url'] in reported_map) {
+      return true;
+    }
+    pics.push({
+      //url: picitem['cloudinary'] || picitem['original'],
+      url: useThumbnails ? picitem['thumbnail'] : picitem['url'],
+      source: picitem['source'],
+      source_display: picitem['display_url'],
+    });
+  });
+  return pics.slice(0, 20);
+}
+
 
 function shuffle(o) {
   for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
