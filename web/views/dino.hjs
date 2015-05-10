@@ -126,33 +126,26 @@
         cursor: pointer;
       }
 
-      .upvote {
+      .vote {
+        font-size: 20px;
         color: #fff;
         background-color: #404040;
-        padding: 5px;
         border-right: 1px solid #000;
         border-bottom: 1px solid #000;
 
         position: absolute;
-        top: 0;
         left: 0;
 
         cursor: pointer;
       }
 
+      .upvote {
+        top: 0;
+        border-bottom: 1px solid #333;
+      }
+
       .downvote {
-        color: #fff;
-        background-color: #404040;
-        padding: 5px;
-        border-top: 1px solid #000;
-        border-right: 1px solid #000;
-        border-bottom: 1px solid #000;
-
-        position: absolute;
-        top: 30px;
-        left: 0;
-
-        cursor: pointer;
+        top: 29px;
       }
 
       .upvote :hover {
@@ -243,10 +236,10 @@
               X
             </div>
           {{/adminReview}}
-          <div class="upvote" data-url="{{voting_url}}">
+          <div class="vote upvote" data-url="{{voting_url}}">
             <i class="glyphicon glyphicon-arrow-up"></i>
           </div>
-          <div class="downvote" data-url="{{voting_url}}">
+          <div class="vote downvote" data-url="{{voting_url}}">
             <i class="glyphicon glyphicon-arrow-down"></i>
           </div>
           <a href="{{clickthrough_url}}" target="_blank"><img src="http://i.imgur.com/Vmxsx1H.gif" data-src="{{url}}" /></a>
@@ -302,7 +295,7 @@
           $(this).css('border-color', 'black');
         });
 
-        /*
+        {{#adminReview}}
         $('body').on('keypress', function(e) {
           if (String.fromCharCode(e.keyCode) == 'x') {
             $focusedImageContainer.hide('fast');
@@ -320,7 +313,8 @@
             window.location.href = $('#next-dino').attr('href');
           }
         });
-        */
+        {{/adminReview}}
+
         $('.upvote').on('click', function() {
           if ($focusedImageContainer.data('upvoted')) {
             alert('You already upvoted this picture.');
