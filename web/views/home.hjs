@@ -136,11 +136,16 @@
       {{/filterPrefix}}
       <div class="intro">
         <p>
-          This site is a collection of dinosaur pictures compiled from all over the internet.  Look at a <strong><a href="/random">random</a></strong> dinosaur or pick one from below!
+          This is a collection of dinosaur pictures compiled from all over the internet.  Look at a <strong><a href="/random">random</a></strong> dinosaur or pick one from below!
+        {{#filterPrefix}}
+        Tired of {{filterPrefix}} dinosaurs?  <strong><a href="/">See everything</strong></a>.
+        {{/filterPrefix}}
         </p>
-        <p>
-        All credit for images goes to the original authors and creators.  DinoPictures.org is a search engine that curates high quality dinosaur pictures.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script> or use <a href="http://goo.gl/forms/B9rRB2O1wT">this form</a>.
-        </p>
+        {{^filterPrefix}}
+          <p>
+          All credit for images goes to the original authors and creators.  DinoPictures.org is a search engine that curates high quality dinosaur pictures.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script> or use <a href="http://goo.gl/forms/B9rRB2O1wT">this form</a>.
+          </p>
+        {{/filterPrefix}}
         {{#showFeatured}}
         <h3>Featured Dinosaurs</h3>
         <div id="featured">
@@ -161,7 +166,7 @@
             {{/featuredSecondRow}}
           </div>
         </div>
-        <h5 class="scroll-to-search"><a href="#">&raquo; Search {{totalCount}} dinosaurs</a></h5>
+        <h5 class="scroll-to-search"><a href="#">&raquo; Search {{totalCount}} {{filterPrefix}} dinosaurs</a></h5>
         {{/showFeatured}}
 
         <hr/>
