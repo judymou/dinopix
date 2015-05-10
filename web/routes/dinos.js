@@ -1,4 +1,5 @@
 var fs = require('fs');
+var stable = require('stable');
 var dinomap = require('./dinomap.js');
 var featured = require('./featured.js');
 var reported_map = require('./reported.js');
@@ -89,7 +90,11 @@ exports.upvote = function(req, res) {
 // ensures bad images aren't returned.
 function picsForDinosaur(match, useThumbnails) {
   var pics = [];
+  var count = 0;
   match['images'].forEach(function(picitem) {
+    if (++count >= 20) {
+      return false;
+    }
     if (picitem['url'] in reported_map) {
       return true;
     }
@@ -101,7 +106,8 @@ function picsForDinosaur(match, useThumbnails) {
       source_display: picitem['display_url'],
     });
   });
-  return pics.slice(0, 20).sort(function(a, b) {
+
+  return stable(pics, function(a, b) {
     if (a['original_url'] in upvoted_map) {
       return -1;
     }
