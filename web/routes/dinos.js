@@ -70,6 +70,8 @@ exports.filter = function(req, res) {
     totalCount: dinoNamesList.length,
     showFeatured: true,
     featuredFirstRow: featuredDinos.slice(0, 4),
+    featuredSecondRow: featuredDinos.length > 20 ?
+      featuredDinos.slice(4, 8) : null,
     filterPrefix: (function() {
       var splits = filter.split('-');
       return splits.map(function(split) {
