@@ -215,7 +215,7 @@
               X
             </div>
           {{/adminReview}}
-          <a href="{{clickthrough_url}}" target="_blank"><img foo-src="http://i.imgur.com/Vmxsx1H.gif" src="{{url}}" /></a>
+          <a href="{{clickthrough_url}}" target="_blank"><img src="http://i.imgur.com/Vmxsx1H.gif" data-src="{{url}}" /></a>
           <div class="source">
             <a target="_blank" href="{{source}}">Source</a>: {{source_display}}
           </div>
