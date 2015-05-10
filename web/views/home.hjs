@@ -2,9 +2,15 @@
   <html lang="en">
     <head>
       <meta charset="utf-8">
-      <title>Dinosaur Pictures - Awesome Dinosaur Pictures!</title>
+      <title>Dinosaur Pictures - Awesome Dinosaur Pictures</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Pictures of dinosaurs!">
+      <meta name="description" content="Curated high quality database of dinosaur pictures">
+
+      <meta property="og:title" content="DinosaurPictures.org - Awesome Dinosaur Pictures" />
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content="http://dinosaurpictures.org" />
+      <meta property="og:image" content="https://res.cloudinary.com/dinopics/image/upload/c_limit,w_960/v1431264203/Majungasaurus_Majungasaurus-_Phil-Brownlow_17.jpg" />
+      <meta property="og:description" content="Curated high quality database of dinosaur pictures" />
       <!--
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
     <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
