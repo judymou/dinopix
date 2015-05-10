@@ -84,6 +84,7 @@
       }
 
       #featured {
+        margin-bottom: 10px;
       }
 
       #featured img {
@@ -92,8 +93,8 @@
       }
 
       .featured-dino {
-        padding: 30px;
-        padding-bottom: 0;
+        padding-left: 30px;
+        padding-bottom: 25px;
       }
 
       #popular {
@@ -137,7 +138,7 @@
         All credit for images goes to the original authors and creators.  DinoPictures.org is a search engine that curates high quality dinosaur pictures.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script> or use <a href="http://goo.gl/forms/B9rRB2O1wT">this form</a>.
         </p>
         {{#showFeatured}}
-        <h3>Featured Dinos</h3>
+        <h3>Featured Dinosaurs</h3>
         <div id="featured">
           <div class="row">
             {{#featuredFirstRow}}
@@ -220,7 +221,12 @@
 
 
         <h3>
-          Search: <input id="search" type="search"/>
+          {{#filterPrefix}}
+            Search {{filterPrefix}} dinosaurs: <input id="search" type="search"/>
+          {{/filterPrefix}}
+          {{^filterPrefix}}
+            Search: <input id="search" type="search"/>
+          {{/filterPrefix}}
         </h3>
       </div>
       <div class="dino-list">
