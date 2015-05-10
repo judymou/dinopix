@@ -95,7 +95,7 @@ function picsForDinosaur(match, useThumbnails) {
     if (++count >= 20) {
       return false;
     }
-    if (picitem['url'] in reported_map) {
+    if (decodeURIComponent(picitem['url']) in reported_map) {
       return true;
     }
     pics.push({
