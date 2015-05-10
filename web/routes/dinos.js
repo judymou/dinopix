@@ -12,14 +12,14 @@ exports.home = function(req, res) {
   for (var key in dinomap.get()) {
     dinoNames.push(key);
   }
-  featured = shuffle(featured);
+  var featuredDinos = shuffle(featured.get());
   res.render('home', {
     dinos: dinoNames,
     popular: ['Tyrannosaurus', 'Allosaurus', 'Ankylosaurus', 'Triceratops',
       'Brachiosaurus', 'Apatosaurus', 'Pachycephalosaurus'],
     // TODO same dino can appear twice!
-    featuredFirstRow: featured.slice(0, 4),
-    featuredSecondRow: featured.slice(4, 8),
+    featuredFirstRow: featuredDinos.slice(0, 4),
+    featuredSecondRow: featuredDinos.slice(4, 8),
     showPopular: true,
     showFeatured: true,
   });
@@ -28,41 +28,54 @@ exports.home = function(req, res) {
 exports.filter = function(req, res) {
   // TODO choose featured and popular based on who's in this filter!
   var filter = req.params.filter;
+  var dinoNamesList = (function() {
+    switch(filter) {
+      case 'triassic':
+        return dinomap.getTriassicDinoNames();
+      case 'jurassic':
+        return dinomap.getJurassicDinoNames();
+      case 'cretaceous':
+        return dinomap.getCretaceousDinoNames();
+      case 'north-america':
+        return dinomap.getNorthAmericaDinoNames();
+      case 'south-america':
+        return dinomap.getSouthAmericaDinoNames();
+      case 'europe':
+        return dinomap.getEuropeDinoNames();
+      case 'africa':
+        return dinomap.getAfricaDinoNames();
+      case 'madagascar':
+        return dinomap.getMadagascarDinoNames();
+      case 'asia':
+        return dinomap.getAsiaDinoNames();
+      case 'india':
+        return dinomap.getIndiaDinoNames();
+      case 'australia':
+        return dinomap.getAustraliaDinoNames();
+      case 'antarctica':
+        return dinomap.getAntarcticaDinoNames();
+    }
+  })();
+  // Put all the names matching this filter into a map, then have the lazy
+  // filter function filter featured dinos by what's in the map.
+  // TODO getting lazy here.  This is inefficient.
+  var dinoNamesMap = {};
+  dinoNamesList.forEach(function(name) {
+    dinoNamesMap[name] = true;
+  });
+  var featuredDinos = shuffle(featured.lazyFilter(filter, function(dino) {
+    return dino['name'] in dinoNamesMap;
+  }));
   res.render('home', {
+    showFeatured: true,
+    featuredFirstRow: featuredDinos.slice(0, 4),
     filterPrefix: (function() {
       var splits = filter.split('-');
       return splits.map(function(split) {
         return split[0].toUpperCase() + split.slice(1)
       }).join(' ');
     })(),
-    dinos: (function() {
-      switch(filter) {
-        case 'triassic':
-          return dinomap.getTriassicDinoNames();
-        case 'jurassic':
-          return dinomap.getJurassicDinoNames();
-        case 'cretaceous':
-          return dinomap.getCretaceousDinoNames();
-        case 'north-america':
-          return dinomap.getNorthAmericaDinoNames();
-        case 'south-america':
-          return dinomap.getSouthAmericaDinoNames();
-        case 'europe':
-          return dinomap.getEuropeDinoNames();
-        case 'africa':
-          return dinomap.getAfricaDinoNames();
-        case 'madagascar':
-          return dinomap.getMadagascarDinoNames();
-        case 'asia':
-          return dinomap.getAsiaDinoNames();
-        case 'india':
-          return dinomap.getIndiaDinoNames();
-        case 'australia':
-          return dinomap.getAustraliaDinoNames();
-        case 'antarctica':
-          return dinomap.getAntarcticaDinoNames();
-      }
-    })(),
+    dinos: dinoNamesList,
   });
 };
 
