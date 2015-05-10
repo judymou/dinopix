@@ -13,6 +13,7 @@ list.sort(function(a, b) {
   return a.name.localeCompare(b.name);
 });
 var sortedDinoMap = {};
+var imageUrlToThumbnail = {};
 
 // Eras
 var triassicList = [];
@@ -36,6 +37,11 @@ list.forEach(function(item) {
   count++;
   var dinoName = item['name'];
   sortedDinoMap[dinoName] = item;
+
+  // Record image url map
+  item['images'].forEach(function(imageInfo) {
+    imageUrlToThumbnail[imageInfo['url']] = imageInfo['thumbnail'];
+  });
 
   // Period
   var period = item['period'].toLowerCase();
@@ -96,6 +102,9 @@ list.forEach(function(item) {
 module.exports = exports = {
   get: function() {
     return sortedDinoMap;
+  },
+  getThumbFor: function(url) {
+    return imageUrlToThumbnail[url];
   },
   getTriassicDinoNames: function() {
     return triassicList;
