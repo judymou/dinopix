@@ -29,7 +29,7 @@ app.get('/:filter-dinosaurs', dinos.filter);
 app.get('/random', dinos.random);
 app.get('/json', dinos.json);
 app.get('/report', dinos.report);
-app.get('/upvote', dinos.upvote);
+app.get('/featurevote', dinos.featurevote);
 
 // someday - dinosaurs by era!
 

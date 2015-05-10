@@ -2,7 +2,7 @@ var fs = require('fs');
 var path = require('path');
 var dinomap = require('./dinomap.js');
 
-var text = fs.readFileSync(path.resolve(__dirname, '../upvoted.txt')) + '';
+var text = fs.readFileSync(path.resolve(__dirname, '../featurevoted.txt')) + '';
 lines = text.match(/[^\r\n]+/g);
 var featuredDinos = [];
 var seenUrls = {};

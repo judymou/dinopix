@@ -112,7 +112,7 @@
         background-color: #535353;
       }
 
-      .upvote {
+      .featurevote {
         color: #fff;
         background-color: #404040;
         padding: 5px;
@@ -126,7 +126,7 @@
         cursor: pointer;
       }
 
-      .upvote :hover {
+      .featurevote :hover {
         background-color: #535353;
       }
 
@@ -205,12 +205,14 @@
       <div class="pics">
         {{#pics}}
         <div class="img-container" data-url="{{voting_url}}">
-          <div class="upvote" data-url="{{voting_url}}">
-            <i class="glyphicon glyphicon-check"></i>
-          </div>
-          <div class="report" data-url="{{voting_url}}">
-            X
-          </div>
+          {{#adminReview}}
+            <div class="featurevote" data-url="{{voting_url}}">
+              <i class="glyphicon glyphicon-check"></i>
+            </div>
+            <div class="report" data-url="{{voting_url}}">
+              X
+            </div>
+          {{/adminReview}}
           <a href="{{clickthrough_url}}" target="_blank"><img foo-src="http://i.imgur.com/Vmxsx1H.gif" src="{{url}}" /></a>
           <div class="source">
             <a target="_blank" href="{{source}}">Source</a>: {{source_display}}
@@ -274,7 +276,7 @@
             $focusedImageContainer.hide('fast', function() {
               $(this).show('fast');
             });
-            $.get('/upvote?url=' +
+            $.get('/featurevote?url=' +
                 encodeURIComponent($focusedImageContainer.data('url')) +
                 '&dino=' + '{{dino}}');
           } else if (String.fromCharCode(e.keyCode) == 'q') {
@@ -290,12 +292,12 @@
               '&dino=' + '{{dino}}');
         });
 
-        $('.upvote').on('click', function() {
+        $('.featurevote').on('click', function() {
           var $this = $(this);
           $this.parent().hide('fast', function() {
             $this.parent().show('fast');
           });
-          $.get('/upvote?url=' +
+          $.get('/featurevote?url=' +
               encodeURIComponent($this.data('url')) +
               '&dino=' + '{{dino}}');
         });

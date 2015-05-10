@@ -109,6 +109,7 @@ exports.dinosaur = function(req, res) {
       }).join(', ');
     })(),
     pics: picsForDinosaur(match),
+    adminReview: !!req.query['review'],
   });
 };
 
@@ -135,11 +136,11 @@ exports.report = function(req, res) {
   });
 };
 
-exports.upvote = function(req, res) {
+exports.featurevote = function(req, res) {
   var url = decodeURIComponent(req.query.url);
   var dino = decodeURIComponent(req.query.dino);
-  console.log('got upvote for', url);
-  fs.appendFile('upvoted.txt', dino + ':' + url + '\n', function (err) {
+  console.log('got featurevote for', url);
+  fs.appendFile('featurevoted.txt', dino + ':' + url + '\n', function (err) {
     res.send('ok');
   });
 };

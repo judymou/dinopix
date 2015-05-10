@@ -5,6 +5,9 @@ module.exports = exports = (function() {
   var text = fs.readFileSync(path.resolve(__dirname, '../upvoted.txt')) + '';
   lines = text.match(/[^\r\n]+/g);
   var ret = {};
+  if (!lines) {
+    return ret;
+  }
   lines.forEach(function(line) {
     var dino = line.slice(0, line.indexOf(':'));
     var url = line.slice(line.indexOf(':') + 1);
