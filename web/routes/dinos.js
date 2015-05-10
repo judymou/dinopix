@@ -2,6 +2,7 @@ var fs = require('fs');
 var dinomap = require('./dinomap.js');
 var featured = require('./featured.js');
 var reported_map = require('./reported.js');
+var upvoted_map = require('./upvoted.js');
 
 var reportedCache = {};
 
@@ -15,6 +16,7 @@ exports.home = function(req, res) {
     dinos: dinoNames,
     popular: ['Tyrannosaurus', 'Allosaurus', 'Ankylosaurus', 'Triceratops',
       'Brachiosaurus', 'Apatosaurus', 'Pachycephalosaurus'],
+    // TODO same dino can appear twice!
     featuredFirstRow: featured.slice(0, 4),
     featuredSecondRow: featured.slice(4, 8),
   });
@@ -94,12 +96,18 @@ function picsForDinosaur(match, useThumbnails) {
     }
     pics.push({
       //url: picitem['cloudinary'] || picitem['original'],
+      original_url: picitem['url'],
       url: useThumbnails ? picitem['thumbnail'] : picitem['url'],
       source: picitem['source'],
       source_display: picitem['display_url'],
     });
   });
-  return pics.slice(0, 20);
+  return pics.slice(0, 20).sort(function(a, b) {
+    if (a['original_url'] in upvoted_map) {
+      return -1;
+    }
+    return 1;
+  });
 }
 
 
