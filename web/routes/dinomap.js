@@ -1,30 +1,136 @@
 var fs = require('fs');
 var path = require('path');
 
-module.exports = exports = (function() {
-  var map = JSON.parse(fs.readFileSync(
-    path.resolve(__dirname, '../../data/megascrape/processed_all.json')));
+var map = JSON.parse(fs.readFileSync(
+  path.resolve(__dirname, '../../data/megascrape/processed_all.json')));
 
-  // Sort the map by dino name.
-  var list = [];
-  for (var key in map) {
-    list.push(map[key]);
+// Sort the map by dino name.
+var list = [];
+for (var key in map) {
+  list.push(map[key]);
+}
+list.sort(function(a, b) {
+  return a.name.localeCompare(b.name);
+});
+var sortedDinoMap = {};
+
+// Eras
+var triassicList = [];
+var jurassicList = [];
+var cretaceousList = [];
+
+// Geographies
+var northAmericaList = [];
+var southAmericaList = [];
+var europeList = [];
+var africaList = [];
+var madagascarList = [];
+var asiaList = [];
+var indiaList = [];
+var australiaList = [];
+var antarcticaList = [];
+
+var prevName = null;
+var count = 0;
+list.forEach(function(item) {
+  count++;
+  var dinoName = item['name'];
+  sortedDinoMap[dinoName] = item;
+
+  // Period
+  var period = item['period'].toLowerCase();
+  if (period.indexOf('triassic') > -1) {
+    triassicList.push(dinoName);
   }
-  list.sort(function(a, b) {
-    return a.name.localeCompare(b.name);
-  });
-  var sorted = {};
-  var prevName = null;
-  var count = 0;
-  list.forEach(function(item) {
-    count++;
-    sorted[item.name] = item;
-    if (prevName) {
-      sorted[item.name]['prev'] = prevName;
-      sorted[item.name]['count'] = count;
-      sorted[prevName]['next'] = item.name;
+  if (period.indexOf('jurassic') > -1) {
+    jurassicList.push(dinoName);
+  }
+  if (period.indexOf('cretaceous') > -1) {
+    cretaceousList.push(dinoName);
+  }
+
+  // Geography
+  item['region'].forEach(function(region) {
+    switch(region) {
+      case 'na':
+        northAmericaList.push(dinoName);
+        break;
+      case 'sa':
+        southAmericaList.push(dinoName);
+        break;
+      case 'europe':
+        europeList.push(dinoName);
+        break;
+      case 'africa':
+        africaList.push(dinoName);
+        break;
+      case 'madagascar':
+        madagascarList.push(dinoName);
+        break;
+      case 'asia':
+        asiaList.push(dinoName);
+        break;
+      case 'india':
+        indiaList.push(dinoName);
+        break;
+      case 'australia':
+        australiaList.push(dinoName);
+        break;
+      case 'antarctica':
+        antarcticaList.push(dinoName);
+        break;
+      default:
+        console.warn('What region is', region, '???');
     }
-    prevName = item.name;
   });
-  return sorted;
-})();
+
+  // Previous and next
+  if (prevName) {
+    sortedDinoMap[dinoName]['prev'] = prevName;
+    sortedDinoMap[dinoName]['count'] = count;
+    sortedDinoMap[prevName]['next'] = dinoName;
+  }
+  prevName = item.name;
+});
+
+module.exports = exports = {
+  get: function() {
+    return sortedDinoMap;
+  },
+  getTriassicDinoNames: function() {
+    return triassicList;
+  },
+  getJurassicDinoNames: function() {
+    return jurassicList;
+  },
+  getCretaceousDinoNames: function() {
+    return cretaceousList;
+  },
+  getNorthAmericaDinoNames: function() {
+    return northAmericaList;
+  },
+  getSouthAmericaDinoNames: function() {
+    return southAmericaList;
+  },
+  getEuropeDinoNames: function() {
+    return europeList;
+  },
+  getAfricaDinoNames: function() {
+    return africaList;
+  },
+  getMadagascarDinoNames: function() {
+    return madagascarList;
+  },
+  getAsiaDinoNames: function() {
+    return asiaList;
+  },
+  getIndiaDinoNames: function() {
+    return indiaList;
+  },
+  getAustraliaDinoNames: function() {
+    return australiaList;
+  },
+  getAntarcticaDinoNames: function() {
+    return antarcticaList;
+  }
+}

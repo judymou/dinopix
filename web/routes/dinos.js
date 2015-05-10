@@ -9,7 +9,7 @@ var reportedCache = {};
 
 exports.home = function(req, res) {
   var dinoNames = [];
-  for (var key in dinomap) {
+  for (var key in dinomap.get()) {
     dinoNames.push(key);
   }
   featured = shuffle(featured);
@@ -20,12 +20,50 @@ exports.home = function(req, res) {
     // TODO same dino can appear twice!
     featuredFirstRow: featured.slice(0, 4),
     featuredSecondRow: featured.slice(4, 8),
+    showPopular: true,
+    showFeatured: true,
+  });
+};
+
+exports.filter = function(req, res) {
+  // TODO choose featured and popular based on who's in this filter!
+  var filter = req.params.filter;
+  res.render('home', {
+    filterPrefix: filter[0].toUpperCase() + filter.slice(1),
+    dinos: (function() {
+      switch(filter) {
+        case 'triassic':
+          return dinomap.getTriassicDinoNames();
+        case 'jurassic':
+          return dinomap.getJurassicDinoNames();
+        case 'cretaceous':
+          return dinomap.getCretaceousDinoNames();
+        case 'north-america':
+          return dinomap.getNorthAmericaDinoNames();
+        case 'south-america':
+          return dinomap.getSouthAmericaDinoNames();
+        case 'europe':
+          return dinomap.getEuropeDinoNames();
+        case 'africa':
+          return dinomap.getAfricaDinoNames();
+        case 'madagascar':
+          return dinomap.getMadagascarDinoNames();
+        case 'asia':
+          return dinomap.getAsiaDinoNames();
+        case 'india':
+          return dinomap.getIndiaDinoNames();
+        case 'australia':
+          return dinomap.getAustraliaDinoNames();
+        case 'antarctica':
+          return dinomap.getAntarcticaDinoNames();
+      }
+    })(),
   });
 };
 
 exports.dinosaur = function(req, res) {
   var dino = req.params.dino.trim();
-  var match = dinomap[dino];
+  var match = dinomap.get()[dino];
   if (!match) {
     res.send('not found');
     return;
@@ -56,7 +94,7 @@ exports.dinosaur = function(req, res) {
 
 exports.random = function(req, res) {
   var dinoNames = [];
-  for (var key in dinomap) {
+  for (var key in dinomap.get()) {
     dinoNames.push(key);
   }
 
@@ -65,7 +103,7 @@ exports.random = function(req, res) {
 };
 
 exports.json = function(req, res) {
-  res.send(JSON.stringify(dinomap));
+  res.send(JSON.stringify(dinomap.get()));
 };
 
 exports.report = function(req, res) {

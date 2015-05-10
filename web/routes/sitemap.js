@@ -3,7 +3,7 @@ var dinomap = require('./dinomap.js');
 
 var sitemap_urls = [];
 sitemap_urls.push({url: '/', changefreq: 'daily', priority: 1.0});
-for (var key in dinomap) {
+for (var key in dinomap.get()) {
   sitemap_urls.push({url: key + '-dinosaur-pictures', changefreq: 'weekly', priority: 0.8});
 }
 console.log(sitemap_urls.length, 'in sitemap');

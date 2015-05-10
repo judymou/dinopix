@@ -40,6 +40,14 @@
         padding: 10px;
       }
 
+      .header a {
+        color: #fff;
+      }
+
+      .header a:hover {
+        text-decoration: none;
+      }
+
       .container {
         position: relative;
 
@@ -112,10 +120,15 @@
   <body>
     <div class="container drop-shadow left right bottom">
       <div class="header">
-        The Dinosaur Picture Database
+        <a href="/">The Dinosaur Picture Database</a>
       </div>
 
-      <h1 class="main-title">Dinosaur Pictures</h1>
+      {{#filterPrefix}}
+        <h1 class="main-title">{{filterPrefix}} Dinosaur Pictures</h1>
+      {{/filterPrefix}}
+      {{^filterPrefix}}
+        <h1 class="main-title">Dinosaur Pictures</h1>
+      {{/filterPrefix}}
       <div class="intro">
         <p>
           This site is a collection of dinosaur pictures compiled from all over the internet.  Look at a <strong><a href="/random">random</a></strong> dinosaur or pick one from below!
@@ -124,6 +137,7 @@
         All credit for images goes to the original authors and creators.  DinoPictures.org is a search engine that curates high quality dinosaur pictures.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script> or use <a href="http://goo.gl/forms/B9rRB2O1wT">this form</a>.
         </p>
 
+        {{#showPopular}}
         <p id="popular">
           Shortcut to pictures of popular dinosaurs:
           {{#popular}}
@@ -132,7 +146,9 @@
         </p>
 
         <hr/>
+        {{/showPopular}}
 
+        {{#showFeatured}}
         <h3>Featured Dinos</h3>
         <div id="featured">
           <div class="row">
@@ -152,6 +168,7 @@
             {{/featuredSecondRow}}
           </div>
         </div>
+        {{/showFeatured}}
 
         <hr/>
 
