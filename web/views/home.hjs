@@ -101,6 +101,11 @@
         padding-bottom: 25px;
       }
 
+      .gray-highlight {
+        background-color: #eee;
+        padding: 30px;
+      }
+
       #popular {
         background-color: #eee;
         padding: 30px;
@@ -119,6 +124,8 @@
         display: inline-block;
         vertical-align: top;
         padding: 10px;
+        padding-left: 0;
+        padding-right: 20px;
       }
     </style>
   </head>
@@ -171,53 +178,55 @@
 
         <hr/>
 
-        <h3>Dinosaurs by Continent</h3>
-        <ul style="text-align: left">
-          <li><a href="/north-america-dinosaurs">
-          North America
-          </a></li>
-          <li><a href="/south-america-dinosaurs">
-          South America
-          </a></li>
-          <li><a href="/europe-dinosaurs">
-          Europe
-          </a></li>
-          <li><a href="/africa-dinosaurs">
-          Africa
-          </a></li>
-          <li><a href="/madagascar-dinosaurs">
-          Madagascar
-          </a></li>
-          <li><a href="/asia-dinosaurs">
-          Asia
-          </a></li>
-          <li><a href="/india-dinosaurs">
-          India
-          </a></li>
-          <li><a href="/australia-dinosaurs">
-          Australia
-          </a></li>
-          <li><a href="/antarctica-dinosaurs">
-          Antarctica
-          </a></li>
-        </ul>
+        <div>
+          <h3>Dinosaurs by Continent</h3>
+          <ul style="text-align: left">
+            <li><a href="/north-america-dinosaurs">
+            North America
+            </a></li>
+            <li><a href="/south-america-dinosaurs">
+            South America
+            </a></li>
+            <li><a href="/europe-dinosaurs">
+            Europe
+            </a></li>
+            <li><a href="/africa-dinosaurs">
+            Africa
+            </a></li>
+            <li><a href="/madagascar-dinosaurs">
+            Madagascar
+            </a></li>
+            <li><a href="/asia-dinosaurs">
+            Asia
+            </a></li>
+            <li><a href="/india-dinosaurs">
+            India
+            </a></li>
+            <li><a href="/australia-dinosaurs">
+            Australia
+            </a></li>
+            <li><a href="/antarctica-dinosaurs">
+            Antarctica
+            </a></li>
+          </ul>
 
-        <h3>Dinosaurs by Period</h3>
-        <ul style="text-align: left">
-          <li><a href="/triassic-dinosaurs">
-          Triassic
-          </a></li>
-          <li><a href="/jurassic-dinosaurs">
-          Jurassic
-          </a></li>
-          <li><a href="/cretaceous-dinosaurs">
-          Cretaceous
-          </a></li>
-        </ul>
+          <h3>Dinosaurs by Period</h3>
+          <ul style="text-align: left">
+            <li><a href="/triassic-dinosaurs">
+            Triassic
+            </a></li>
+            <li><a href="/jurassic-dinosaurs">
+            Jurassic
+            </a></li>
+            <li><a href="/cretaceous-dinosaurs">
+            Cretaceous
+            </a></li>
+          </ul>
+        </div>
 
         <hr/>
 
-
+        <!--
         {{#showPopular}}
         <p id="popular">
           Shortcut to pictures of popular dinosaurs:
@@ -228,6 +237,7 @@
 
         <hr/>
         {{/showPopular}}
+        -->
 
 
         <h3 id="search-box-container">
