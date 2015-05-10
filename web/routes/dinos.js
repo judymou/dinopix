@@ -156,10 +156,14 @@ function picsForDinosaur(match) {
     if (decodeURIComponent(picitem['url']) in reported_map) {
       return true;
     }
+    var cloudinary_url_resized = picitem['cloudinary_url'] ?
+      picitem['cloudinary_url'].replace('/upload/', '/upload/c_limit,w_960/') :
+      null;
     pics.push({
-      original_url: picitem['url'],
       //url: picitem['url'],
-      url: picitem['cloudinary_url'] || picitem['original'],
+      voting_url: picitem['url'],
+      url: cloudinary_url_resized || picitem['url'],
+      clickthrough_url: picitem['cloudinary_url'] || picitem['url'],
       thumbnail: picitem['thumbnail'],
       source: picitem['source'],
       source_display: picitem['display_url'],
@@ -167,7 +171,7 @@ function picsForDinosaur(match) {
   });
 
   return stable(pics, function(a, b) {
-    if (a['original_url'] in upvoted_map) {
+    if (a['voting_url'] in upvoted_map) {
       return -1;
     }
     return 1;

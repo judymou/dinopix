@@ -204,14 +204,14 @@
 
       <div class="pics">
         {{#pics}}
-        <div class="img-container" data-url="{{url}}">
-          <div class="upvote" data-url="{{url}}">
+        <div class="img-container" data-url="{{voting_url}}">
+          <div class="upvote" data-url="{{voting_url}}">
             <i class="glyphicon glyphicon-check"></i>
           </div>
-          <div class="report" data-url="{{url}}">
+          <div class="report" data-url="{{voting_url}}">
             X
           </div>
-          <a href="{{url}}" target="_blank"><img foo-src="http://i.imgur.com/Vmxsx1H.gif" src="{{url}}" /></a>
+          <a href="{{clickthrough_url}}" target="_blank"><img foo-src="http://i.imgur.com/Vmxsx1H.gif" src="{{url}}" /></a>
           <div class="source">
             <a target="_blank" href="{{source}}">Source</a>: {{source_display}}
           </div>
