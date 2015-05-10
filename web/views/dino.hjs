@@ -66,13 +66,13 @@
         font-weight: bold;
       }
 
-      .intro {
+      .main-content {
         margin: 30px;
-        font-size: 20px;
+        font-size: 16px;
       }
 
-      .intro p {
-        margin: 0 0 30px;
+      .main-content p {
+        margin: 0 0 15px;
       }
 
       .pics {
@@ -188,13 +188,15 @@
 
       <h1 class="main-title">{{dino}} dinosaur pictures</h1>
 
-      <div class="intro">
-        <p>
-        {{dino}} is a {{eats}}.  It lived in the {{period}} period and resided in {{regions}}.
-        </p>
-        <p>
-        All these {{dino}} pictures were collected from the internet.  Credit goes to original creators and artists.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script> or use <a href="http://goo.gl/forms/B9rRB2O1wT">this form</a>.
-        </p>
+      <div class="main-content">
+        <div class="intro">
+          <p>
+          {{dino}} is a {{eats}}.  It lived in the {{period}} period and resided in {{regions}}.
+          </p>
+          <p>
+          All these {{dino}} pictures were collected from the internet.  Credit goes to original creators and artists.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script> or use <a href="http://goo.gl/forms/B9rRB2O1wT">this form</a>.
+          </p>
+        </div>
         <ul>
           <li><strong><a href="/random">Random dinosaur</a></strong></li>
           <li><a href="/">View other dinosaurs</a></li>

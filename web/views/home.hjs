@@ -69,13 +69,17 @@
         font-weight: bold;
       }
 
-      .intro {
+      .main-content {
         margin: 30px;
         font-size: 20px;
       }
 
-      .intro p {
-        margin: 0 0 30px;
+      .main-content p {
+        margin: 0 0 15px;
+      }
+
+      .intro {
+        font-size: 16px;
       }
 
       .dino-list {
@@ -146,18 +150,20 @@
       {{^filterPrefix}}
         <h1 class="main-title">Dinosaur Pictures</h1>
       {{/filterPrefix}}
-      <div class="intro">
-        <p>
-          This is a collection of dinosaur pictures compiled from all over the internet.  Look at a <strong><a href="/random">random</a></strong> dinosaur or pick one from below!
-        {{#filterPrefix}}
-        Tired of {{filterPrefix}} dinosaurs?  <strong><a href="/">See everything</strong></a>.
-        {{/filterPrefix}}
-        </p>
-        {{^filterPrefix}}
+      <div class="main-content">
+        <div class="intro">
           <p>
-          All credit for images goes to the original authors and creators.  DinoPictures.org is a search engine that curates high quality dinosaur pictures.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script> or use <a href="http://goo.gl/forms/B9rRB2O1wT">this form</a>.
+            This is a collection of dinosaur pictures compiled from all over the internet.  Look at a <strong><a href="/random">random</a></strong> dinosaur or pick one from below!
+          {{#filterPrefix}}
+          Tired of {{filterPrefix}} dinosaurs?  <strong><a href="/">See everything</strong></a>.
+          {{/filterPrefix}}
           </p>
-        {{/filterPrefix}}
+          {{^filterPrefix}}
+            <p>
+            All credit for images goes to the original authors and creators.  DinoPictures.org is a search engine that curates high quality dinosaur pictures.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script> or use <a href="http://goo.gl/forms/B9rRB2O1wT">this form</a>.
+            </p>
+          {{/filterPrefix}}
+        </div>
         {{#showFeatured}}
         <h3>Featured Dinosaurs</h3>
         <div id="featured">
