@@ -146,7 +146,7 @@ exports.upvote = function(req, res) {
 
 // Returns pics for a given dinosaur from dinomap.  Does all the ranking and
 // ensures bad images aren't returned.
-function picsForDinosaur(match, useThumbnails) {
+function picsForDinosaur(match) {
   var pics = [];
   var count = 0;
   match['images'].forEach(function(picitem) {
@@ -159,7 +159,8 @@ function picsForDinosaur(match, useThumbnails) {
     pics.push({
       //url: picitem['cloudinary'] || picitem['original'],
       original_url: picitem['url'],
-      url: useThumbnails ? picitem['thumbnail'] : picitem['url'],
+      url: picitem['url'],
+      thumbnail: picitem['thumbnail'],
       source: picitem['source'],
       source_display: picitem['display_url'],
     });
