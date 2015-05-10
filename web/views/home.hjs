@@ -101,6 +101,11 @@
         padding-bottom: 25px;
       }
 
+      .featured-dino span {
+        display: block;
+        min-width: 50px;
+      }
+
       .gray-highlight {
         background-color: #eee;
         padding: 30px;
