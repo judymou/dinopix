@@ -8,13 +8,14 @@ var upvoted_map = require('./upvoted.js');
 var reportedCache = {};
 
 exports.home = function(req, res) {
-  var dinoNames = [];
+  var dinoNamesList = [];
   for (var key in dinomap.get()) {
-    dinoNames.push(key);
+    dinoNamesList.push(key);
   }
   var featuredDinos = shuffle(featured.get());
   res.render('home', {
-    dinos: dinoNames,
+    totalCount: dinoNamesList.length,
+    dinos: dinoNamesList,
     popular: ['Tyrannosaurus', 'Allosaurus', 'Ankylosaurus', 'Triceratops',
       'Brachiosaurus', 'Apatosaurus', 'Pachycephalosaurus'],
     // TODO same dino can appear twice!
@@ -67,6 +68,7 @@ exports.filter = function(req, res) {
     return dino['name'] in dinoNamesMap;
   }));
   res.render('home', {
+    totalCount: dinoNamesList.length,
     showFeatured: true,
     featuredFirstRow: featuredDinos.slice(0, 4),
     filterPrefix: (function() {

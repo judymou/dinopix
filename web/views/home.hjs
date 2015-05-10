@@ -92,6 +92,10 @@
         height: auto;
       }
 
+      .scroll-to-search {
+        margin-left: 15px;
+      }
+
       .featured-dino {
         padding-left: 30px;
         padding-bottom: 25px;
@@ -157,6 +161,7 @@
             {{/featuredSecondRow}}
           </div>
         </div>
+        <h5 class="scroll-to-search"><a href="#">&raquo; Search {{totalCount}} dinosaurs</a></h5>
         {{/showFeatured}}
 
         <hr/>
@@ -220,12 +225,12 @@
         {{/showPopular}}
 
 
-        <h3>
+        <h3 id="search-box-container">
           {{#filterPrefix}}
             Search {{filterPrefix}} dinosaurs: <input id="search" type="search"/>
           {{/filterPrefix}}
           {{^filterPrefix}}
-            Search: <input id="search" type="search"/>
+            Search {{ totalCount}} dinosaurs: <input id="search" type="search"/>
           {{/filterPrefix}}
         </h3>
       </div>
@@ -254,6 +259,17 @@
             var found = $this.data('match').indexOf(val) > -1;
             $this.toggle(found);
           });
+        });
+
+        $('.scroll-to-search a').on('click', function() {
+          var offset = $('#search-box-container').offset();
+          offset.left -= 20;
+          offset.top -= 20;
+          $('html, body').animate({
+            scrollTop: offset.top,
+            scrollLeft: offset.left
+          });
+          $('#search').focus();
         });
       });
     </script>
