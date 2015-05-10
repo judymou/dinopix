@@ -144,6 +144,24 @@ exports.featurevote = function(req, res) {
   });
 };
 
+exports.upvote = function(req, res) {
+  var url = decodeURIComponent(req.query.url);
+  var dino = decodeURIComponent(req.query.dino);
+  console.log('got upvote for', url);
+  fs.appendFile('upvoted.txt', dino + ':' + url + '\n', function (err) {
+    res.send('ok');
+  });
+};
+
+exports.downvote = function(req, res) {
+  var url = decodeURIComponent(req.query.url);
+  var dino = decodeURIComponent(req.query.dino);
+  console.log('got downvote for', url);
+  fs.appendFile('downvoted.txt', dino + ':' + url + '\n', function (err) {
+    res.send('ok');
+  });
+};
+
 // Returns pics for a given dinosaur from dinomap.  Does all the ranking and
 // ensures bad images aren't returned.
 function picsForDinosaur(match) {

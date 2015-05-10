@@ -30,6 +30,8 @@ app.get('/random', dinos.random);
 app.get('/json', dinos.json);
 app.get('/report', dinos.report);
 app.get('/featurevote', dinos.featurevote);
+app.get('/upvote', dinos.upvote);
+app.get('/downvote', dinos.downvote);
 
 // someday - dinosaurs by era!
 
