@@ -26,6 +26,5 @@ module.exports = exports = (function() {
     }
     prevName = item.name;
   });
-  sorted['_total'] = count;
   return sorted;
 })();
