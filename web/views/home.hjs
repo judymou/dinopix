@@ -147,7 +147,7 @@
             {{#featuredSecondRow}}
               <div class="featured-dino col-md-3">
                 <span><a href="/{{dino}}-dinosaur-pictures">{{dino}}</a></span>
-                <img src="{{img}}">
+                <a href="/{{dino}}-dinosaur-pictures"><img src="{{img}}"></a>
               </div>
             {{/featuredSecondRow}}
           </div>
