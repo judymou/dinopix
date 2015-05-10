@@ -39,7 +39,7 @@ for dino, dinoinfo in dinos.iteritems():
         except:
             print 'Upload failed'
             new_image_info['cloudinary_url'] = None
-            new_dino_map[dino].append(new_image_info)
+            new_images.append(new_image_info)
             continue
         print 'Uploaded to', cloudinary_url
 

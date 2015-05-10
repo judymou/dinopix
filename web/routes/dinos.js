@@ -157,9 +157,9 @@ function picsForDinosaur(match) {
       return true;
     }
     pics.push({
-      //url: picitem['cloudinary'] || picitem['original'],
       original_url: picitem['url'],
-      url: picitem['url'],
+      //url: picitem['url'],
+      url: picitem['cloudinary_url'] || picitem['original'],
       thumbnail: picitem['thumbnail'],
       source: picitem['source'],
       source_display: picitem['display_url'],

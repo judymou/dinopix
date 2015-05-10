@@ -2,7 +2,8 @@ var fs = require('fs');
 var path = require('path');
 
 var map = JSON.parse(fs.readFileSync(
-  path.resolve(__dirname, '../../data/megascrape/processed_all.json')));
+  //path.resolve(__dirname, '../../data/megascrape/processed_all.json')));
+  path.resolve(__dirname, '../../data/processed_all_cloudinary.json')));
 
 // Sort the map by dino name.
 var list = [];
