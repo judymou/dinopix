@@ -76,12 +76,16 @@
       }
 
       #featured {
-        padding: 30px;
       }
 
       #featured img {
         max-width: 200px;
         height: auto;
+      }
+
+      .featured-dino {
+        padding: 30px;
+        padding-bottom: 0;
       }
 
       #popular {
@@ -139,7 +143,7 @@
               </div>
             {{/featuredFirstRow}}
           </div>
-          <div class="row" style="margin-top: 30px">
+          <div class="row">
             {{#featuredSecondRow}}
               <div class="featured-dino col-md-3">
                 <span><a href="/{{dino}}-dinosaur-pictures">{{dino}}</a></span>
