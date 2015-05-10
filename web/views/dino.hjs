@@ -264,15 +264,14 @@
           $(this).css('border-color', 'black');
         });
 
+        /*
         $('body').on('keypress', function(e) {
           if (String.fromCharCode(e.keyCode) == 'x') {
-            console.log('Xing...');
             $focusedImageContainer.hide('fast');
             $.get('/report?url=' +
                 encodeURIComponent($focusedImageContainer.data('url')) +
                 '&dino=' + '{{dino}}');
           } else if (String.fromCharCode(e.keyCode) == 'a') {
-            console.log('Aing...');
             $focusedImageContainer.hide('fast', function() {
               $(this).show('fast');
             });
@@ -283,6 +282,7 @@
             window.location.href = $('#next-dino').attr('href');
           }
         });
+        */
 
         $('.report').on('click', function() {
           var $this = $(this);

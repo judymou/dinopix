@@ -1,5 +1,6 @@
 var fs = require('fs');
 var dinomap = require('./dinomap.js');
+var featured = require('./featured.js');
 
 var reportedCache = {};
 
@@ -12,6 +13,7 @@ exports.home = function(req, res) {
     dinos: dinoNames,
     popular: ['Tyrannosaurus', 'Allosaurus', 'Ankylosaurus', 'Triceratops',
       'Brachiosaurus', 'Apatosaurus', 'Pachycephalosaurus'],
+    featured: shuffle(featured).slice(0, 5),
   });
 };
 
@@ -88,4 +90,9 @@ exports.upvote = function(req, res) {
   fs.appendFile('upvoted.txt', dino + ':' + url + '\n', function (err) {
     res.send('ok');
   });
+};
+
+function shuffle(o) {
+  for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+  return o;
 };

@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
     <style>
       body {
         background: #b3b3b0;
@@ -74,6 +75,15 @@
         margin-right: 60px;
       }
 
+      #featured {
+        padding: 30px;
+      }
+
+      #featured img {
+        max-width: 300px;
+        height: auto;
+      }
+
       #popular {
         background-color: #eee;
         padding: 30px;
@@ -117,6 +127,16 @@
           {{/popular}}
         </p>
 
+        <div id="featured">
+          <h3>Featured Dinos</h3>
+          {{#featured}}
+            <div>
+              <span><a href="/{{dino}}-dinosaur-pictures">{{dino}}</a></span>
+              <img src="{{img}}">
+            </div>
+          {{/featured}}
+        </div>
+
         <p>
           Search: <input id="search" type="search"/>
         </p>
@@ -132,6 +152,7 @@
     </div> <!-- end container-fluid -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.js"></script>
     <script>
       $(function() {
         $('.dino-list li').each(function() {
