@@ -290,7 +290,7 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
           {{/filterPrefix}}
         </h3>
       </div>
-      <div class="dino-list">
+      <div class="dino-list" style="display:none">
         <ul>
         {{#dinos}}
         <li><h4><a href="/{{.}}-dinosaur-pictures">{{.}}</a></h4></li>
@@ -306,6 +306,10 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
         $('.dino-list li').each(function() {
           var $this = $(this);
           $this.data('match', $this.text().toLowerCase());
+        });
+
+        $('#search').on('focus', function() {
+          $('.dino-list').show();
         });
 
         $('#search').on('keyup', function() {
