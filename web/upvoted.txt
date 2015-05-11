@@ -16,3 +16,6 @@ Abrosaurus:http://www.dinosaurfact.net/Pictures/Abrosaurus3.jpg
 Monolophosaurus:http://www.wikidino.com/wp-content/uploads/Monolophosaurus-Peter-Minister.jpg
 Monolophosaurus:http://australianmuseum.net.au/Uploads/Images/8223/G125 Monolophosaurus_big.jpg
 Monolophosaurus:http://australianmuseum.net.au/Uploads/Images/8223/G125 Monolophosaurus_big.jpg
+Ultrasaurus:http://img1.wikia.nocookie.net/__cb20120505015929/dinocyclopedia/images/0/04/Ultrasaurus.png
+undefined:
+Medusaceratops:http://fc02.deviantart.net/fs71/i/2012/149/0/2/horns03__medusaceratops_by_tuomaskoivurinne-d2sve2r.jpg
