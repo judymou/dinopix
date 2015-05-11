@@ -4332,3 +4332,5 @@ Epidendrosaurus:http://www.wikidino.com/wp-content/uploads/Epidendrosaurus-Rafae
 Europelta:http://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Europelta_skull_restoration.png/800px-Europelta_skull_restoration.png
 Eustreptospondylus:http://upload.wikimedia.org/wikipedia/commons/d/dc/Eustreptospondylus_head.jpg
 Gargoyleosaurus:http://westernpaleo.org/symposiums/artists_2013/Gargoyleosaurus_BRAGINETZ.jpg
+Monolophosaurus:http://jurassicpark-productions.webs.com/photos/Jurassic-park-pictures/Monolophosaurus.jpg
+undefined:
