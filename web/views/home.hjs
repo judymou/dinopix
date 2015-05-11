@@ -284,9 +284,11 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
         <h3 id="search-box-container">
           {{#filterPrefix}}
             Search {{filterPrefix}} dinosaurs: <input id="search" type="search"/>
+            <span id="view-all-container">or <a href="#" id="view-all">view all</a></span>
           {{/filterPrefix}}
           {{^filterPrefix}}
             Search {{ totalCount}} dinosaurs: <input id="search" type="search"/>
+            <span id="view-all-container">or <a href="#" id="view-all">view all</a></span>
           {{/filterPrefix}}
         </h3>
       </div>
@@ -303,19 +305,14 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
           $this.data('match', $this.text().toLowerCase());
         });
 
+        $('#view-all').on('click', function() {
+          maybeFillDinosList();
+          scrollToSearch();
+          return false;
+        });
+
         $('#search').on('focus', function() {
-          var $dl = $('.dino-list');
-          if ($dl.data('filled')) {
-            return;
-          }
-          var $ul = $('<ul>');
-          for (var i=0; i < window.dinos.length; i++) {
-            var dino = window.dinos[i];
-            $ul.append('<li><h4><a href="/' + dino + '-dinosaur-pictures">' +
-                dino + '</h4></li>');
-          }
-          $dl.append($ul);
-          $dl.show().data('filled', 1);
+          maybeFillDinosList();
         });
 
         $('#search').on('keyup', function() {
@@ -328,6 +325,12 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
         });
 
         $('.scroll-to-search a').on('click', function() {
+          maybeFillDinosList();
+          scrollToSearch();
+          $('#search').focus();
+        });
+
+        function scrollToSearch() {
           var offset = $('#search-box-container').offset();
           offset.left -= 20;
           offset.top -= 20;
@@ -335,8 +338,23 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
             scrollTop: offset.top,
             scrollLeft: offset.left
           });
-          $('#search').focus();
-        });
+        }
+
+        function maybeFillDinosList() {
+          var $dl = $('.dino-list');
+          if ($dl.data('filled')) {
+            return;
+          }
+          var $ul = $('<ul>');
+          for (var i=0; i < window.dinos.length; i++) {
+            var dino = window.dinos[i];
+            $ul.append('<li><h4><a href="/' + dino + '-dinosaur-pictures">' +
+                dino + '</h4></li>');
+          }
+          $dl.append($ul);
+          $dl.show().data('filled', 1);
+          $('#view-all-container').hide();
+        }
       });
     </script>
 
