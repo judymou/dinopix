@@ -300,11 +300,6 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>
       $(function() {
-        $('.dino-list li').each(function() {
-          var $this = $(this);
-          $this.data('match', $this.text().toLowerCase());
-        });
-
         $('#view-all').on('click', function() {
           maybeFillDinosList();
           scrollToSearch();
@@ -348,7 +343,8 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
           var $ul = $('<ul>');
           for (var i=0; i < window.dinos.length; i++) {
             var dino = window.dinos[i];
-            $ul.append('<li><h4><a href="/' + dino + '-dinosaur-pictures">' +
+            $ul.append('<li data-match="' + dino.toLowerCase() +
+                '"><h4><a href="/' + dino + '-dinosaur-pictures">' +
                 dino + '</h4></li>');
           }
           $dl.append($ul);
