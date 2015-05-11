@@ -284,15 +284,25 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
         <h3 id="search-box-container">
           {{#filterPrefix}}
             Search {{filterPrefix}} dinosaurs: <input id="search" type="search"/>
-            <span id="view-all-container">or <a href="#" id="view-all">view all</a></span>
+            {{^dinosShortListIsComplete}}
+            <span class="view-all-container">or <a href="#" class="view-all">view all</a></span>
+            {{/dinosShortListIsComplete}}
           {{/filterPrefix}}
           {{^filterPrefix}}
             Search {{ totalCount}} dinosaurs: <input id="search" type="search"/>
-            <span id="view-all-container">or <a href="#" id="view-all">view all</a></span>
+            <span class="view-all-container">or <a href="#" class="view-all">view all</a></span>
           {{/filterPrefix}}
         </h3>
       </div>
-      <div class="dino-list" style="display:none">
+      <div class="dino-list">
+        <ul>
+          {{#dinosShortList}}
+          <li><h4><a href="/{{.}}-dinosaur-pictures">{{.}}</a></h4></li>
+          {{/dinosShortList}}
+          {{^dinosShortListIsComplete}}
+          <h4 class="view-all-container"><strong><a href="#" class="view-all">show more...</a></strong></h4>
+          {{/dinosShortListIsComplete}}
+        </ul>
       </div>
 
     </div> <!-- end container-fluid -->
@@ -300,7 +310,7 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>
       $(function() {
-        $('#view-all').on('click', function() {
+        $('.view-all').on('click', function() {
           maybeFillDinosList();
           scrollToSearch();
           return false;
@@ -340,6 +350,7 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
           if ($dl.data('filled')) {
             return;
           }
+          $dl.empty();
           var $ul = $('<ul>');
           for (var i=0; i < window.dinos.length; i++) {
             var dino = window.dinos[i];
@@ -349,7 +360,7 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
           }
           $dl.append($ul);
           $dl.show().data('filled', 1);
-          $('#view-all-container').hide();
+          $('.view-all-container').hide();
         }
       });
     </script>

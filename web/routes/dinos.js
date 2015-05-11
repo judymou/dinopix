@@ -15,6 +15,8 @@ exports.home = function(req, res) {
   res.render('home', {
     totalCount: dinoNamesList.length,
     dinos: dinoNamesList,
+    dinosShortList: shuffle(dinoNamesList.slice(0)).slice(0, 20),
+    dinosShortListIsComplete: dinoNamesList.length <= 20,
     popular: ['Tyrannosaurus', 'Allosaurus', 'Ankylosaurus', 'Triceratops',
       'Brachiosaurus', 'Apatosaurus', 'Pachycephalosaurus'],
     // TODO same dino can appear twice!
@@ -79,6 +81,13 @@ exports.filter = function(req, res) {
       }).join(' ');
     })(),
     dinos: dinoNamesList,
+    dinosShortList: (function() {
+      if (dinoNamesList.length <= 20) {
+        return dinoNamesList;
+      }
+      return shuffle(dinoNamesList.slice(0)).slice(0, 20)
+    })(),
+    dinosShortListIsComplete: dinoNamesList.length <= 20,
   });
 };
 
