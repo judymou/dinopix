@@ -291,11 +291,6 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
         </h3>
       </div>
       <div class="dino-list" style="display:none">
-        <ul>
-        {{#dinos}}
-        <li><h4><a href="/{{.}}-dinosaur-pictures">{{.}}</a></h4></li>
-        {{/dinos}}
-        </ul>
       </div>
 
     </div> <!-- end container-fluid -->
@@ -309,7 +304,18 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
         });
 
         $('#search').on('focus', function() {
-          $('.dino-list').show();
+          var $dl = $('.dino-list');
+          if ($dl.data('filled')) {
+            return;
+          }
+          var $ul = $('<ul>');
+          for (var i=0; i < window.dinos.length; i++) {
+            var dino = window.dinos[i];
+            $ul.append('<li><h4><a href="/' + dino + '-dinosaur-pictures">' +
+                dino + '</h4></li>');
+          }
+          $dl.append($ul);
+          $dl.show().data('filled', 1);
         });
 
         $('#search').on('keyup', function() {
@@ -357,5 +363,10 @@ mixpanel.init("c46b3dfff827de823f35a442a22a1ab8");</script><!-- end Mixpanel -->
       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=137618869704832";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
+
+    <script>
+      // ie8 no like
+      window.dinos = [ {{#dinos}}'{{.}}',{{/dinos}} ];
+    </script>
   </body>
 </html>
