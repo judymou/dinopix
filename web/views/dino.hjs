@@ -272,7 +272,14 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
           <div class="vote downvote" data-url="{{voting_url}}">
             <i class="glyphicon glyphicon-arrow-down"></i>
           </div>
-          <a href="{{clickthrough_url}}" target="_blank"><img src="http://i.imgur.com/Vmxsx1H.gif" data-src="{{url}}" /></a>
+          <a href="{{clickthrough_url}}" target="_blank">
+            {{#isCrawler}}
+              <img src="{{url}}" />
+            {{/isCrawler}}
+            {{^isCrawler}}
+              <img src="http://i.imgur.com/Vmxsx1H.gif" data-src="{{url}}" />
+            {{/isCrawler}}
+          </a>
           <div class="source">
             <a target="_blank" href="{{source}}">Source</a>: {{source_display}}
           </div>
