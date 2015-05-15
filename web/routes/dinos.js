@@ -1,6 +1,7 @@
 var fs = require('fs');
 var stable = require('stable');
 var dinomap = require('./dinomap.js');
+var useragents = require('./useragents.js');
 var featured = require('./featured.js');
 var reported_map = require('./reported.js');
 
@@ -120,6 +121,7 @@ exports.dinosaur = function(req, res) {
     })(),
     pics: picsForDinosaur(match),
     adminReview: !!req.query['review'],
+    isCrawler: useragents.isCrawler(req),
   });
 };
 
@@ -207,8 +209,7 @@ function picsForDinosaur(match) {
   });
 }
 
-
 function shuffle(o) {
   for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
   return o;
-};
+}
