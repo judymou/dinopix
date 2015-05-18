@@ -67,3 +67,6 @@ Beipiaosaurus:http://upload.wikimedia.org/wikipedia/commons/1/13/Beipiaosaurus.j
 Beipiaosaurus:http://www.kyouryu.info/img/dinosaur/beipiaosaurus_l.jpg
 Beipiaosaurus:http://fc04.deviantart.net/fs38/f/2008/342/8/b/Beipiaosaurus_by_SageGoat.jpg
 Beipiaosaurus:http://th00.deviantart.net/fs70/PRE/i/2012/068/9/4/beipiaosaurus_inexpectus_by_durbed-d4s4buz.jpg
+Microraptor:http://www.rareresource.com/photos/dinosaur-gallery/microraptor_mny.jpg
+Yunnanosaurus:http://dinosaurs.afly.ru/ii/z/yunnanosaurus.jpg
+undefined:
