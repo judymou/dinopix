@@ -249,7 +249,7 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
           </p>
         </div>
         <ul>
-          <li><strong><a href="/random">Random dinosaur</a></strong></li>
+          <li><strong><a href="/random" rel="nofollow">Random dinosaur</a></strong></li>
           <li><a href="/">View other dinosaurs</a></li>
           <li><a target="_blank" href="http://en.wikipedia.org/wiki/{{dino}}">Wikipedia page</a></li>
         </ul>
@@ -311,7 +311,7 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
           {{/nextDino}}
         </p>
         <p>
-          <a href="/">More dinosaur pictures</a> &middot; <a href="/random">Random dinosaur</a>
+          <a href="/">More dinosaur pictures</a> &middot; <a href="/random" rel="nofollow">Random dinosaur</a>
         </p>
       </h4>
 
