@@ -237,7 +237,7 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
         </div>
       </div>
 
-      <h1 class="main-title">{{dino}} dinosaur pictures</h1>
+      <h1 class="main-title">{{dino}} pictures</h1>
 
       <div class="main-content">
         <div class="intro">
@@ -294,12 +294,12 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
         <p>
           <strong>
           Next dinosaur:
-          <a id="next-dino" href="/{{nextDino}}-dinosaur-pictures">{{ nextDino }}<!-- ({{count}} of {{total}}) &raquo;--></a>
+          <a id="next-dino" href="/{{nextDino}}-pictures">{{ nextDino }}<!-- ({{count}} of {{total}}) &raquo;--></a>
           </strong>
         </p>
         <p>
           {{#prevDino}}
-          <a href="/{{prevDino}}-dinosaur-pictures">&laquo; {{ prevDino }}</a>
+          <a href="/{{prevDino}}-pictures">&laquo; {{ prevDino }}</a>
           &middot;
           {{/prevDino}}
 
@@ -307,7 +307,7 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
 
           {{#nextDino}}
           &middot;
-          <a href="/{{nextDino}}-dinosaur-pictures">{{ nextDino }} &raquo;</a>
+          <a href="/{{nextDino}}-pictures">{{ nextDino }} &raquo;</a>
           {{/nextDino}}
         </p>
         <p>

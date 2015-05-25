@@ -16,7 +16,7 @@ sitemap_urls.push({url: 'india-dinosaurs', changefreq: 'weekly', priority: 0.9})
 sitemap_urls.push({url: 'australia-dinosaurs', changefreq: 'weekly', priority: 0.9});
 sitemap_urls.push({url: 'antarctica-dinosaurs', changefreq: 'weekly', priority: 0.9});
 for (var key in dinomap.get()) {
-  sitemap_urls.push({url: key + '-dinosaur-pictures', changefreq: 'weekly', priority: 0.8});
+  sitemap_urls.push({url: key + '-pictures', changefreq: 'weekly', priority: 0.8});
 }
 console.log(sitemap_urls.length, 'in sitemap');
 var sitemap = sm.createSitemap ({
