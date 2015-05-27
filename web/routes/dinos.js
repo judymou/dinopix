@@ -28,37 +28,47 @@ exports.home = function(req, res) {
   });
 };
 
+function getDinoNamesForCategory(filter) {
+  switch(filter) {
+    case 'triassic':
+      return dinomap.getTriassicDinoNames();
+    case 'jurassic':
+      return dinomap.getJurassicDinoNames();
+    case 'cretaceous':
+      return dinomap.getCretaceousDinoNames();
+    case 'north-america':
+      return dinomap.getNorthAmericaDinoNames();
+    case 'south-america':
+      return dinomap.getSouthAmericaDinoNames();
+    case 'europe':
+      return dinomap.getEuropeDinoNames();
+    case 'africa':
+      return dinomap.getAfricaDinoNames();
+    case 'madagascar':
+      return dinomap.getMadagascarDinoNames();
+    case 'asia':
+      return dinomap.getAsiaDinoNames();
+    case 'india':
+      return dinomap.getIndiaDinoNames();
+    case 'australia':
+      return dinomap.getAustraliaDinoNames();
+    case 'antarctica':
+      return dinomap.getAntarcticaDinoNames();
+    case 'all':
+      return dinomap.get();
+  };
+  return {};
+}
+
+exports.jsonFilter = function(req, res) {
+  res.send(
+    getDinoNamesForCategory(req.params.filter.trim()).extend({success:true}));
+}
+
 exports.filter = function(req, res) {
   // TODO choose featured and popular based on who's in this filter!
-  var filter = req.params.filter;
-  var dinoNamesList = (function() {
-    switch(filter) {
-      case 'triassic':
-        return dinomap.getTriassicDinoNames();
-      case 'jurassic':
-        return dinomap.getJurassicDinoNames();
-      case 'cretaceous':
-        return dinomap.getCretaceousDinoNames();
-      case 'north-america':
-        return dinomap.getNorthAmericaDinoNames();
-      case 'south-america':
-        return dinomap.getSouthAmericaDinoNames();
-      case 'europe':
-        return dinomap.getEuropeDinoNames();
-      case 'africa':
-        return dinomap.getAfricaDinoNames();
-      case 'madagascar':
-        return dinomap.getMadagascarDinoNames();
-      case 'asia':
-        return dinomap.getAsiaDinoNames();
-      case 'india':
-        return dinomap.getIndiaDinoNames();
-      case 'australia':
-        return dinomap.getAustraliaDinoNames();
-      case 'antarctica':
-        return dinomap.getAntarcticaDinoNames();
-    }
-  })();
+  var filter = req.params.filter.trim();
+  var dinoNamesList = getDinoNamesForCategory(filter);
   // Put all the names matching this filter into a map, then have the lazy
   // filter function filter featured dinos by what's in the map.
   // TODO getting lazy here.  This is inefficient.
