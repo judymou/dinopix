@@ -93,3 +93,7 @@ Agustinia:http://0.tqn.com/d/dinosaurs/1/0/c/H/-/-/agustiniaNT.jpg
 Segnosaurus:http://4.bp.blogspot.com/-cZirOlwYRSM/VAEBq_UpLPI/AAAAAAAAB7s/MlEynujK61s/s1600/Segnosaurus_20140830.jpg
 Lanasaurus:http://www.wikidino.com/wp-content/uploads/Lanasaurus-Gopal.jpg
 Eoraptor:http://file1.npage.de/005538/95/bilder/eoraptor-beingthepredator-tuomaskoivurinne-2009.jpg
+Daspletosaurus:http://upload.wikimedia.org/wikipedia/commons/2/2d/Daspletosaurus_torDB.jpg
+Barosaurus:http://3.bp.blogspot.com/-1ACT5a4BpkM/T1RoasPiYQI/AAAAAAAAATI/dKzeYutNyQ4/s1600/barosaurus_by_zdenek_burian_1976.jpg
+Camposaurus:http://images2.wikia.nocookie.net/acam/es/images/f/fb/Camposaurus.png
+Pachycephalosaurus:http://fc06.deviantart.net/fs70/f/2013/032/3/9/pachycephalosaurus_by_pietro_ant-d5tihut.jpg
