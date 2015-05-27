@@ -4,6 +4,9 @@ var dinomap = require('./dinomap.js');
 var useragents = require('./useragents.js');
 var featured = require('./featured.js');
 var reported_map = require('./reported.js');
+var util = require('../util.js');
+
+util.installObjectExtend();
 
 var reportedCache = {};
 
@@ -92,19 +95,15 @@ exports.filter = function(req, res) {
   });
 };
 
-exports.dinosaur = function(req, res) {
-  var dino = req.params.dino.trim();
+function getInfoForDino(dino) {
+  var dino = dino.trim();
   var match = dinomap.get()[dino];
   if (!match) {
-    res.send('not found');
-    return;
+    return null;
   }
 
-  res.render('dino', {
+  return {
     dino: dino,
-    prevDino: match['prev'],
-    nextDino: match['next'],
-    count: match['count'],
     period: match['period'],
     eats: match['eats'],
     regions: (function() {
@@ -120,9 +119,33 @@ exports.dinosaur = function(req, res) {
       }).join(', ');
     })(),
     pics: picsForDinosaur(match),
+    matchObject: match,
+  };
+}
+
+exports.jsonDinosaur = function(req, res) {
+  var dinoInfo = getInfoForDino(req.params.dino);
+  if (!dinoInfo) {
+    res.status(404);
+    res.send({success: false, message: "Dinosaur not found"});
+    return;
+  }
+
+  res.send(dinoInfo.extend({
+    success: true,
+  }));
+}
+
+exports.dinosaur = function(req, res) {
+  var dinoInfo = getInfoForDino(req.params.dino);
+
+  res.render('dino', dinoInfo.extend({
+    prevDino: dinoInfo.matchObject['prev'],
+    nextDino: dinoInfo.matchObject['next'],
+    count: dinoInfo.matchObject['count'],
     adminReview: !!req.query['review'],
     isCrawler: useragents.isCrawler(req),
-  });
+  }));
 };
 
 exports.random = function(req, res) {

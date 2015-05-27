@@ -29,6 +29,8 @@ app.get('/:dino-dinosaur-pictures', function(req, res) {
 });
 app.get('/:dino-pictures', dinos.dinosaur);
 app.get('/:filter-dinosaurs', dinos.filter);
+app.get('/api/dinosaur/:dino', dinos.jsonDinosaur);
+//app.get('/api/category/:filter', dinos.jsonFilter);
 app.get('/random', dinos.random);
 app.get('/json', dinos.json);
 app.get('/report', dinos.report);
