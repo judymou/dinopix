@@ -132,7 +132,7 @@ exports.random = function(req, res) {
   }
 
   var name = dinoNames[Math.floor(Math.random() * dinoNames.length)];
-  res.redirect('/' + name + '-dinosaur-pictures');
+  res.redirect('/' + name + '-pictures');
 };
 
 exports.json = function(req, res) {

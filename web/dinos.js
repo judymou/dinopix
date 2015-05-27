@@ -24,7 +24,10 @@ app.configure('development', function(){
 });
 
 app.get('/', dinos.home);
-app.get('/:dino-dinosaur-pictures', dinos.dinosaur);
+app.get('/:dino-dinosaur-pictures', function(req, res) {
+  res.redirect(301, '/' + req.params.dino + '-pictures');
+});
+app.get('/:dino-pictures', dinos.dinosaur);
 app.get('/:filter-dinosaurs', dinos.filter);
 app.get('/random', dinos.random);
 app.get('/json', dinos.json);
