@@ -102,57 +102,56 @@ exports.filter = function(req, res) {
   });
 };
 
-function getInfoForDino(dino) {
-  var dino = dino.trim();
-  var match = dinomap.get()[dino];
-  if (!match) {
-    return null;
-  }
-
-  return {
-    dino: dino,
-    period: match['period'],
-    eats: match['eats'],
-    regions: (function() {
-      return match['region'].map(function(region) {
-        switch(region) {
-          case 'na':
-            return 'North America';
-          case 'sa':
-            return 'South America';
-          default:
-            return region[0].toUpperCase() + region.slice(1);
-        }
-      }).join(', ');
-    })(),
-    pics: picsForDinosaur(match),
-    matchObject: match,
-  };
+function getRegionsForDino(match) {
+  return match['region'].map(function(region) {
+    switch(region) {
+      case 'na':
+        return 'North America';
+      case 'sa':
+        return 'South America';
+      default:
+        return region[0].toUpperCase() + region.slice(1);
+    }
+  });
 }
 
 exports.jsonDinosaur = function(req, res) {
-  var dinoInfo = getInfoForDino(req.params.dino);
-  if (!dinoInfo) {
+  var dino = req.params.dino.trim();
+  var match = dinomap.get()[dino];
+  if (!match) {
     res.status(404);
     res.send({success: false, message: "Dinosaur not found"});
     return;
   }
 
-  res.send(dinoInfo.extend({
-    success: true,
-  }));
+  res.send({
+    dino: dino,
+    period: match['period'],
+    eats: match['eats'],
+    regions: getRegionsForDino(match),
+    pics: picsForDinosaur(match),
+  });
 }
 
 exports.dinosaur = function(req, res) {
-  var dinoInfo = getInfoForDino(req.params.dino);
+  var dino = req.params.dino.trim();
+  var match = dinomap.get()[dino];
+  if (!match) {
+    return null;
+  }
 
-  res.render('dino', dinoInfo.extend({
-    prevDino: dinoInfo.matchObject['prev'],
-    nextDino: dinoInfo.matchObject['next'],
-    count: dinoInfo.matchObject['count'],
+  res.render('dino', {
+    dino: dino,
+    period: match['period'],
+    eats: match['eats'],
+    regions: getRegionsForDino(match).join(', '),
+    pics: picsForDinosaur(match),
+    prevDino: match['prev'],
+    nextDino: match['next'],
+    count: match['count'],
     adminReview: !!req.query['review'],
     isCrawler: useragents.isCrawler(req),
-  }));
+  });
 };
 
 exports.random = function(req, res) {
