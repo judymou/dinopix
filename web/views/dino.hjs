@@ -274,10 +274,10 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
           </div>
           <a href="{{clickthrough_url}}" target="_blank">
             {{#isCrawler}}
-              <img src="{{url}}" />
+              <img src="{{url}}" alt="{{dino}}"/>
             {{/isCrawler}}
             {{^isCrawler}}
-              <img src="http://i.imgur.com/Vmxsx1H.gif" data-src="{{url}}" />
+              <img src="http://i.imgur.com/Vmxsx1H.gif" data-src="{{url}}" alt="{{dino}}"/>
             {{/isCrawler}}
           </a>
           <div class="source">
