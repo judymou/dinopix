@@ -116,7 +116,8 @@ function getRegionsForDino(match) {
 }
 
 exports.jsonDinosaur = function(req, res) {
-  var dino = req.params.dino.trim();
+  var dino = req.params.dino.trim().toLowerCase();
+  dino = dino[0].toUpperCase() + dino.slice(1);
   var match = dinomap.get()[dino];
   if (!match) {
     res.status(404);
