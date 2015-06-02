@@ -205,6 +205,10 @@ exports.downvote = function(req, res) {
   });
 };
 
+exports.apiInfo = function(req, res) {
+  res.render('api', {});
+};
+
 // Returns pics for a given dinosaur from dinomap.  Does all the ranking and
 // ensures bad images aren't returned.
 function picsForDinosaur(match) {

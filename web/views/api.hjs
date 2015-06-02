@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Dinosaur API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curated high quality database of dinosaur pictures">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@iwebst">
+    <meta name="twitter:title" content="DinosaurPictures.org - Awesome Dinosaur Pictures">
+    <meta name="twitter:description" content="Curated high quality database of dinosaur pictures">
+    <meta name="twitter:creator" content="@iwebst">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dinopics/image/upload/c_limit,w_960/v1431264203/Majungasaurus_Majungasaurus-_Phil-Brownlow_17.jpg">
+
+    <meta property="og:title" content="DinosaurPictures.org - Awesome Dinosaur Pictures" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://dinosaurpictures.org" />
+    <meta property="og:image" content="https://res.cloudinary.com/dinopics/image/upload/c_limit,w_960/v1431264203/Majungasaurus_Majungasaurus-_Phil-Brownlow_17.jpg" />
+    <meta property="og:description" content="Curated high quality database of dinosaur pictures" />
+    <!--
+  <link href="/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  -->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+  <style>
+    body {
+      background: #b3b3b0;
+      background: -moz-linear-gradient(top,#b3b3b0 0,#e3e2dd 500px);
+      background: -webkit-linear-gradient(#b3b3b0 0,#e3e2dd 500px);
+      background: -ms-linear-gradient(top,#b3b3b0 0,#e3e2dd 500px);
+      background: linear-gradient(top,#b3b3b0 0,#e3e2dd 500px);
+      background-color: #e3e2dd;
+      background-repeat: no-repeat;
+
+      margin-bottom: 40px;
+    }
+
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      color: #fff;
+      background-color: #404040;
+      text-align: center;
+      font-weight: bold;
+
+      padding: 10px;
+    }
+
+    .header a {
+      color: #fff;
+    }
+
+    .header a:hover {
+      text-decoration: none;
+    }
+
+    .container {
+      position: relative;
+
+      {{! maybe someday: http://jsfiddle.net/zuul/mPnTP/ }}
+
+      background-color: rgb(255, 255, 255);
+      background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.298039) 0px, rgba(0, 0, 0, 0) 7px);
+      box-shadow: 4px 0 2px -2px rgba(0,0,0,0.4), 0 4px 2px -2px rgba(0,0,0,0.4), -4px 0 2px -2px rgba(0,0,0,0.4);
+
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+      padding-top: 45px;
+      padding-bottom: 20px;
+    }
+
+    .main-title {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .main-content {
+      margin: 30px;
+      font-size: 20px;
+    }
+
+    .main-content p {
+      margin: 0 0 15px;
+    }
+
+    .intro {
+      font-size: 16px;
+    }
+
+    .dino-list {
+      margin: 30px;
+      margin-right: 60px;
+    }
+
+    #featured {
+      margin-bottom: 10px;
+    }
+
+    #featured img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    .scroll-to-search {
+      margin-left: 15px;
+    }
+
+    .featured-dino {
+      padding-left: 30px;
+      padding-bottom: 25px;
+    }
+
+    .featured-dino span {
+      display: block;
+      min-width: 50px;
+    }
+
+    .gray-highlight {
+      background-color: #eee;
+      padding: 30px;
+    }
+
+    #popular {
+      background-color: #eee;
+      padding: 30px;
+    }
+
+    #popular span:not(:last-of-type)::after {
+      content: ", "
+    }
+
+    ul {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      padding: 10px;
+      padding-left: 0;
+      padding-right: 20px;
+    }
+
+    .social-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container drop-shadow left right bottom">
+    <div class="header">
+      <a href="/">The Dinosaur Picture Database</a>
+      <div class="social-container">
+        <div style="line-height:0.7" class="fb-like" data-href="http://dinosaurpictures.org/" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+        <a class="twitter-share-button"
+            href="https://twitter.com/share?counturl=http://dinosaurpictures.org/">
+          Tweet
+        </a>
+        <script>
+window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+        </script>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="intro">
+        <h1 class="main-title">The Dinosaur API</h1>
+        Welcome to version 1 of the dinosaur API.
+      </div>
+      <div>
+        <h3>/dinosaur/*</h3>
+        <p>
+        For a given dinosaur, learn when and when it lived and what it ate.  Also, a list of pictures, sources, and thumbnails.
+        </p>
+        <p>
+          eg. <a href="http://dinosaurpictures.org/api/dinosaur/Cetiosaurus">/api/dinosaur/Cetiosaurus</a>
+        </p>
+        <p>
+          <pre>
+{
+  "dino": "Cetiosaurus",
+  "period": "Jurassic",
+  "eats": "herbivore",
+  "regions": [
+    "Africa",
+    "Europe"
+  ],
+  "pics": [
+    {
+      "voting_url": "http://kozmopolitaydinlar.files.wordpress.com/2011/08/cetiosaurus.jpg",
+      "url": "https://res.cloudinary.com/dinopics/image/upload/c_limit,w_960/v1431252594/Cetiosaurus_cetiosaurus_6.jpg",
+      "clickthrough_url": "https://res.cloudinary.com/dinopics/image/upload/v1431252594/Cetiosaurus_cetiosaurus_6.jpg",
+      "thumbnail": "http://ts4.mm.bing.net/th?id=JN.0HDWWT8ig3UCX4oCJn4OUQ&pid=15.1",
+      "source": "http://kozmopolitaydinlar.wordpress.com/2011/08/30/foto-galeri-prehistorik-canlilar/",
+      "source_display": "kozmopolitaydinlar.wordpress.com/2011/08/30/foto-galeri-prehistorik..."
+    },
+          </pre>
+        </p>
+      </div>
+      <hr/>
+      <div>
+        <h3>/category/*</h3>
+        <p>
+        For a given time period or geography, fetch a list of dinosaurs that resided there.
+        </p>
+        <p>
+          eg. <a href="http://dinosaurpictures.org/api/category/antarctica">/api/category/Antarctica</a>
+        </p>
+        <p>
+          <pre>
+[
+  "Antarctopelta",
+  "Cryolophosaurus",
+  "Glacialisaurus",
+  "Trinisaura"
+]
+          </pre>
+        </p>
+        <p>
+          Valid geographies: north-america, south-america, europe, africa, asia, australia, india, madagascar
+        </p>
+        <p>
+          Valid time periods: triassic, jurassic, cretaceous
+        </p>
+      </div>
+    </div>
+
+  <!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+mixpanel.init("c46b3dfff827de823f35a442a22a1ab8");</script><!-- end Mixpanel -->
+    {{#filterPrefix}}
+    <script>if(window.location.href.indexOf('localhost') < 0) mixpanel.track('category', {category: '{{filterPrefix}}'});</script>
+    {{/filterPrefix}}
+    {{^filterPrefix}}
+      <script>if(window.location.href.indexOf('localhost') < 0) mixpanel.track('home');</script>
+    {{/filterPrefix}}
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    if (window.location.href.indexOf('localhost') < 0) {
+      ga('create', 'UA-62588220-1', 'auto');
+      ga('send', 'pageview');
+    }
+  </script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=137618869704832";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>
