@@ -117,3 +117,4 @@ Manidens:http://0.tqn.com/d/dinosaurs/1/7/X/b/-/-/manidensNT.jpg
 Deinonychus:http://dinosaurios.org/wp-content/uploads/2013/08/deinonychus-1.jpg
 Deinonychus:http://fc00.deviantart.net/fs70/i/2012/037/9/2/deinonychus_antirrhopus_by_durbed-d48yfn6.jpg
 Carcharodontosaurus:http://fc03.deviantart.net/fs5/i/2004/284/2/d/Carcharodontosaurus_saharicus_by_dustdevil.jpg
+Rebbachisaurus:http://www.wikidino.com/wp-content/uploads/Rebbachisaurus-Andrey-Atuchin.jpg
