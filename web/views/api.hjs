@@ -234,6 +234,7 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
         <p>
           Valid time periods: triassic, jurassic, cretaceous
         </p>
+        <p>Or 'all' for everything.</p>
       </div>
     </div>
 
