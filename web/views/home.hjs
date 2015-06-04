@@ -79,7 +79,7 @@
         border-bottom-right-radius: 5px;
 
         padding-top: 45px;
-        padding-bottom: 20px;
+        padding-bottom: 40px;
       }
 
       .main-title {
@@ -160,6 +160,23 @@
         top: 10px;
         right: 10px;
         font-size: 12px;
+      }
+
+      .footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #404040;
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+        padding: 5px;
+      }
+
+      .footer a {
+        color: #fff;
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -310,6 +327,9 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
         </ul>
       </div>
 
+      <div class="footer">
+        &copy; 2015 DinosaurPictures.org by <a href="http://ianww.com">Ian Webster</a>
+      </div>
     </div> <!-- end container-fluid -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
