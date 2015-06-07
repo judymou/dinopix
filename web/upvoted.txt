@@ -125,3 +125,7 @@ Siamosaurus:http://www.tunturisusi.com/dinosaurukset/siamosaurus.jpg
 Beishanlong:http://masahatto2.p2.bindsite.jp/_src/sc2106/Beishanlong_20120401_2.jpg
 Polacanthus:http://2.bp.blogspot.com/-OZH_m_zmTVk/UeZwXSPUigI/AAAAAAAAAu8/LDhsNWNM3nA/s1600/Polacanthus+cropped+FB.jpg
 Pukyongosaurus:http://img2.wikia.nocookie.net/__cb20140425120417/heroes-and-villains-fight-club/images/4/4d/Pukyongosaurus.jpg
+Pitekunsaurus:http://www.wikidino.com/wp-content/uploads/Pitekunsaurus-maniraptora.jpg
+Pitekunsaurus:http://img.photobucket.com/albums/v229/PsydanCo/Mesozoico/Pitekunsaurus.jpg
+Allosaurus:http://brantworks.com/resources/Allosaurus/brANTS-Allo-Nov08-w-1000.jpg
+Troodon:http://fc02.deviantart.net/fs70/f/2013/295/0/d/troodon_by_haghani-d6re9g7.jpg
