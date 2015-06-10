@@ -9,7 +9,7 @@
         <title>Dinosaur Pictures - The Online Database</title>
       {{/filterPrefix}}
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Curated high quality database of dinosaur pictures">
+      <meta name="description" content="Curated high quality database of dinosaur pictures, facts, and fossils.">
 
       <meta name="twitter:card" content="summary">
       <meta name="twitter:site" content="@iwebst">
@@ -205,9 +205,9 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
       <div class="main-content">
         <div class="intro">
           <p>
-            This is a collection of dinosaur pictures compiled from all over the internet.  Look at a <strong><a href="/random" rel="nofollow">random</a></strong> dinosaur or pick one from below!
+            This is a collection of dinosaur pictures compiled from all over the internet.  Look at a <strong><a href="/random" rel="nofollow">random dinosaur</a></strong>, pick one from below, or check out our <a href="/ancient-earth#170">globe</a> of ancient Earth!
           {{#filterPrefix}}
-          Tired of {{filterPrefix}} dinosaurs?  <strong><a href="/">See all dinosaurs</strong></a> or look at a <a href="/ancient-earth#170">globe</a> of ancient Earth.
+          Tired of {{filterPrefix}} dinosaurs?  <strong><a href="/">See all dinosaurs</strong></a>.
           {{/filterPrefix}}
           </p>
           {{^filterPrefix}}
