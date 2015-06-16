@@ -52,7 +52,8 @@ def upload(url):
             return s3_url
         k = Key(bucket)
         k.key = name
-        file_object = urllib2.urlopen(url, timeout=30)           # 'Like' a file object
+        headers = { 'User-Agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36' }
+        file_object = urllib2.urlopen(url, timeout=30, headers=headers)           # 'Like' a file object
         fp = StringIO.StringIO(file_object.read())   # Wrap object
         im = Image.open(fp)
 
