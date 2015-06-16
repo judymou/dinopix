@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import secrets
+import copy
 from urlparse import urlparse
 from os.path import splitext, basename
 import urllib, urllib2
@@ -65,13 +66,13 @@ def upload(url):
 
         # Preserve transparency if the image is in Pallette (P) mode.
         transparency_formats = ('PNG', 'GIF', )
-        kwargs = {}
+        transparency = None
         if im.mode == 'P' and format in transparency_formats:
-            kwargs['transparency'] = len(im.split()[-1].getcolors())
+            transparency = len(im.split()[-1].getcolors())
         else:
             im = im.convert('RGB')
 
-        im.save(uploadfp, 'JPEG', **kwargs)
+        im.save(uploadfp, 'JPEG', transparency=transparency)
         uploadfp.seek(0)
 
         print 'Uploading', url, '\n\tto', name
@@ -101,14 +102,17 @@ for line in blacklisted:
 
 output = {}
 for dino, dinostuff in dinos.iteritems():
+    output[dino] = copy.deepcopy(dinostuff)
+    output[dino]['images'] = []
     for image in dinostuff['images']:
         url = image['url'].encode('utf-8')
         if url in blacklisted_urls:
             print 'Skipping blacklisted url', url
             continue
         uploaded_url = upload(url)
-        output[dino] = dinostuff
-        output[dino]['s3_url'] = uploaded_url
+        newimage = image
+        newimage['s3_url'] = uploaded_url
+        output[dino]['images'].append(newimage)
 f = open('processed_s3.json', 'w')
 f.write(json.dumps(output, indent=2))
 f.close()
