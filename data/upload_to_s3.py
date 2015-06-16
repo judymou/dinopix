@@ -53,8 +53,8 @@ def upload(url):
         k = Key(bucket)
         k.key = name
         headers = { 'User-Agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36' }
-        request = urllib2.Request(url, timeout=30, headers=headers)           # 'Like' a file object
-        file_object = urllib2.urlopen(request)
+        request = urllib2.Request(url, headers=headers)           # 'Like' a file object
+        file_object = urllib2.urlopen(request, timeout=30)
         fp = StringIO.StringIO(file_object.read())   # Wrap object
         im = Image.open(fp)
 
