@@ -41,14 +41,12 @@ def key_from_url(url):
             k.delete()
     return unquoted_full_name
 
-    #return '/images/' + urllib.quote(urllib.unquote(url)).replace('/', '_')
-
 def upload(url):
     try:
         url = url.encode('utf-8')
         name = key_from_url(url)
         if bucket.get_key(name):
-            print "Already exists!"
+            print 'Already exists!'
             return
         k = Key(bucket)
         k.key = name
