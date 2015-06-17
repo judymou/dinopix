@@ -106,6 +106,9 @@ for line in blacklisted:
 output = {}
 for dino, dinostuff in dinos.iteritems():
     output[dino] = copy.deepcopy(dinostuff)
+    if type(output[dino]['region']) == str:
+        # correct plesiosaur region mistake
+        output[dino]['region'] = [output[dino]['region']]
     output[dino]['images'] = []
     for image in dinostuff['images']:
         url = image['url'].encode('utf-8')
