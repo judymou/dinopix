@@ -128,6 +128,7 @@ exports.jsonDinosaur = function(req, res) {
   }
 
   res.send({
+    creature_type: match['creature_type'] || 'dinosaur',
     dino: dino,
     period: match['period'],
     eats: match['eats'],
@@ -143,16 +144,23 @@ exports.dinosaur = function(req, res) {
     return null;
   }
 
+  var creature_type = match['creature_type'];
+  var regions = getRegionsForDino(match);
   res.render('dino', {
+    creature_type: creature_type || 'dinosaur',
+    isDinosaur: !creature_type || creature_type === 'dinosaur',
+    isPlesiosaur: creature_type === 'plesiosaur',
+
     dino: dino,
-    period: match['period'],
+    // Default to null for empty string, for templating purposes.
+    period: match['period'] || null,
     eats: match['eats'],
-    regions: getRegionsForDino(match).join(', '),
+    regions: regions.length == 0 ? null : regions.join(', '),
     pics: picsForDinosaur(match),
     prevDino: match['prev'],
     nextDino: match['next'],
     count: match['count'],
-    adminReview: true, //!!req.query['review'],
+    adminReview: !!req.query['review'],
     isCrawler: useragents.isCrawler(req),
   });
 };

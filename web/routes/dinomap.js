@@ -9,9 +9,7 @@ var map = JSON.parse(fs.readFileSync(
 // Sort the map by dino name.
 var list = [];
 for (var key in map) {
-  if (map[key]['creature_type'] == 'plesiosaur') {
   list.push(map[key]);
-  }
 }
 list.sort(function(a, b) {
   return a.name.localeCompare(b.name);
