@@ -4337,3 +4337,4 @@ Monolophosaurus:http://jurassicpark-productions.webs.com/photos/Jurassic-park-pi
 Mosasaurus:http://www.brickshelf.com/gallery/Lyichir/LDDSets/6721_mosasaurus_a.png
 Mosasaurus:http://img4.wikia.nocookie.net/__cb20130116153551/dinosauralive/images/c/c4/Mosasaurus.jpg
 Mosasaurus:http://static4.wikia.nocookie.net/__cb20130524001809/dtrain/images/b/b0/Mosasaurus.png
+Pachyrhinosaurus:http://jurassicpark-productions.webs.com/photos/Jurassic-park-pictures/Pachyrhinosaurus.jpg
