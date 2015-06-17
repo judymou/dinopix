@@ -208,3 +208,4 @@ Allosaurus:http://www.dinosaurfact.net/Pictures/Allosaurus2.jpg
 Jianchangosaurus:https://earthlingnature.files.wordpress.com/2013/05/jianchangosaurus_yixianensis1.png
 Pachyrhinosaurus:http://fc08.deviantart.net/fs70/i/2011/249/9/5/pachyrhinosaurus_ii_by_ntamura-d482ln8.jpg
 Telmatosaurus:http://fc01.deviantart.net/fs70/f/2011/100/3/8/telmatosaurus_wip_2_by_dinosaurmanzt2-d3dn2ev.jpg
+Neuquenraptor:http://th06.deviantart.net/fs70/PRE/f/2011/193/1/c/neuquenraptor_concept_by_artomsey-d3niw9h.jpg
