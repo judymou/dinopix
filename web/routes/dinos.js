@@ -6,7 +6,7 @@ var featured = require('./featured.js');
 var reported_map = require('./reported.js');
 var util = require('../util.js');
 
-util.installObjectExtend();
+//util.installObjectExtend();
 
 var reportedCache = {};
 
@@ -54,6 +54,8 @@ function getDinoNamesForCategory(filter) {
       return dinomap.getAustraliaDinoNames();
     case 'antarctica':
       return dinomap.getAntarcticaDinoNames();
+    case 'plesiosaurs':
+      return dinomap.getPlesiosaurDinoNames();
     case 'all':
       return dinomap.get();
   };
@@ -150,7 +152,7 @@ exports.dinosaur = function(req, res) {
     prevDino: match['prev'],
     nextDino: match['next'],
     count: match['count'],
-    adminReview: !!req.query['review'],
+    adminReview: true, //!!req.query['review'],
     isCrawler: useragents.isCrawler(req),
   });
 };

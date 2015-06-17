@@ -18,7 +18,8 @@ dinos = {}
 reader = csv.reader(f)
 for row in reader:
     creature_type = period = period_modifier = status = discovered = \
-            discoverer = eats = region = ''
+            discoverer = eats = ''
+    regions = []
     if file_type == 'dino':
         creature_type = 'dinosaur'
         dino, period, eats = [x.strip() for x in row]
@@ -26,6 +27,7 @@ for row in reader:
         creature_type = 'plesiosaur'
         dino, discoverer, discovered, status, period, region =  \
                 [x.strip() for x in row]
+        regions.append(region)
 
     out_path = 'scrape_results/%s' % dino
     if os.path.exists(out_path):
@@ -46,7 +48,7 @@ for row in reader:
         'name': dino,
         'period': period,
         'eats': eats,
-        'region': region,
+        'region': regions,
         'status': status,
         'discovered': discovered,
         'discoverer': discoverer,
