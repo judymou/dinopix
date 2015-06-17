@@ -205,3 +205,4 @@ Gastonia:http://www.qubesoft.com/images/q2-gastonia.png
 Avaceratops:http://fc05.deviantart.net/fs71/i/2010/028/f/e/Avaceratops_by_karkemish00.jpg
 Allosaurus:http://upload.wikimedia.org/wikipedia/commons/c/c3/Allosaurus.jpg
 Allosaurus:http://www.dinosaurfact.net/Pictures/Allosaurus2.jpg
+Jianchangosaurus:https://earthlingnature.files.wordpress.com/2013/05/jianchangosaurus_yixianensis1.png

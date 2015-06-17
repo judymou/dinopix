@@ -13,9 +13,11 @@ cloudinary.config(
     api_secret = secrets.API_SECRET,
 )
 
-cloudinary.api.delete_all_resources()
+# 12,291
+#cloudinary.api.delete_all_resources()
 
-f = open('./megascrape/processed_all.json', 'r')
+#f = open('./megascrape/processed_all.json', 'r')
+f = open('./megascrape/processed_custom.json', 'r')
 dinos = json.loads(f.read())
 f.close()
 
@@ -48,6 +50,7 @@ for dino, dinoinfo in dinos.iteritems():
 
     new_dino_map[dino]['images'] = new_images
 
-f = open('processed_all_cloudinary.json', 'w')
+#f = open('processed_all_cloudinary.json', 'w')
+f = open('processed_all_custom.json', 'w')
 f.write(json.dumps(new_dino_map, indent=2))
 f.close()
