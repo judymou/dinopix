@@ -417,6 +417,13 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
               encodeURIComponent($this.data('url')) +
               '&dino=' + '{{dino}}');
         });
+
+        // Hide errored images.
+        $('img').error(function () {
+          // TODO downvote?
+          $(this).parent().parent().hide();
+          mixpanel.track('broken image', {url: $(this).attr('src')});
+        });
       });
     </script>
 
