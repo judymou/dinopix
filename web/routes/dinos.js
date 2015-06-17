@@ -4,9 +4,11 @@ var dinomap = require('./dinomap.js');
 var useragents = require('./useragents.js');
 var featured = require('./featured.js');
 var reported_map = require('./reported.js');
+var upvoted_map = require('./upvoted.js');
+var downvoted_map = require('./downvoted.js');
 var util = require('../util.js');
 
-util.installObjectExtend();
+//util.installObjectExtend();
 
 var reportedCache = {};
 
@@ -54,6 +56,8 @@ function getDinoNamesForCategory(filter) {
       return dinomap.getAustraliaDinoNames();
     case 'antarctica':
       return dinomap.getAntarcticaDinoNames();
+    case 'plesiosaurs':
+      return dinomap.getPlesiosaurDinoNames();
     case 'all':
       return dinomap.get();
   };
@@ -126,6 +130,7 @@ exports.jsonDinosaur = function(req, res) {
   }
 
   res.send({
+    creature_type: match['creature_type'] || 'dinosaur',
     dino: dino,
     period: match['period'],
     eats: match['eats'],
@@ -141,11 +146,18 @@ exports.dinosaur = function(req, res) {
     return null;
   }
 
+  var creature_type = match['creature_type'];
+  var regions = getRegionsForDino(match);
   res.render('dino', {
+    creature_type: creature_type || 'dinosaur',
+    isDinosaur: !creature_type || creature_type === 'dinosaur',
+    isPlesiosaur: creature_type === 'plesiosaur',
+
     dino: dino,
-    period: match['period'],
+    // Default to null for empty string, for templating purposes.
+    period: match['period'] || null,
     eats: match['eats'],
-    regions: getRegionsForDino(match).join(', '),
+    regions: regions.length == 0 ? null : regions.join(', '),
     pics: picsForDinosaur(match),
     prevDino: match['prev'],
     nextDino: match['next'],
@@ -234,6 +246,16 @@ function picsForDinosaur(match) {
 
   return stable(pics, function(a, b) {
     if (featured.isFeaturedUrl(a['voting_url'])) {
+      return -1;
+    }
+    var upvote_score_a = upvoted_map[a['voting_url']] || 0;
+    var upvote_score_b = upvoted_map[b['voting_url']] || 0;
+    if (upvote_score_a > upvote_score_b) {
+      return -1;
+    }
+    var downvote_score_a = downvoted_map[a['voting_url']] || 0;
+    var downvote_score_b = downvoted_map[b['voting_url']] || 0;
+    if (downvote_score_b > downvote_score_a) {
       return -1;
     }
     return 1;

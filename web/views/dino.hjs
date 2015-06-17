@@ -259,7 +259,15 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
       <div class="main-content">
         <div class="intro">
           <p>
+          {{#isDinosaur}}
           {{dino}} is a {{eats}}.  It lived in the {{period}} period and resided in {{regions}}.
+          {{/isDinosaur}}
+          {{#isPlesiosaur}}
+          {{dino}} is a plesiosaur, a type of marine reptile.  They are not dinosaurs, although they lived during the same time period.
+            {{#period}}
+              {{dino}} lived during the {{period}}{{#regions}}and resided in {{regions}}{{/regions}}.
+            {{/period}}
+          {{/isPlesiosaur}}
           </p>
           <p>
           All these {{dino}} pictures were collected from the internet.  Credit goes to original creators and artists.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script> or use <a href="http://goo.gl/forms/B9rRB2O1wT">this form</a>.
@@ -408,6 +416,13 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
           $.get('/featurevote?url=' +
               encodeURIComponent($this.data('url')) +
               '&dino=' + '{{dino}}');
+        });
+
+        // Hide errored images.
+        $('img').error(function () {
+          // TODO downvote?
+          $(this).parent().parent().hide();
+          mixpanel.track('broken image', {url: $(this).attr('src')});
         });
       });
     </script>

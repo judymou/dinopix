@@ -33,6 +33,9 @@ var indiaList = [];
 var australiaList = [];
 var antarcticaList = [];
 
+// Other
+var plesiosaurList = [];
+
 var prevName = null;
 var count = 0;
 list.forEach(function(item) {
@@ -44,6 +47,11 @@ list.forEach(function(item) {
   item['images'].forEach(function(imageInfo) {
     imageUrlToThumbnail[imageInfo['url']] = imageInfo['thumbnail'];
   });
+
+  // Type
+  if (item['creature_type'] === 'plesiosaur') {
+    plesiosaurList.push(dinoName);
+  }
 
   // Period
   var period = item['period'].toLowerCase();
@@ -58,39 +66,41 @@ list.forEach(function(item) {
   }
 
   // Geography
-  item['region'].forEach(function(region) {
-    switch(region) {
-      case 'na':
-        northAmericaList.push(dinoName);
-        break;
-      case 'sa':
-        southAmericaList.push(dinoName);
-        break;
-      case 'europe':
-        europeList.push(dinoName);
-        break;
-      case 'africa':
-        africaList.push(dinoName);
-        break;
-      case 'madagascar':
-        madagascarList.push(dinoName);
-        break;
-      case 'asia':
-        asiaList.push(dinoName);
-        break;
-      case 'india':
-        indiaList.push(dinoName);
-        break;
-      case 'australia':
-        australiaList.push(dinoName);
-        break;
-      case 'antarctica':
-        antarcticaList.push(dinoName);
-        break;
-      default:
-        console.warn('What region is', region, '???');
-    }
-  });
+  if (item['region']) {
+    item['region'].forEach(function(region) {
+      switch(region) {
+        case 'na':
+          northAmericaList.push(dinoName);
+          break;
+        case 'sa':
+          southAmericaList.push(dinoName);
+          break;
+        case 'europe':
+          europeList.push(dinoName);
+          break;
+        case 'africa':
+          africaList.push(dinoName);
+          break;
+        case 'madagascar':
+          madagascarList.push(dinoName);
+          break;
+        case 'asia':
+          asiaList.push(dinoName);
+          break;
+        case 'india':
+          indiaList.push(dinoName);
+          break;
+        case 'australia':
+          australiaList.push(dinoName);
+          break;
+        case 'antarctica':
+          antarcticaList.push(dinoName);
+          break;
+        default:
+          console.warn('What region is', region, '???');
+      }
+    });
+  }
 
   // Previous and next
   if (prevName) {
@@ -143,5 +153,8 @@ module.exports = exports = {
   },
   getAntarcticaDinoNames: function() {
     return antarcticaList;
+  },
+  getPlesiosaurDinoNames: function() {
+    return plesiosaurList;
   }
 }

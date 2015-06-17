@@ -1,22 +1,34 @@
 #!/usr/bin/env python
 
 from bing_secrets import BING_KEY
+import csv
 import os
 import json
 import requests
 import sys
 from PIL import Image
 
-f = open(sys.argv[1], 'r')
-lines = f.readlines()
-f.close()
+f = open(sys.argv[2], 'r')
+#lines = f.readlines()
+#f.close()
+
+file_type = sys.argv[1]
 
 dinos = {}
-for line in lines:
-    dino, period, eats = line.split(',')
-    dino = dino.strip()
-    period = period.strip()
-    eats = eats.strip()
+reader = csv.reader(f)
+for row in reader:
+    creature_type = period = period_modifier = status = discovered = \
+            discoverer = eats = ''
+    regions = []
+    if file_type == 'dino':
+        creature_type = 'dinosaur'
+        dino, period, eats = [x.strip() for x in row]
+    elif file_type == 'plesio':
+        creature_type = 'plesiosaur'
+        dino, discoverer, discovered, status, period, region =  \
+                [x.strip() for x in row]
+        regions.append(region)
+
     out_path = 'scrape_results/%s' % dino
     if os.path.exists(out_path):
         print 'Load', dino
@@ -36,6 +48,11 @@ for line in lines:
         'name': dino,
         'period': period,
         'eats': eats,
+        'region': regions,
+        'status': status,
+        'discovered': discovered,
+        'discoverer': discoverer,
+        'creature_type': creature_type,
         'images': []
     }
     for result in obj:
@@ -52,7 +69,7 @@ for line in lines:
             'source': result['SourceUrl'],
             'thumbnail': result['Thumbnail']['MediaUrl'],
         })
-    if len(metadino['images']) < 3:
+    if len(metadino['images']) < 1:
         # Manual intervention is required
         print 'Warning:', dino, 'does not have enough images'
         continue
@@ -78,7 +95,7 @@ for line in lines:
             })
     dinos[dino] = metadino
 
-f = open('processed_%s' % sys.argv[1], 'w')
+f = open('processed_%s' % sys.argv[2], 'w')
 f.write(json.dumps(dinos, indent=2))
 f.close()
 

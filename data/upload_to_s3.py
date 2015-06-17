@@ -50,8 +50,6 @@ def upload(url):
         if bucket.get_key(name):
             #print 'Already exists!'
             return s3_url
-        k = Key(bucket)
-        k.key = name
         headers = { 'User-Agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36' }
         request = urllib2.Request(url, headers=headers)           # 'Like' a file object
         file_object = urllib2.urlopen(request, timeout=30)
@@ -79,9 +77,11 @@ def upload(url):
 
         print 'Uploading', url, '\n\tto', name
 
-        k.set_acl('public-read')
+        k = Key(bucket)
+        k.key = name
         k.set_metadata('Content-Type', 'image/jpeg')
         k.set_contents_from_file(uploadfp)
+        k.set_acl('public-read')
         return s3_url
     except Exception, e:
         f = open('uploadserrors', 'a')
@@ -110,7 +110,7 @@ for dino, dinostuff in dinos.iteritems():
     for image in dinostuff['images']:
         url = image['url'].encode('utf-8')
         if url in blacklisted_urls:
-            print 'Skipping blacklisted url', url
+            #print 'Skipping blacklisted url', url
             continue
         uploaded_url = upload(url)
         newimage = image
