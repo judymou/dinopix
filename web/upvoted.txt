@@ -237,3 +237,5 @@ Kotasaurus:http://img1.wikia.nocookie.net/__cb20111207005005/cooldinofacts/image
 Aragosaurus:http://www.aragosaurus.com/img/paleoart/jrubio3g.jpg
 Amphicoelias:http://th02.deviantart.net/fs71/PRE/i/2013/038/6/5/amphicoelias_and_allosaurus_by_iphicrates-d3jp446.jpg
 Futalognkosaurus:http://pinkubentobox.com/nagi/images/dinowiki/futalognkosaurus_01.jpg
+Pachycephalosaurus:http://media.moddb.com/cache/images/games/1/28/27193/thumb_620x2000/rjpalmer_pachycephalosaurus_004.JPG
+Mamenchisaurus:http://img2.wikia.nocookie.net/__cb20140711015155/dinosauralive/images/d/d2/Mamenchisaurus-3.jpg
