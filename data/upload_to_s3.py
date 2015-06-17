@@ -46,7 +46,7 @@ def upload(url):
     try:
         url = url.encode('utf-8')
         name = key_from_url(url)
-        s3_url = 'https://s3.amazonaws.com/dinosaur-pictures/' + name
+        s3_url = 'http://images.dinosaurpictures.org/' + name
         if bucket.get_key(name):
             #print 'Already exists!'
             return s3_url
@@ -79,8 +79,9 @@ def upload(url):
 
         print 'Uploading', url, '\n\tto', name
 
-        k.set_contents_from_file(uploadfp)
         k.set_acl('public-read')
+        k.set_metadata('Content-Type', 'image/jpeg')
+        k.set_contents_from_file(uploadfp)
         return s3_url
     except Exception, e:
         f = open('uploadserrors', 'a')
