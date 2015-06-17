@@ -2,6 +2,7 @@
   <html lang="en">
     <head>
       <meta charset="utf-8">
+      <meta name="msvalidate.01" content="A93C3E94611914D799831B0D517FF410" />
       {{#filterPrefix}}
         <title>{{filterPrefix}} Dinosaur Pictures - The Online Database</title>
       {{/filterPrefix}}
