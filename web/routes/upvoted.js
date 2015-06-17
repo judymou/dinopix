@@ -12,7 +12,6 @@ module.exports = exports = (function() {
     var dino = line.slice(0, line.indexOf(':'));
     var url = line.slice(line.indexOf(':') + 1);
     // For now, just care about url.
-    // TODO dedup and add add score!
     ret[url] = ret[url] + 1 || 1;
   });
   return ret;

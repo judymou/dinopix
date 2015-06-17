@@ -5,6 +5,7 @@ var useragents = require('./useragents.js');
 var featured = require('./featured.js');
 var reported_map = require('./reported.js');
 var upvoted_map = require('./upvoted.js');
+var downvoted_map = require('./downvoted.js');
 var util = require('../util.js');
 
 //util.installObjectExtend();
@@ -250,6 +251,11 @@ function picsForDinosaur(match) {
     var upvote_score_a = upvoted_map[a['voting_url']] || 0;
     var upvote_score_b = upvoted_map[b['voting_url']] || 0;
     if (upvote_score_a > upvote_score_b) {
+      return -1;
+    }
+    var downvote_score_a = downvoted_map[a['voting_url']] || 0;
+    var downvote_score_b = downvoted_map[b['voting_url']] || 0;
+    if (downvote_score_b > downvote_score_a) {
       return -1;
     }
     return 1;
