@@ -13,7 +13,7 @@ module.exports = exports = (function() {
     var url = line.slice(line.indexOf(':') + 1);
     // For now, just care about url.
     // TODO dedup and add add score!
-    ret[url] = true;
+    ret[url] = ret[url] + 1 || 1;
   });
   return ret;
 })();

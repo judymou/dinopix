@@ -4,6 +4,7 @@ var dinomap = require('./dinomap.js');
 var useragents = require('./useragents.js');
 var featured = require('./featured.js');
 var reported_map = require('./reported.js');
+var upvoted_map = require('./upvoted.js');
 var util = require('../util.js');
 
 //util.installObjectExtend();
@@ -244,6 +245,11 @@ function picsForDinosaur(match) {
 
   return stable(pics, function(a, b) {
     if (featured.isFeaturedUrl(a['voting_url'])) {
+      return -1;
+    }
+    var upvote_score_a = upvoted_map[a['voting_url']] || 0;
+    var upvote_score_b = upvoted_map[b['voting_url']] || 0;
+    if (upvote_score_a > upvote_score_b) {
       return -1;
     }
     return 1;
