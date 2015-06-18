@@ -230,7 +230,13 @@ function picsForDinosaur(match) {
     if (++count >= 20) {
       return false;
     }
-    if (decodeURIComponent(picitem['url']) in reported_map) {
+    try{
+      if (decodeURIComponent(picitem['url']) in reported_map) {
+        return true;
+      }
+    } catch (e) {
+      // URL decoding error.
+      // TODO handle this better.
       return true;
     }
     pics.push({

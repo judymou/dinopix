@@ -376,6 +376,8 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
                 '&dino=' + '{{dino}}');
           } else if (String.fromCharCode(e.keyCode) == 'q') {
             window.location.href = $('#next-dino').attr('href');
+          } else if (String.fromCharCode(e.keyCode) == 'r') {
+            window.location.href = '/random';
           }
         });
         {{/adminReview}}
