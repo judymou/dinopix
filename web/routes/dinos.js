@@ -260,15 +260,14 @@ function picsForDinosaur(match) {
     }
     var upvote_score_a = upvoted_map[a['voting_url']] || 0;
     var upvote_score_b = upvoted_map[b['voting_url']] || 0;
-    if (upvote_score_a > upvote_score_b) {
-      return -1;
+    var diff = upvote_score_b - upvote_score_a;
+    if (diff != 0) {
+      return diff;
     }
+
     var downvote_score_a = downvoted_map[a['voting_url']] || 0;
     var downvote_score_b = downvoted_map[b['voting_url']] || 0;
-    if (downvote_score_b > downvote_score_a) {
-      return -1;
-    }
-    return 1;
+    return downvote_score_a - downvote_score_b;
   });
 }
 

@@ -427,3 +427,5 @@ Dravidosaurus:http://0.tqn.com/d/dinosaurs/1/0/9/M/-/-/dravidosaurusGE.jpg
 Kaatedocus:http://2.bp.blogspot.com/-ac3VHchw5h8/UNeLYCuqjEI/AAAAAAAAC4s/dynSw-j47gs/s1600/Kaatedocus_NT.jpg
 Kaatedocus:http://0.tqn.com/d/dinosaurs/1/0/x/W/-/-/kaatedocus.jpg
 Kaatedocus:http://fc07.deviantart.net/fs71/i/2012/366/7/6/kaatedocus_siberi_by_t_pekc-d5pwaya.jpg
+Torvosaurus:http://dinosaurios.org/wp-content/uploads/2013/11/21-Torvosaurus-attack.jpg
+Torvosaurus:http://fc00.deviantart.net/fs70/i/2013/200/d/5/torvosaurus_vs_camarasaurus_by_epic3d-d6e63l4.jpg
