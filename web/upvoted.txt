@@ -429,3 +429,6 @@ Kaatedocus:http://0.tqn.com/d/dinosaurs/1/0/x/W/-/-/kaatedocus.jpg
 Kaatedocus:http://fc07.deviantart.net/fs71/i/2012/366/7/6/kaatedocus_siberi_by_t_pekc-d5pwaya.jpg
 Torvosaurus:http://dinosaurios.org/wp-content/uploads/2013/11/21-Torvosaurus-attack.jpg
 Torvosaurus:http://fc00.deviantart.net/fs70/i/2013/200/d/5/torvosaurus_vs_camarasaurus_by_epic3d-d6e63l4.jpg
+Tarbosaurus:http://dinosaurs.afly.ru/ii/t/tarbosaurus-2-m.jpg
+Tarbosaurus:http://th07.deviantart.net/fs70/PRE/f/2014/187/6/3/as75myaalphabosstarbosaurus_by_herschel_hoffmeyer-d7piahb.png
+Tarbosaurus:http://img3.wikia.nocookie.net/__cb20110805184411/dinosaurs/images/f/f9/Tarbosaurus_and_gallimimus_by_jconway-d3107eb.jpg
