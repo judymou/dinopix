@@ -432,3 +432,7 @@ Torvosaurus:http://fc00.deviantart.net/fs70/i/2013/200/d/5/torvosaurus_vs_camara
 Tarbosaurus:http://dinosaurs.afly.ru/ii/t/tarbosaurus-2-m.jpg
 Tarbosaurus:http://th07.deviantart.net/fs70/PRE/f/2014/187/6/3/as75myaalphabosstarbosaurus_by_herschel_hoffmeyer-d7piahb.png
 Tarbosaurus:http://img3.wikia.nocookie.net/__cb20110805184411/dinosaurs/images/f/f9/Tarbosaurus_and_gallimimus_by_jconway-d3107eb.jpg
+Dimorphodon:http://www.arcadiastreet.com/cgvistas/earth/03_mesozoic/images/dimorphodon_on_beach_1280.jpg
+Mosasaurus:http://fc01.deviantart.net/fs70/f/2013/240/f/c/hunting_mosasaurus_hobetsuensis_by_malvit-d6k30gt.jpg
+Mosasaurus:http://images.fineartamerica.com/images-medium-large/mosasaurus-hoffmanni-swimming-sergey-krasovskiy.jpg
+Mosasaurus:http://fc03.deviantart.net/fs70/f/2011/305/0/5/mosasaurus_hoffmani_by_olorotitan-d4esmfm.jpg

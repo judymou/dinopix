@@ -5334,3 +5334,6 @@ Pterodactylus:http://upload.wikimedia.org/wikipedia/commons/4/41/Pterodactylus_k
 Pterodactylus:http://fc02.deviantart.net/fs71/i/2013/184/b/0/pterodactylus_antiquus_by_batworker-d6buctz.jpg
 Tarascosaurus:http://fc07.deviantart.net/fs42/i/2009/126/c/6/Tarascosaurus_by_Rapator.jpg
 Tarascosaurus:http://fc01.deviantart.net/fs70/i/2014/205/8/b/tarascosaurus_by_jonagold2000-d7s3t0f.png
+Dimorphodon:http://educar.org/prehistoria/fosiles/dimorphodon.jpg
+Dimorphodon:http://4.bp.blogspot.com/-1KjnKF6hKnA/UQ3lFtk-MSI/AAAAAAAAA3c/YUvOiLvN-xI/s1600/Dimorphodon+painting+(wm).jpg
+Dimorphodon:http://img1.wikia.nocookie.net/__cb20130818062831/wierdnwildcreatures/images/e/ec/Dimorphodon.jpg
