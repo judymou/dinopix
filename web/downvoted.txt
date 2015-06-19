@@ -226,3 +226,17 @@ Carnotaurus:http://cdn.zmescience.com/wp-content/uploads/2011/10/carnotaurus.jpg
 Concavenator:http://www.dinotoyblog.com/dinotoyimages/june11/concavenator_collectA1.jpg
 Concavenator:http://romangm.com/wp-content/uploads/2014/01/Concavenator_boc-1024x786.jpg
 Stegosaurus:http://0.tqn.com/d/dinosaurs/1/0/J/0/-/-/stegosaurus.jpg
+Bakonydraco:http://2.bp.blogspot.com/-m3St3JLUEQY/UBZQU2vIgFI/AAAAAAAANJ8/MGSpTHBOEEA/s1600/Bakonydraco-Fig1.jpg
+Bellubrunnus:http://www.reptileevolution.com/images/lepidosauromorpha/diadectidae/lepidosauriformes/fenestrasauria/pterosauria/bellubrunnus588.jpg
+Bellubrunnus:https://pterosaurheresies.files.wordpress.com/2012/07/bellubrunnus-mandible.jpg
+Boreopterus:http://th02.deviantart.net/fs32/PRE/i/2008/191/3/3/boreopterus_cuiae_by_tascalo.jpg
+Boreopterus:http://www.prehistoric-wildlife.com/images/species/b/boreopterus-size.jpg
+Caiuajara:http://pterosaurheresies.files.wordpress.com/2014/08/caiuajara-postcrania.jpg
+Cearadactylus:http://fc07.deviantart.net/fs71/i/2011/309/0/9/cearadactylus_by_benjee10-d4f733v.png
+Dawndraco:http://www.amnh.org/var/ezflow_site/storage/images/media/amnh/images/exhibitions/upcoming-exhibitions/pterosaurs/interior-exhibition-pages/dawndraco-fossil-700.309/1205161-1-eng-US/dawndraco-fossil-700.309.jpg
+Dendrorhynchoides:https://pterosaurheresies.files.wordpress.com/2011/11/dendrorhynchoides1.jpg?w=584&h=384
+Dendrorhynchoides:http://www.prehistoric-wildlife.com/images/species/0/sizes-of-anurognathid-pterosaurs-anurognathus-dendrorhynchoides-jeholopterus.jpg
+Harpactognathus:http://www.reptileevolution.com/images/lepidosauromorpha/diadectidae/lepidosauriformes/fenestrasauria/pterosauria/harpactognathus588.jpg
+Harpactognathus:http://paleopedia.free.fr/image/harpactognathus.jpg
+Pterodactylus:http://upload.wikimedia.org/wikipedia/commons/4/41/Pterodactylus_kochi.jpg
+Pterodactylus:http://fc02.deviantart.net/fs71/i/2013/184/b/0/pterodactylus_antiquus_by_batworker-d6buctz.jpg

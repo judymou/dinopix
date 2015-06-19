@@ -35,6 +35,7 @@ var antarcticaList = [];
 
 // Other
 var plesiosaurList = [];
+var pterosaurList = [];
 
 var prevName = null;
 var count = 0;
@@ -51,6 +52,9 @@ list.forEach(function(item) {
   // Type
   if (item['creature_type'] === 'plesiosaur') {
     plesiosaurList.push(dinoName);
+  }
+  if (item['creature_type'] === 'pterosaur') {
+    pterosaurList.push(dinoName);
   }
 
   // Period
@@ -156,5 +160,8 @@ module.exports = exports = {
   },
   getPlesiosaurDinoNames: function() {
     return plesiosaurList;
-  }
+  },
+  getPterosaurDinoNames: function() {
+    return pterosaurList;
+  },
 }

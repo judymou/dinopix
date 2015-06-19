@@ -56,8 +56,10 @@ function getDinoNamesForCategory(filter) {
       return dinomap.getAustraliaDinoNames();
     case 'antarctica':
       return dinomap.getAntarcticaDinoNames();
-    case 'plesiosaurs':
+    case 'plesiosaur':
       return dinomap.getPlesiosaurDinoNames();
+    case 'pterosaur':
+      return dinomap.getPterosaurDinoNames();
     case 'all':
       return dinomap.get();
   };
@@ -143,6 +145,7 @@ exports.dinosaur = function(req, res) {
   var dino = req.params.dino.trim();
   var match = dinomap.get()[dino];
   if (!match) {
+    res.send('Sorry, could not find this creature.');
     return null;
   }
 
@@ -152,6 +155,7 @@ exports.dinosaur = function(req, res) {
     creature_type: creature_type || 'dinosaur',
     isDinosaur: !creature_type || creature_type === 'dinosaur',
     isPlesiosaur: creature_type === 'plesiosaur',
+    isPterosaur: creature_type === 'pterosaur',
 
     dino: dino,
     // Default to null for empty string, for templating purposes.

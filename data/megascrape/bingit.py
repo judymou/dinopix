@@ -27,7 +27,15 @@ for row in reader:
         creature_type = 'plesiosaur'
         dino, discoverer, discovered, status, period, region =  \
                 [x.strip() for x in row]
-        regions.append(region)
+        tmp_regions = [x.strip() for x in region.split(',')]
+        regions.extend(tmp_regions)
+    elif file_type == 'ptero':
+        creature_type = 'pterosaur'
+        dino, discoverer, discovered, status, period, region =  \
+                [x.strip() for x in row]
+        tmp_regions = [x.strip() for x in region.split(',')]
+        if len(tmp_regions) > 1 or (len(tmp_regions) == 1 and tmp_regions[0] != ''):
+            regions.extend(tmp_regions)
 
     out_path = 'scrape_results/%s' % dino
     if os.path.exists(out_path):
