@@ -416,3 +416,6 @@ Zhejiangopterus:http://img07.deviantart.net/997f/i/2015/105/5/e/tarbosaurus_zhej
 Zhejiangopterus:http://johnconway.co/images/medium/zhejiangopterus-linhaiensis.jpeg
 Zhejiangopterus:http://fc09.deviantart.net/fs71/i/2014/267/6/a/zhejiangopterus_linhaiensis_by_paleopeter-d7rj3q9.jpg
 Zhenyuanopterus:http://images.fineartamerica.com/images-medium-large/zhenyuanopterus-walter-colvin.jpg
+Amargasaurus:http://www.dinosaurier-info.de/images/dinosaurs/dino_a/~amargasaurus/Amargasaurus-by-Raul-Lunia.jpg
+Sordes:http://fc01.deviantart.net/fs71/i/2010/020/5/d/Sordes_by_Eurwentala.jpg
+Eudimorphodon:http://www.tunturisusi.com/dinosaurukset/eudimorphodon.jpg
