@@ -145,6 +145,7 @@ exports.dinosaur = function(req, res) {
   var dino = req.params.dino.trim();
   var match = dinomap.get()[dino];
   if (!match) {
+    res.status(404);
     res.send('Sorry, could not find this creature.');
     return null;
   }
