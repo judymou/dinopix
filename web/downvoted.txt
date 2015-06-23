@@ -273,3 +273,13 @@ Gobivenator:http://encyklopedia.dinozaury.com/images/3/38/Gobivenator.jpg
 Concavenator:http://s4.e-monsite.com/2011/06/02/11/Concavenator.jpg
 Ornitholestes:http://www.nenature.com/DinoImages/Ornitholestes074.jpg
 Gwawinapterus:http://archosaurmusings.files.wordpress.com/2011/01/gwawinapterus-revised-copy.jpg
+Orkoraptor:http://www.wikidino.com/wp-content/uploads/Orkoraptor-Rodrigo-Vega.jpg
+Jiangjunosaurus:http://fc02.deviantart.net/fs71/i/2012/235/a/e/jiangjunosaurus_by_fafnirx-d5c7qtn.jpg
+Jiangjunosaurus:http://www.wikidino.com/wp-content/uploads/Jiangjunosaurus-EmperorDinobot.jpg
+Edmontosaurus:http://www.sciencekids.co.nz/images/pictures/dinosaurs/edmontosaurus.jpg
+Edmontosaurus:http://3.bp.blogspot.com/-UyEN-yB5HbE/T4cLDtN_L9I/AAAAAAAAC-E/fuqE1jmbcbo/s1600/edmontosaurus-regalis.jpg
+Edmontosaurus:http://upload.wikimedia.org/wikipedia/commons/f/f0/Edmontosaurus_BW.jpg
+Elopteryx:http://img1.wikia.nocookie.net/__cb20140117173830/dinosaurs/images/0/0f/Elopteryx_by_hyrotrioskjan-d3llwnd.jpg
+Plesiosaurus:http://www.dinosaurfact.net/Pictures/Plesiosaurus3.jpg
+Plesiosaurus:http://fc03.deviantart.net/fs70/f/2012/047/9/6/plesiosaurus_by_vukaddin-d4pwic9.jpg
+Plesiosaurus:http://fc07.deviantart.net/fs71/f/2012/083/f/7/plesiosaurus_pose_003_by_vukaddin-d4trdcf.jpg
