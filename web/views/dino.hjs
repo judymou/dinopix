@@ -298,10 +298,10 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
             </div>
           {{/adminReview}}
           <div class="vote upvote" data-url="{{voting_url}}">
-            <i class="glyphicon glyphicon-arrow-up"></i>
+            <i title="Upvote - I like this!" class="glyphicon glyphicon-arrow-up"></i>
           </div>
           <div class="vote downvote" data-url="{{voting_url}}">
-            <i class="glyphicon glyphicon-arrow-down"></i>
+            <i title="Downvote - I don't like this" class="glyphicon glyphicon-arrow-down"></i>
           </div>
           <a href="{{clickthrough_url}}" target="_blank">
             {{#isCrawler}}
