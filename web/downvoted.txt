@@ -283,3 +283,8 @@ Elopteryx:http://img1.wikia.nocookie.net/__cb20140117173830/dinosaurs/images/0/0
 Plesiosaurus:http://www.dinosaurfact.net/Pictures/Plesiosaurus3.jpg
 Plesiosaurus:http://fc03.deviantart.net/fs70/f/2012/047/9/6/plesiosaurus_by_vukaddin-d4pwic9.jpg
 Plesiosaurus:http://fc07.deviantart.net/fs71/f/2012/083/f/7/plesiosaurus_pose_003_by_vukaddin-d4trdcf.jpg
+Acheroraptor:http://cdn4.sci-news.com/images/2013/12/image_1630_2-Acheroraptor.jpg
+Acheroraptor:http://cdn4.sci-news.com/images/enlarge/image_1630_1e-Acheroraptor.jpg
+Yueosaurus:http://fc01.deviantart.net/fs70/i/2012/060/d/f/yueosaurus__tiantaiensis_by_teratophoneus-d4rdh3u.jpg
+Yueosaurus:http://fc04.deviantart.net/fs70/i/2012/069/9/7/yueosaurus__tiantaiensis_by_teratophoneus-d4sawtr.jpg
+Yueosaurus:http://fc01.deviantart.net/fs70/i/2012/060/d/f/yueosaurus__tiantaiensis_by_teratophoneus-d4rdh3u.jpg
