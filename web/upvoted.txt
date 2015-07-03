@@ -481,3 +481,10 @@ Dracorex:http://s4.e-monsite.com/2011/07/22/10/Dracorex.jpg
 Euoplocephalus:http://canadianmuseumofnature.files.wordpress.com/2013/03/euoplocephalus-rgb4001.jpg?w=640
 Pentaceratops:http://static1.cornucopia3d.net/galleries/albums/userpics/15875/Pentaceratops.jpg
 Giganotosaurus:http://th02.deviantart.net/fs71/PRE/i/2012/147/5/f/giganotosaurus_by_pachyrhinosaurus-d519on1.png
+Tyrannosaurus:http://www.wallpaperden.com/pics/tyrannosaurus-rex.jpg
+Ahshislepelta:http://www.wikidino.com/wp-content/uploads/Ahshislepelta-wikidino.jpg
+Xiaosaurus:http://fc03.deviantart.net/fs70/i/2011/338/c/b/xiaosaurus_dashanpensis_by_teratophoneus-d4i4mic.jpg
+Bienosaurus:http://histoiredutemps.free.fr/images/im-terrestre/animal.arma/Bienosaurus.jpg
+Gigantoraptor:http://fc08.deviantart.net/fs70/i/2010/013/5/5/Gigantoraptor_erlianensis_by_TopGon.jpg
+Quaesitosaurus:http://img4.wikia.nocookie.net/__cb20130608183510/prehistrico/es/images/4/42/Quaesitosaurus.jpg
+Cumnoria:http://www.dinosaurier-info.de/images/dinosaurs/dino_c/~cumnoria/Cumnoria-NT.jpg
