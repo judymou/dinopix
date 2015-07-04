@@ -303,7 +303,7 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
         </div>
         {{#shouldShowMap}}
         <div class="map-container col-sm-5">
-          <img src="{{mapUrl}}"/>
+          <img src="{{mapUrl}}" alt="Locations where fossils were found."/>
         </div>
         {{/shouldShowMap}}
       </div>
