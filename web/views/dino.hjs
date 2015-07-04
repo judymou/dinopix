@@ -80,7 +80,7 @@
       }
 
       .main-content {
-        margin: 30px;
+        margin-left: 30px;
         font-size: 16px;
       }
 
