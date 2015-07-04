@@ -488,3 +488,4 @@ Bienosaurus:http://histoiredutemps.free.fr/images/im-terrestre/animal.arma/Bieno
 Gigantoraptor:http://fc08.deviantart.net/fs70/i/2010/013/5/5/Gigantoraptor_erlianensis_by_TopGon.jpg
 Quaesitosaurus:http://img4.wikia.nocookie.net/__cb20130608183510/prehistrico/es/images/4/42/Quaesitosaurus.jpg
 Cumnoria:http://www.dinosaurier-info.de/images/dinosaurs/dino_c/~cumnoria/Cumnoria-NT.jpg
+Lusotitan:http://2.bp.blogspot.com/-_PGvuuWkyD8/TqBW3FPtpII/AAAAAAAAAOc/RxjFbrjcjCo/s1600/dinosaur-revolution-lusotitan-2.jpg
