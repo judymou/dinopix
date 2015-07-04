@@ -279,13 +279,13 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
             {{#isPlesiosaur}}
             {{dino}} is a plesiosaur, a type of marine reptile.  It was not a dinosaur, though it lived during the same period.
               {{#period}}
-                {{dino}} lived during the {{period}}{{#regions}}and resided in {{regions}}{{/regions}}.
+                {{dino}} lived during the {{period}}{{#regions}} and resided in {{regions}}{{/regions}}.
               {{/period}}
             {{/isPlesiosaur}}
             {{#isPterosaur}}
             {{dino}} is a pterosaur, a type of flying reptile.  It was not a dinosaur, though it lived during the same period.
               {{#period}}
-                {{dino}} lived during the {{period}}{{#regions}}and resided in {{regions}}{{/regions}}.
+                {{dino}} lived during the {{period}}{{#regions}} and resided in {{regions}}{{/regions}}.
               {{/period}}
             {{/isPterosaur}}
             </p>
