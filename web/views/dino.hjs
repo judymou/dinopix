@@ -306,7 +306,7 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
         </div>
         {{#shouldShowMap}}
         <div class="map-container col-sm-5">
-          <img src="{{mapUrl}}" alt="Locations where fossils were found."/>
+          <img src="{{mapUrl}}" alt="Locations where {{dino}} fossils were found." title="Locations where {{dino}} fossils were found."/>
         </div>
         {{/shouldShowMap}}
       </div>
@@ -330,14 +330,14 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
           </div>
           <a href="{{clickthrough_url}}" target="_blank">
             {{#isCrawler}}
-              <img src="{{url}}" alt="{{dino}}"/>
+              <img src="{{url}}" title="{{dino}}" alt="{{dino}}"/>
             {{/isCrawler}}
             {{^isCrawler}}
               {{#adminReview}}
-              <img src="{{url}}" alt="{{dino}}"/>
+              <img src="{{url}}" title="{{dino}}" alt="{{dino}}"/>
               {{/adminReview}}
               {{^adminReview}}
-              <img src="http://i.imgur.com/Vmxsx1H.gif" data-src="{{url}}" alt="{{dino}}"/>
+              <img src="http://i.imgur.com/Vmxsx1H.gif" data-src="{{url}}" title="{{dino}}" alt="{{dino}}"/>
               {{/adminReview}}
             {{/isCrawler}}
           </a>

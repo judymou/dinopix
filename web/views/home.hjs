@@ -223,7 +223,7 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
             {{#featuredFirstRow}}
               <div class="featured-dino col-md-3">
                 <span><a href="/{{name}}-pictures">{{name}}</a></span>
-                <a href="/{{name}}-pictures"><img src="{{img}}" alt="{{name}}"></a>
+                <a href="/{{name}}-pictures"><img src="{{img}}" title="{{name}}" alt="{{name}}"></a>
               </div>
             {{/featuredFirstRow}}
           </div>
@@ -231,7 +231,7 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
             {{#featuredSecondRow}}
               <div class="featured-dino col-md-3">
                 <span><a href="/{{name}}-pictures">{{name}}</a></span>
-                <a href="/{{name}}-pictures"><img src="{{img}}" alt="{{name}}"></a>
+                <a href="/{{name}}-pictures"><img src="{{img}}" title="{{name}}" alt="{{name}}"></a>
               </div>
             {{/featuredSecondRow}}
           </div>
