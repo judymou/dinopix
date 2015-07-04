@@ -275,7 +275,7 @@ function picsForDinosaur(match) {
 }
 
 function createMapUrlForDinosaur(match) {
-  var ret = 'http://maps.googleapis.com/maps/api/staticmap?center=&zoom=4&scale=1&size=350x250&maptype=terrain&format=png&visual_refresh=true';
+  var ret = 'http://maps.googleapis.com/maps/api/staticmap?zoom=2&scale=1&size=350x250&maptype=terrain&format=png&visual_refresh=true';
   match['fossil_latlngs'].slice(0, 10).forEach(function(latlng) {
     ret += '&markers=size:mid%7Ccolor:red%7Clabel:1%7C' + latlng[0] + ',' + latlng[1];
   });
