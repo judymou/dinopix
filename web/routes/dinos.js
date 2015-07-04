@@ -164,6 +164,8 @@ exports.dinosaur = function(req, res) {
     eats: match['eats'],
     regions: regions.length == 0 ? null : regions.join(', '),
     pics: picsForDinosaur(match),
+    shouldShowMap: match['fossil_latlngs'] && match['fossil_latlngs'].length > 0,
+    mapUrl: createMapUrlForDinosaur(match),
     prevDino: match['prev'],
     nextDino: match['next'],
     count: match['count'],
@@ -270,6 +272,14 @@ function picsForDinosaur(match) {
     var downvote_score_b = downvoted_map[b['voting_url']] || 0;
     return downvote_score_a - downvote_score_b;
   });
+}
+
+function createMapUrlForDinosaur(match) {
+  var ret = 'http://maps.googleapis.com/maps/api/staticmap?center=&zoom=4&scale=1&size=350x250&maptype=terrain&format=png&visual_refresh=true';
+  match['fossil_latlngs'].forEach(function(latlng) {
+    ret += '&markers=size:mid%7Ccolor:red%7Clabel:1%7C' + latlng[0] + ',' + latlng[1];
+  });
+  return ret;
 }
 
 function shuffle(o) {

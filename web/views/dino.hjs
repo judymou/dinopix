@@ -88,6 +88,14 @@
         margin: 0 0 15px;
       }
 
+      .map-container {
+      }
+
+      .map-container img {
+        width: 100%;
+        height: auto;
+      }
+
       .pics {
         text-align: center;
       }
@@ -256,34 +264,46 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
 
       <h1 class="main-title">{{dino}} pictures</h1>
 
-      <div class="main-content">
-        <div class="intro">
-          <p>
-          {{#isDinosaur}}
-          {{dino}} is a {{eats}}.  It lived in the {{period}} period and resided in {{regions}}.
-          {{/isDinosaur}}
-          {{#isPlesiosaur}}
-          {{dino}} is a plesiosaur, a type of marine reptile.  It was not a dinosaur, though it lived during the same period.
-            {{#period}}
-              {{dino}} lived during the {{period}}{{#regions}}and resided in {{regions}}{{/regions}}.
-            {{/period}}
-          {{/isPlesiosaur}}
-          {{#isPterosaur}}
-          {{dino}} is a pterosaur, a type of flying reptile.  It was not a dinosaur, though it lived during the same period.
-            {{#period}}
-              {{dino}} lived during the {{period}}{{#regions}}and resided in {{regions}}{{/regions}}.
-            {{/period}}
-          {{/isPterosaur}}
-          </p>
-          <p>
-          All these {{dino}} pictures were collected from the internet.  Credit goes to original creators and artists.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script> or use <a href="http://goo.gl/forms/B9rRB2O1wT">this form</a>.
-          </p>
+      <div class="row">
+        {{#shouldShowMap}}
+        <div class="main-content col-sm-6">
+        {{/shouldShowMap}}
+        {{^shouldShowMap}}
+        <div class="main-content">
+        {{/shouldShowMap}}
+          <div class="intro">
+            <p>
+            {{#isDinosaur}}
+            {{dino}} is a {{eats}}.  It lived in the {{period}} period and resided in {{regions}}.
+            {{/isDinosaur}}
+            {{#isPlesiosaur}}
+            {{dino}} is a plesiosaur, a type of marine reptile.  It was not a dinosaur, though it lived during the same period.
+              {{#period}}
+                {{dino}} lived during the {{period}}{{#regions}}and resided in {{regions}}{{/regions}}.
+              {{/period}}
+            {{/isPlesiosaur}}
+            {{#isPterosaur}}
+            {{dino}} is a pterosaur, a type of flying reptile.  It was not a dinosaur, though it lived during the same period.
+              {{#period}}
+                {{dino}} lived during the {{period}}{{#regions}}and resided in {{regions}}{{/regions}}.
+              {{/period}}
+            {{/isPterosaur}}
+            </p>
+            <p>
+            All these {{dino}} pictures were collected from the internet.  Credit goes to original creators and artists.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script> or use <a href="http://goo.gl/forms/B9rRB2O1wT">this form</a>.
+            </p>
+          </div>
+          <ul>
+            <li><strong><a href="/random" rel="nofollow">Random dinosaur</a></strong></li>
+            <li><a href="/">View other dinosaurs</a></li>
+            <li><a target="_blank" href="http://en.wikipedia.org/wiki/{{dino}}">Wikipedia page</a></li>
+          </ul>
         </div>
-        <ul>
-          <li><strong><a href="/random" rel="nofollow">Random dinosaur</a></strong></li>
-          <li><a href="/">View other dinosaurs</a></li>
-          <li><a target="_blank" href="http://en.wikipedia.org/wiki/{{dino}}">Wikipedia page</a></li>
-        </ul>
+        {{#shouldShowMap}}
+        <div class="map-container col-sm-5">
+          <img src="{{mapUrl}}"/>
+        </div>
+        {{/shouldShowMap}}
       </div>
 
       <div class="pics">
