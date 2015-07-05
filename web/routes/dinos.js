@@ -8,8 +8,6 @@ var upvoted_map = require('./upvoted.js');
 var downvoted_map = require('./downvoted.js');
 var util = require('../util.js');
 
-//util.installObjectExtend();
-
 var reportedCache = {};
 
 exports.home = function(req, res) {
@@ -67,8 +65,9 @@ function getDinoNamesForCategory(filter) {
 }
 
 exports.jsonFilter = function(req, res) {
-  res.send(
-    getDinoNamesForCategory(req.params.filter.trim()).extend({success:true}));
+  var ret = getDinoNamesForCategory(req.params.filter.trim());
+  ret['success'] = true;
+  res.send(ret);
 }
 
 exports.filter = function(req, res) {
@@ -138,6 +137,9 @@ exports.jsonDinosaur = function(req, res) {
     eats: match['eats'],
     regions: getRegionsForDino(match),
     pics: picsForDinosaur(match),
+    shouldShowMap: match['fossil_latlngs'] && match['fossil_latlngs'].length > 0,
+    mapUrl: createMapUrlForDinosaur(match),
+    globeUrl: createGlobeUrlForDinosaur(match),
   });
 }
 
@@ -166,6 +168,7 @@ exports.dinosaur = function(req, res) {
     pics: picsForDinosaur(match),
     shouldShowMap: match['fossil_latlngs'] && match['fossil_latlngs'].length > 0,
     mapUrl: createMapUrlForDinosaur(match),
+    globeUrl: createGlobeUrlForDinosaur(match),
     prevDino: match['prev'],
     nextDino: match['next'],
     count: match['count'],
@@ -279,6 +282,20 @@ function createMapUrlForDinosaur(match) {
   match['fossil_latlngs'].slice(0, 10).forEach(function(latlng) {
     ret += '&markers=size:mid%7Ccolor:red%7Clabel:1%7C' + latlng[0] + ',' + latlng[1];
   });
+  return ret;
+}
+
+function createGlobeUrlForDinosaur(match) {
+  var ret = 'http://dinosaurpictures.org/ancient-earth/#';
+  var period = match['period'].toLowerCase();
+  // TODO have these understand 'mid', 'late', and mixed, etc.
+  if (period.indexOf('cretaceous') > -1) {
+    ret += '90';
+  } else if (period.indexOf('jurassic') > -1) {
+    ret += '170';
+  } else if (period.indexOf('triassic') > -1) {
+    ret += '220';
+  }
   return ret;
 }
 
