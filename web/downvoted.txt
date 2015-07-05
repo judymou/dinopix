@@ -335,3 +335,6 @@ Gasosaurus:http://0.tqn.com/d/dinosaurs/1/0/S/Q/-/-/gasosaurus-constructus.jpg
 Gasosaurus:http://s4.e-monsite.com/2011/06/09/10/resize_550_550/gasosaurus.jpg
 Lycorhinus:http://www.paleofile.com/imges/Dinosaurs/Ornithopoda/Lycorhinus3606.jpg
 Majungasaurus:http://fc04.deviantart.net/fs70/i/2013/124/1/3/majungasaurus___15__by_wolverine041269-d643zks.png
+Skorpiovenator:http://images2.wikia.nocookie.net/__cb20130302193755/bbcplanetdinosaur/images/8/83/Skorpiovenator.png
+Ostafrikasaurus:http://www.wikidino.com/wp-content/uploads/Ostafrikasaurus-Hyrotrioskjan.jpg
+Ostafrikasaurus:http://fc01.deviantart.net/fs70/i/2012/314/0/b/ostafrikasaurus_by_fafnirx-d5kjyr0.jpg
