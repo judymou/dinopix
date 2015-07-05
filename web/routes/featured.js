@@ -8,15 +8,15 @@ var featuredDinos = [];
 var seenUrls = {};
 lines.forEach(function(line) {
   var dino = line.slice(0, line.indexOf(':'));
-  var url = line.slice(line.indexOf(':') + 1);
-  if (url in seenUrls) {
+  var originalUrl = line.slice(line.indexOf(':') + 1);
+  if (originalUrl in seenUrls) {
     return true;
   }
   featuredDinos.push({
     name: dino,
-    img: dinomap.getThumbFor(url) || url,
+    img: dinomap.getThumbFor(originalUrl) || originalUrl,
   });
-  seenUrls[url] = true;
+  seenUrls[originalUrl] = true;
 });
 
 var filterCache = {};
