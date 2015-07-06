@@ -505,3 +505,8 @@ Triceratops:http://upload.wikimedia.org/wikipedia/commons/0/0c/Triceratops-Zachi
 Triceratops:http://www.nenature.com/DinoImages/Triceratops026.jpg
 Sinornithosaurus:http://runningponies.files.wordpress.com/2010/01/sinornithosaurus_by_ferahgo_the_assassin.jpg
 Cetiosaurus:http://kozmopolitaydinlar.files.wordpress.com/2011/08/cetiosaurus.jpg
+Astrodon:http://upload.wikimedia.org/wikipedia/commons/6/6d/Astrodon1DB.jpg
+Astrodon:http://www.nenature.com/DinoImages/Astrodon029.jpg
+Astrodon:http://www.wikidino.com/wp-content/uploads/Astrodon-karkemish00.jpg
+Nanuqsaurus:http://fc04.deviantart.net/fs70/i/2014/334/6/0/nanuqsaurus_by_ntamura-d88aqpb.jpg
+Nanuqsaurus:http://fc07.deviantart.net/fs70/i/2014/089/1/5/nanuqsaurus_hoglundi_by_xiphactinus-d7c7y0a.jpg
