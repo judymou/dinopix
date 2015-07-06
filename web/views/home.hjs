@@ -16,12 +16,12 @@
       <meta name="twitter:title" content="DinosaurPictures.org - Awesome Dinosaur Pictures">
       <meta name="twitter:description" content="Curated high quality database of dinosaur pictures">
       <meta name="twitter:creator" content="@iwebst">
-      <meta name="twitter:image" content="https://res.cloudinary.com/dinopics/image/upload/c_limit,w_960/v1431264203/Majungasaurus_Majungasaurus-_Phil-Brownlow_17.jpg">
+      <meta name="twitter:image" content="http://images.dinosaurpictures.org/Majungasaurus-_Phil-Brownlow_a382.jpg">
 
       <meta property="og:title" content="DinosaurPictures.org - Awesome Dinosaur Pictures" />
       <meta property="og:type" content="article" />
       <meta property="og:url" content="http://dinosaurpictures.org" />
-      <meta property="og:image" content="https://res.cloudinary.com/dinopics/image/upload/c_limit,w_960/v1431264203/Majungasaurus_Majungasaurus-_Phil-Brownlow_17.jpg" />
+      <meta property="og:image" content="http://images.dinosaurpictures.org/Majungasaurus-_Phil-Brownlow_a382.jpg" />
       <meta property="og:description" content="Best dinosaur pictures and info on the internet. Curated high quality database of dinosaur pictures" />
       <!--
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
