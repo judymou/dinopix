@@ -1,0 +1,10 @@
+          {{hasRefs}}
+          <p>
+            This dinosaur was described in the following scientific paper(s):
+            <ul>
+              {{refs}}
+                <li>{{.}}</li>
+              {{/refs}}
+            </ul>
+          </p>
+          {{/hasRefs}}

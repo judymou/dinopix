@@ -139,6 +139,7 @@ exports.jsonDinosaur = function(req, res) {
     pics: picsForDinosaur(match),
     shouldShowMap: match['fossil_latlngs'] && match['fossil_latlngs'].length > 0,
     mapUrl: createMapUrlForDinosaur(match),
+    refs: match['refs'],
     globeUrl: createGlobeUrlForDinosaur(match),
   });
 }
@@ -154,6 +155,7 @@ exports.dinosaur = function(req, res) {
 
   var creature_type = match['creature_type'];
   var regions = getRegionsForDino(match);
+  var refs = match['refs'] || [];
   res.render('dino', {
     creature_type: creature_type || 'dinosaur',
     isDinosaur: !creature_type || creature_type === 'dinosaur',
@@ -168,6 +170,8 @@ exports.dinosaur = function(req, res) {
     pics: picsForDinosaur(match),
     shouldShowMap: match['fossil_latlngs'] && match['fossil_latlngs'].length > 0,
     mapUrl: createMapUrlForDinosaur(match),
+    hasRefs: refs.length > 0,
+    refs: refs.slice(3),
     globeUrl: createGlobeUrlForDinosaur(match),
     prevDino: match['prev'],
     nextDino: match['next'],
