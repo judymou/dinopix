@@ -510,3 +510,16 @@ Astrodon:http://www.nenature.com/DinoImages/Astrodon029.jpg
 Astrodon:http://www.wikidino.com/wp-content/uploads/Astrodon-karkemish00.jpg
 Nanuqsaurus:http://fc04.deviantart.net/fs70/i/2014/334/6/0/nanuqsaurus_by_ntamura-d88aqpb.jpg
 Nanuqsaurus:http://fc07.deviantart.net/fs70/i/2014/089/1/5/nanuqsaurus_hoglundi_by_xiphactinus-d7c7y0a.jpg
+Hypsilophodon:http://www.dinopit.com/wp-content/uploads/2012/10/hypsilophodon-1024x636.jpg
+Majungasaurus:http://4.bp.blogspot.com/-mkajjd_EUv4/ToOB0hvkuPI/AAAAAAAAAHY/EUgCF2MNNtA/s1600/Majungasaurus-_Phil-Brownlow.jpg
+Confuciusornis:http://2.bp.blogspot.com/-AmdxEiQH4MA/UQDyDPBcu8I/AAAAAAAACUk/NEUDgf-hJjY/s1600/confuciusornis.jpg
+Labocania:http://romangm.com/wp-content/uploads/2013/08/Labocania_web.jpg
+Lanzhousaurus:http://masahatto2.p2.bindsite.jp/_src/sc2098/Lanzhousaurus_20120330_2.jpg
+Udanoceratops:http://masahatto2.p2.bindsite.jp/_src/sc1882/Udanoceratops20111227_2.jpg
+Udanoceratops:http://images.fineartamerica.com/images-medium-large-5/1-udanoceratops-walking-along-the-waters-kostyantyn-ivanyshen.jpg
+Sciurumimus:http://1.bp.blogspot.com/-vklX_DkgFvE/UGoB_KWKIQI/AAAAAAAAAmY/VPA0ObhSDFU/s1600/Sciurumimus_20120929_1.jpg
+Skorpiovenator:http://kozmopolitaydinlar.files.wordpress.com/2011/08/skorpiovenator.jpg
+Neuquenraptor:http://www.wikidino.com/wp-content/uploads/Neuquenraptor-maniraptora-3.jpg
+Zby:http://fc00.deviantart.net/fs70/i/2014/136/8/f/zby_atlanticus_by_eloymanzanero-d7htvs5.jpg
+Zhejiangopterus:http://2.bp.blogspot.com/-DgfAx6x6DbE/UBK85ntvnwI/AAAAAAAANHE/gPsXIE917_8/s1600/Zhejiangopterus_linhaiensis_by_Eurwentala.jpg
+Sigilmassasaurus:http://www.wikidino.com/wp-content/uploads/Sigilmassasaurus-Brad-ysaurus.jpg
