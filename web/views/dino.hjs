@@ -92,6 +92,10 @@
         margin: 0 0 15px;
       }
 
+      .references {
+        margin-top: 14px;
+      }
+
       .references ul {
         margin-top: 5px;
         margin-left: -2px;
@@ -302,14 +306,16 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
             {{/isPterosaur}}
             </p>
             <p>
-            All these {{dino}} pictures were collected from the internet.  Credit goes to original creators and artists.  If you would like to add a picture, please <script>document.write('<a href="mailto:co' + 'nt' + String.fromCharCode(97) + 'ct@dinosaurpictures.org">email us</a>')</script> or use <a href="http://goo.gl/forms/B9rRB2O1wT">this form</a>.
+            All these {{dino}} pictures were collected from the internet.  Credit goes to original creators and artists.  Enjoy and explore:
             </p>
           </div>
-          <ul>
-            <li><strong><a href="/random" rel="nofollow">Random dinosaur</a></strong></li>
-            <li><a href="/">View other dinosaurs</a></li>
-            <li><a target="_blank" href="http://en.wikipedia.org/wiki/{{dino}}">Wikipedia page</a></li>
-          </ul>
+          <div>
+            <ul>
+              <li><strong><a href="/random" rel="nofollow">Random dinosaur</a></strong></li>
+              <li><a href="/">View other dinosaurs</a></li>
+              <li><a target="_blank" href="http://en.wikipedia.org/wiki/{{dino}}">Wikipedia page</a></li>
+            </ul>
+          </div>
           {{#hasRefs}}
           <div class="references">
             {{dino}} was described by the following scientific paper(s):
