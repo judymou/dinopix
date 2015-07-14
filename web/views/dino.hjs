@@ -92,6 +92,12 @@
         margin: 0 0 15px;
       }
 
+      .references ul {
+        margin-top: 5px;
+        margin-left: -2px;
+        font-size: 12px;
+      }
+
       .map-container {
         padding-left: 40px;
         padding-right: 40px;
@@ -304,6 +310,16 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
             <li><a href="/">View other dinosaurs</a></li>
             <li><a target="_blank" href="http://en.wikipedia.org/wiki/{{dino}}">Wikipedia page</a></li>
           </ul>
+          {{#hasRefs}}
+          <div class="references">
+            {{dino}} was described by the following scientific paper(s):
+            <ul>
+              {{#refs}}
+                <li>{{.}}</li>
+              {{/refs}}
+            </ul>
+          </div>
+          {{/hasRefs}}
         </div>
         {{#shouldShowMap}}
         <div class="map-container col-sm-5">
