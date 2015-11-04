@@ -47,7 +47,10 @@ list.forEach(function(item) {
 
   // Record image url map
   item['images'].forEach(function(imageInfo) {
-    imageUrlToThumbnail[imageInfo['url']] = imageInfo['thumbnail'];
+    //imageUrlToThumbnail[imageInfo['url']] = imageInfo['thumbnail'];
+    imageUrlToThumbnail[imageInfo['url']] = imageInfo['s3_url']
+        .replace('dinosaurpictures.org', 'dinosaurpictures.org.rsz.io') +
+        '?width=200';
   });
 
   // Type

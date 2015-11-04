@@ -7,10 +7,11 @@
   },
   "dependencies": {
     "express": "3.0.6",
-    "sitemap": "latest",
-    "underscore": "latest",
     "hjs": "*",
     "less-middleware": "*",
-    "stable": "latest"
+    "sitemap": "latest",
+    "stable": "latest",
+    "underscore": "latest",
+    "url-join": "0.0.1"
   }
 }

@@ -259,7 +259,7 @@ function picsForDinosaur(match) {
       voting_url: picitem['url'],
       url: picitem['s3_url'] || picitem['url'],
       clickthrough_url: picitem['s3_url'] || picitem['url'],
-      thumbnail: picitem['s3_url'],
+      thumbnail: picitem['thumbnail'],
       source: picitem['source'],
       source_display: picitem['display_url'],
     });
