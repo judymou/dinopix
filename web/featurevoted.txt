@@ -253,7 +253,6 @@ Concavenator:http://4.bp.blogspot.com/-svRKbm6RkQI/Tgb07Qd-D0I/AAAAAAAAC3Y/ROxAv
 Confuciusornis:http://2.bp.blogspot.com/-AmdxEiQH4MA/UQDyDPBcu8I/AAAAAAAACUk/NEUDgf-hJjY/s1600/confuciusornis.jpg
 Coronosaurus:http://i2.wp.com/csotonyi.com/wp-content/uploads/2014/05/Spinops_Coronosaurus_tyrannosaur_Csotonyi-21-900x595_c.jpg
 Corythosaurus:http://dinosaurios.org/wp-content/uploads/2013/10/Corythosaurus.jpg
-Crichtonsaurus:http://www.arcadiastreet.com/cgvistas/earth/03_mesozoic/images/crichtonsaurus_and_frogs_1280.jpg
 Dacentrurus:http://romangm.com/wp-content/uploads/2012/11/Dacentrurus_Camptosaurus-1024x724.jpg
 Dacentrurus:http://2.bp.blogspot.com/-YU6EP-Qjj8E/UtmstmMJtuI/AAAAAAAABaU/xpI_UVnkvUI/s1600/Dacentrurus_20140118.jpg
 Dacentrurus:http://www.arturodemiguel.com/ArtGallery/ssp_director/albums/album-15/lg/dacentrurus.jpg
@@ -311,7 +310,6 @@ Dimorphodon:http://www.arcadiastreet.com/cgvistas/earth/03_mesozoic/images/dimor
 Dsungaripterus:http://geofrikphotos.files.wordpress.com/2013/02/dsungaripterus.jpg
 Gwawinapterus:http://gwawinapterus.files.wordpress.com/2011/10/505612-planet-dinosaur.jpg
 Ikrandraco:http://cdn4.sci-news.com/images/enlarge/image_2147_1e-Ikrandraco-avatar.jpg
-Ornithocheirus:http://4.bp.blogspot.com/-EhCiyhoi1Lc/UWgO8L9oZ6I/AAAAAAAAVWs/3J0rHvLHP_A/s1600/Ornithocheirus+04.jpg
 Ornithocheirus:http://th01.deviantart.net/fs70/PRE/i/2013/171/3/b/ornithocheirus_simus_and_chick_by_philip72-d69y6ax.jpg
 Thalassodromeus:http://upload.wikimedia.org/wikipedia/commons/d/df/Thalassodromeus.jpg
 Tupandactylus:http://4.bp.blogspot.com/-ilBm2DfoOgw/TlfQmacPgvI/AAAAAAAAAYo/vbKmGd6QMgc/s1600/Tupandactylus_composite_test.jpg
@@ -320,4 +318,3 @@ Zhejiangopterus:http://fc08.deviantart.net/fs71/i/2010/227/6/f/Zhejiangopterus_b
 Zhenyuanopterus:http://images.fineartamerica.com/images-medium-large/zhenyuanopterus-walter-colvin.jpg
 Elopteryx:http://www.wikidino.com/wp-content/uploads/Elopteryx-liliensternus.jpg
 Nanuqsaurus:http://fc04.deviantart.net/fs70/i/2014/334/6/0/nanuqsaurus_by_ntamura-d88aqpb.jpg
-undefined:
