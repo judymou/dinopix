@@ -30,6 +30,7 @@ app.get('/:dino-dinosaur-pictures', function(req, res) {
 app.get('/:dino-pictures', dinos.dinosaur);
 app.get('/:filter-dinosaurs', dinos.filter);
 app.get('/api', dinos.apiInfo);
+app.get('/api/dinosaur/random', dinos.jsonRandomDinosaur);
 app.get('/api/dinosaur/:dino', dinos.jsonDinosaur);
 app.get('/api/category/:filter', dinos.jsonFilter);
 app.get('/api/category/all', dinos.jsonFilter);

@@ -130,9 +130,21 @@ exports.jsonDinosaur = function(req, res) {
     return;
   }
 
+  dinoJsonResponse(dino, match, res);
+}
+
+exports.jsonRandomDinosaur = function(req, res) {
+  var dm = dinomap.get();
+  var keys = Object.keys(dm);
+  var dinoname = keys[keys.length * Math.random() << 0];
+  var match = dm[dinoname];
+  dinoJsonResponse(dinoname, match, res);
+}
+
+function dinoJsonResponse(dinoname, match, res) {
   res.send({
     creature_type: match['creature_type'] || 'dinosaur',
-    dino: dino,
+    name: dinoname,
     period: match['period'],
     eats: match['eats'],
     regions: getRegionsForDino(match),
