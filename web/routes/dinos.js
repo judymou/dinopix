@@ -119,6 +119,8 @@ function getRegionsForDino(match) {
     }
   });
 }
+// TODO(ian): Move out of this file, because it's also used by FB bot.
+exports.getRegionsForDino = getRegionsForDino;
 
 exports.jsonDinosaur = function(req, res) {
   var dino = req.params.dino.trim().toLowerCase();
@@ -293,6 +295,8 @@ function picsForDinosaur(match) {
     return downvote_score_a - downvote_score_b;
   });
 }
+// TODO(ian): Move out of this file, because it's also used by FB bot.
+exports.picsForDinosaur = picsForDinosaur;
 
 function createMapUrlForDinosaur(match) {
   var ret = 'http://maps.googleapis.com/maps/api/staticmap?zoom=2&scale=1&size=350x250&maptype=terrain&format=png&visual_refresh=true';

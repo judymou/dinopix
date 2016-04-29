@@ -1,6 +1,7 @@
 var express = require('express')
   , dinos = require('./routes/dinos.js')
   , sitemap = require('./routes/sitemap.js')
+  , fb_bot = require('./fb_bot.js')
   , http = require('http')
   , path = require('path')
 
@@ -44,6 +45,9 @@ app.get('/downvote', dinos.downvote);
 // someday - dinosaurs by era!
 
 app.get('/sitemap.xml', sitemap.main);
+
+// Set up facebook bot.
+fb_bot.setup(app);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

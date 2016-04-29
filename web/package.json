@@ -9,6 +9,7 @@
     "express": "3.0.6",
     "hjs": "*",
     "less-middleware": "*",
+    "messenger-bot": "^2.2.0",
     "sitemap": "latest",
     "stable": "latest",
     "underscore": "latest",
