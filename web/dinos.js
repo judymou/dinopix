@@ -1,7 +1,7 @@
 var express = require('express')
   , dinos = require('./routes/dinos.js')
   , sitemap = require('./routes/sitemap.js')
-  , fb_bot = require('./fb_bot.js')
+  , fb_bot = require('./fb_bot/fb_bot.js')
   , http = require('http')
   , path = require('path')
 

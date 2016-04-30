@@ -1,6 +1,6 @@
 var Bot = require('messenger-bot');
-var dinomap = require('./routes/dinomap.js');
-var dinoroute = require('./routes/dinos.js');
+var dinomap = require('../routes/dinomap.js');
+var dinoroute = require('../routes/dinos.js');
 
 function setup(app) {
   var bot = new Bot({
