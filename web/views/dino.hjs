@@ -293,7 +293,7 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
             {{dino}} is a {{eats}}.  It lived in the <a href="{{globeUrl}}">{{period}} period</a> and resided in {{regions}}.
             {{/isDinosaur}}
             {{#isPlesiosaur}}
-            {{dino}} is a plesiosaur, a type of marine reptile.  It was not a dinosaur, though it lived during the same period.
+            {{dino}} is a plesiosaur, a type of marine reptile.  It was not a dinosaur, though it coexisted with many dinosaurs.
               {{#period}}
                 {{dino}} lived during the <a href="{{globeUrl}}">{{period}}</a>{{#regions}} and resided in {{regions}}{{/regions}}.
               {{/period}}
