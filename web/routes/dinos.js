@@ -170,7 +170,6 @@ exports.dinosaur = function(req, res) {
   var creature_type = match['creature_type'];
   var regions = getRegionsForDino(match);
   var refs = match['refs'] || [];
-  console.log(refs);
   res.render('dino', {
     creature_type: creature_type || 'dinosaur',
     isDinosaur: !creature_type || creature_type === 'dinosaur',
@@ -180,8 +179,24 @@ exports.dinosaur = function(req, res) {
     dino: dino,
     // Default to null for empty string, for templating purposes.
     period: match['period'] || null,
+    period_url: (function() {
+      var period_url = match['period'].toLowerCase();
+      // Convert something like 'early cretaceous' to just 'cretaceous'.
+      period_parts = period_url.split(' ');
+      var short_period = period_parts[period_parts.length - 1];
+      return '/' +  short_period + '-dinosaurs';
+    })(),
     eats: match['eats'],
-    regions: regions.length == 0 ? null : regions.join(', '),
+    regions: regions,
+    regions_links: (function() {
+      return regions.map(function(r) {
+        return {
+          url: '/' + r.toLowerCase().replace(' ', '-') + '-dinosaurs',
+          text: r,
+        };
+      });
+    })(),
+    regions_joined: regions.length == 0 ? null : regions.join(', '),
     pics: picsForDinosaur(match),
     shouldShowMap: match['fossil_latlngs'] && match['fossil_latlngs'].length > 0,
     mapUrl: createMapUrlForDinosaur(match),

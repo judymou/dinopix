@@ -92,7 +92,7 @@
         margin: 0 0 15px;
       }
 
-      .references {
+      .info-section {
         margin-top: 14px;
       }
 
@@ -290,18 +290,18 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
           <div class="intro">
             <p>
             {{#isDinosaur}}
-            {{dino}} is a {{eats}}.  It lived in the <a href="{{globeUrl}}">{{period}} period</a> and resided in {{regions}}.
+            {{dino}} is a {{eats}}.  It lived in the <a href="{{globeUrl}}">{{period}} period</a> and resided in {{regions_joined}}.
             {{/isDinosaur}}
             {{#isPlesiosaur}}
             {{dino}} is a plesiosaur, a type of marine reptile.  It was not a dinosaur, though it coexisted with many dinosaurs.
               {{#period}}
-                {{dino}} lived during the <a href="{{globeUrl}}">{{period}}</a>{{#regions}} and resided in {{regions}}{{/regions}}.
+                {{dino}} lived during the <a href="{{globeUrl}}">{{period}}</a>{{#regions_joined}} and resided in {{regions_joined}}{{/regions_joined}}.
               {{/period}}
             {{/isPlesiosaur}}
             {{#isPterosaur}}
             {{dino}} is a pterosaur, a type of flying reptile.  It was not a dinosaur, though it lived during the same period.
               {{#period}}
-                {{dino}} lived during the <a href="{{globeUrl}}">{{period}}</a>{{#regions}} and resided in {{regions}}{{/regions}}.
+                {{dino}} lived during the <a href="{{globeUrl}}">{{period}}</a>{{#regions_joined}} and resided in {{regions_joined}}{{/regions_joined}}.
               {{/period}}
             {{/isPterosaur}}
             </p>
@@ -316,8 +316,17 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
               <li><a target="_blank" href="http://en.wikipedia.org/wiki/{{dino}}">Wikipedia page</a></li>
             </ul>
           </div>
+          <div class="info-section">
+            {{dino}} is part of these categories:
+            <ul>
+              <li><a href="{{period_url}}">{{period}} dinosaurs</a></li>
+              {{#regions_links}}
+              <li><a href="{{url}}">{{text}} dinosaurs</a></li>
+              {{/regions_links}}
+            </ul>
+          </div>
           {{#hasRefs}}
-          <div class="references">
+          <div class="info-section references">
             {{dino}} was described by the following scientific paper(s):
             <ul>
               {{#refs}}
