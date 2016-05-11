@@ -31,7 +31,7 @@ function setup(app) {
 
 function interpretAndReply(text, reply) {
   var dinoresult = tryDinoSearch(text);
-  if (text.indexOf('random') > -1 || text.indexOf('Random') > -1) {
+  if (matches(text, ['random', 'next', 'another', 'more'])) {
     sendRandomDino(reply);
   } else if(dinoresult) {
     doDinoReply(dinoresult[0], dinoresult[1], reply);
