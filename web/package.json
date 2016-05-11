@@ -6,6 +6,7 @@
     "start": "node app"
   },
   "dependencies": {
+    "dotenv": "^2.0.0",
     "express": "3.0.6",
     "hjs": "*",
     "less-middleware": "*",

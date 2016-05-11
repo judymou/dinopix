@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var express = require('express')
   , dinos = require('./routes/dinos.js')
   , sitemap = require('./routes/sitemap.js')
