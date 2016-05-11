@@ -37,6 +37,10 @@ function interpretAndReply(text, reply) {
     doDinoReply(dinoresult[0], dinoresult[1], reply);
   } else if (matches(text, ['hello', 'hi', 'hey'])) {
     doReply("Hi! Try typing 'random' or enter the name of a dinosaur.", reply);
+  } else if (matches(text, ['thank you', 'thanks', 'thx'])) {
+    doReply("No problem <3", reply);
+  } else if (matches(text, ['how are you', 'whats up', 'what\'s up'])) {
+    doReply("Still sad about dinosaurs going extinct :(", reply);
   } else {
     doReply("Sorry, I don't understand.  Try 'random' or enter the name of a dinosaur.", reply);
   }
