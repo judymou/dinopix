@@ -33,6 +33,13 @@ function interpretAndReply(text, reply) {
   var dinoresult = tryDinoSearch(text);
   if (matches(text, ['random', 'next', 'another', 'more'])) {
     sendRandomDino(reply);
+  } else if (matches(text, ['browse'])) {
+    doReply("Would you like to browse by continent or period?", reply);
+  } else if (matches(text, ['continent'])) {
+    doReply("Which continent are you interested in: North America, South America, Europe, Africa, Madagascar,"
+      + "Asia, India, Australia, or Antarctica?", reply);
+  } else if (matches(text, ['period'])) {
+    doReply("Which period are you interested in: Triassic, Jurassic, or Cretaceous?", reply);
   } else if(dinoresult) {
     doDinoReply(dinoresult[0], dinoresult[1], reply);
   } else if (matches(text, ['hello', 'hi', 'hey'])) {
